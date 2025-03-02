@@ -1,38 +1,39 @@
 ---
-title: For Loops
+title: Per i cicli
 teaching: 10
 exercises: 15
 ---
 
+
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain what for loops are normally used for.
-- Trace the execution of a simple (unnested) loop and correctly state the values of variables in each iteration.
-- Write for loops that use the Accumulator pattern to aggregate values.
+- Spiegare a cosa servono normalmente i cicli for.
+- Tracciare l'esecuzione di un ciclo semplice (non annidato) e indicare correttamente i
+  valori delle variabili in ogni iterazione.
+- Scrivere cicli for che utilizzano lo schema Accumulator per aggregare valori.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- How can I make a program do many things?
+- Come posso fare in modo che un programma faccia molte cose?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## A *for loop* executes commands once for each value in a collection.
+## Un ciclo *for* esegue i comandi una volta per ogni valore di un insieme.
 
-- Doing calculations on the values in a list one by one
-  is as painful as working with `pressure_001`, `pressure_002`, etc.
-- A *for loop* tells Python to execute some statements once for each value in a list,
-  a character string,
-  or some other collection.
-- "for each thing in this group, do these operations"
+- Fare calcoli sui valori di un elenco uno per uno è doloroso come lavorare con
+  `pressure_001`, `pressure_002`, ecc.
+- Un ciclo *for* dice a Python di eseguire alcune istruzioni una volta per ogni valore
+  di un elenco, di una stringa di caratteri o di un altro insieme.
+- "per ogni cosa in questo gruppo, fare queste operazioni"
 
 ```python
 for number in [2, 3, 5]:
     print(number)
 ```
 
-- This `for` loop is equivalent to:
+- Questo ciclo `for` è equivalente a:
 
 ```python
 print(2)
@@ -40,7 +41,7 @@ print(3)
 print(5)
 ```
 
-- And the `for` loop's output is:
+- E l'output del ciclo `for` è:
 
 ```output
 2
@@ -48,23 +49,24 @@ print(5)
 5
 ```
 
-## A `for` loop is made up of a collection, a loop variable, and a body.
+## Un ciclo `for` è composto da un insieme, una variabile del ciclo e un corpo.
 
 ```python
 for number in [2, 3, 5]:
     print(number)
 ```
 
-- The collection, `[2, 3, 5]`, is what the loop is being run on.
-- The body, `print(number)`, specifies what to do for each value in the collection.
-- The loop variable, `number`, is what changes for each *iteration* of the loop.
-  - The "current thing".
+- L'insieme, `[2, 3, 5]`, è quello su cui viene eseguito il ciclo.
+- Il corpo, `print(number)`, specifica cosa fare per ogni valore dell'insieme.
+- La variabile del ciclo, `number`, è quella che cambia a ogni *iterazione* del ciclo.
+  - La "cosa corrente".
 
-## The first line of the `for` loop must end with a colon, and the body must be indented.
+## La prima riga del ciclo `for` deve terminare con i due punti e il corpo deve essere indentato.
 
-- The colon at the end of the first line signals the start of a *block* of statements.
-- Python uses indentation rather than `{}` or `begin`/`end` to show *nesting*.
-  - Any consistent indentation is legal, but almost everyone uses four spaces.
+- I due punti alla fine della prima riga indicano l'inizio di un *blocco* di istruzioni.
+- Python usa l'indentazione piuttosto che `{}` o `begin`/`end` per mostrare il
+  *nesting*.
+  - Qualsiasi rientro coerente è legale, ma quasi tutti usano quattro spazi.
 
 ```python
 for number in [2, 3, 5]:
@@ -75,7 +77,7 @@ print(number)
 IndentationError: expected an indented block
 ```
 
-- Indentation is always meaningful in Python.
+- L'indentazione è sempre significativa in Python.
 
 ```python
 firstName = "Jon"
@@ -89,24 +91,24 @@ firstName = "Jon"
 IndentationError: unexpected indent
 ```
 
-- This error can be fixed by removing the extra spaces
-  at the beginning of the second line.
+- Questo errore può essere risolto rimuovendo gli spazi extra all'inizio della seconda
+  riga.
 
-## Loop variables can be called anything.
+## Le variabili di loop possono essere chiamate in qualsiasi modo.
 
-- As with all variables, loop variables are:
-  - Created on demand.
-  - Meaningless: their names can be anything at all.
+- Come tutte le variabili, le variabili del ciclo sono:
+  - Creato su richiesta.
+  - Senza senso: i loro nomi possono essere qualsiasi cosa.
 
 ```python
 for kitten in [2, 3, 5]:
     print(kitten)
 ```
 
-## The body of a loop can contain many statements.
+## Il corpo di un ciclo può contenere molte istruzioni.
 
-- But no loop should be more than a few lines long.
-- Hard for human beings to keep larger chunks of code in mind.
+- Ma nessun ciclo dovrebbe essere lungo più di qualche riga.
+- È difficile per gli esseri umani tenere a mente pezzi di codice più grandi.
 
 ```python
 primes = [2, 3, 5]
@@ -122,13 +124,15 @@ for p in primes:
 5 25 125
 ```
 
-## Use `range` to iterate over a sequence of numbers.
+## Usare `range` per iterare su una sequenza di numeri.
 
-- The built-in function [`range`](https://docs.python.org/3/library/stdtypes.html#range) produces a sequence of numbers.
-  - *Not* a list: the numbers are produced on demand
-    to make looping over large ranges more efficient.
-- `range(N)` is the numbers 0..N-1
-  - Exactly the legal indices of a list or character string of length N
+- La funzione built-in [`range`](https://docs.python.org/3/library/stdtypes.html#range)
+  produce una sequenza di numeri.
+  - *Non* un elenco: i numeri sono prodotti su richiesta per rendere più efficiente il
+    looping su intervalli di grandi dimensioni.
+- `range(N)` sono i numeri 0..N-1
+  - Esattamente gli indici legali di un elenco o di una stringa di caratteri di
+    lunghezza N
 
 ```python
 print('a range is not a list: range(0, 3)')
@@ -143,11 +147,12 @@ a range is not a list: range(0, 3)
 2
 ```
 
-## The Accumulator pattern turns many values into one.
+## Lo schema Accumulatore trasforma molti valori in uno.
 
-- A common pattern in programs is to:
-  1. Initialize an *accumulator* variable to zero, the empty string, or the empty list.
-  2. Update the variable with values from a collection.
+- Uno schema comune nei programmi è quello di:
+  1. Inizializza una variabile *accumulatore* a zero, alla stringa vuota o all'elenco
+     vuoto.
+  2. Aggiorna la variabile con i valori di un insieme.
 
 ```python
 # Sum the first 10 integers.
@@ -161,24 +166,25 @@ print(total)
 55
 ```
 
-- Read `total = total + (number + 1)` as:
-  - Add 1 to the current value of the loop variable `number`.
-  - Add that to the current value of the accumulator variable `total`.
-  - Assign that to `total`, replacing the current value.
-- We have to add `number + 1` because `range` produces 0..9, not 1..10.
+- Leggere `total = total + (number + 1)` come:
+  - aggiunge 1 al valore corrente della variabile del ciclo `number`.
+  - Aggiungetelo al valore corrente della variabile accumulatore `total`.
+  - Assegna questo valore a `total`, sostituendo il valore corrente.
+- Dobbiamo aggiungere `number + 1` perché `range` produce 0..9, non 1..10.
 
-:::::::::::::::::::::::::::::::::::::::  challenge
+::::::::::::::::::::::::::::::::::::::: challenge
 
-## Classifying Errors
+## Classificazione degli errori
 
-Is an indentation error a syntax error or a runtime error?
+Un errore di indentazione è un errore di sintassi o un errore di runtime?
 
-:::::::::::::::  solution
+::::::::::::::: solution
 
-## Solution
+## Soluzione
 
-An IndentationError is a syntax error. Programs with syntax errors cannot be started.
-A program with a runtime error will start but an error will be thrown under certain conditions.
+Un IndentationError è un errore di sintassi. I programmi con errori di sintassi non
+possono essere avviati. Un programma con un errore di runtime verrà avviato, ma in
+determinate condizioni verrà lanciato un errore.
 
 
 
@@ -186,12 +192,13 @@ A program with a runtime error will start but an error will be thrown under cert
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-:::::::::::::::::::::::::::::::::::::::  challenge
+::::::::::::::::::::::::::::::::::::::: challenge
 
-## Tracing Execution
+## Tracciamento dell'esecuzione
 
-Create a table showing the numbers of the lines that are executed when this program runs,
-and the values of the variables after each line is executed.
+Creare una tabella che mostri i numeri delle righe che vengono eseguite durante
+l'esecuzione di questo programma e i valori delle variabili dopo l'esecuzione di ogni
+riga.
 
 ```python
 total = 0
@@ -199,30 +206,30 @@ for char in "tin":
     total = total + 1
 ```
 
-:::::::::::::::  solution
+::::::::::::::: solution
 
-## Solution
+## Soluzione
 
-| Line no | Variables            | 
+| Line no | Variables            |
 | ------- | -------------------- |
-| 1       | total = 0            | 
-| 2       | total = 0 char = 't' | 
-| 3       | total = 1 char = 't' | 
-| 2       | total = 1 char = 'i' | 
-| 3       | total = 2 char = 'i' | 
-| 2       | total = 2 char = 'n' | 
-| 3       | total = 3 char = 'n' | 
+| 1       | total = 0            |
+| 2       | total = 0 char = 't' |
+| 3       | total = 1 char = 't' |
+| 2       | total = 1 char = 'i' |
+| 3       | total = 2 char = 'i' |
+| 2       | total = 2 char = 'n' |
+| 3       | total = 3 char = 'n' |
 
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-:::::::::::::::::::::::::::::::::::::::  challenge
+::::::::::::::::::::::::::::::::::::::: challenge
 
-## Reversing a String
+## Inversione di una stringa
 
-Fill in the blanks in the program below so that it prints "nit"
-(the reverse of the original character string "tin").
+Riempite gli spazi vuoti del programma sottostante in modo che stampi "nit" (l'inverso
+della stringa di caratteri originale "tin").
 
 ```python
 original = "tin"
@@ -232,9 +239,9 @@ for char in original:
 print(result)
 ```
 
-:::::::::::::::  solution
+::::::::::::::: solution
 
-## Solution
+## Soluzione
 
 ```python
 original = "tin"
@@ -248,12 +255,12 @@ print(result)
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-:::::::::::::::::::::::::::::::::::::::  challenge
+::::::::::::::::::::::::::::::::::::::: challenge
 
-## Practice Accumulating
+## Pratica di Accumulazione
 
-Fill in the blanks in each of the programs below
-to produce the indicated result.
+Riempite gli spazi vuoti in ciascuno dei programmi seguenti per produrre il risultato
+indicato.
 
 ```python
 # Total length of the strings in the list: ["red", "green", "blue"] => 12
@@ -263,9 +270,9 @@ for word in ["red", "green", "blue"]:
 print(total)
 ```
 
-:::::::::::::::  solution
+::::::::::::::: solution
 
-## Solution
+## Soluzione
 
 ```python
 total = 0
@@ -284,9 +291,9 @@ for word in ["red", "green", "blue"]:
 print(lengths)
 ```
 
-:::::::::::::::  solution
+::::::::::::::: solution
 
-## Solution
+## Soluzione
 
 ```python
 lengths = []
@@ -306,9 +313,9 @@ for ____ in ____:
 print(result)
 ```
 
-:::::::::::::::  solution
+::::::::::::::: solution
 
-## Solution
+## Soluzione
 
 ```python
 words = ["red", "green", "blue"]
@@ -320,14 +327,15 @@ print(result)
 
 :::::::::::::::::::::::::
 
-**Create an acronym:** Starting from the list `["red", "green", "blue"]`, create the acronym `"RGB"` using
-a for loop.
+**Creare un acronimo:** Partendo dall'elenco `["red", "green", "blue"]`, creare
+l'acronimo `"RGB"` usando un ciclo for.
 
-**Hint:** You may need to use a string method to properly format the acronym.
+**Consiglio:** Potrebbe essere necessario utilizzare un metodo stringa per formattare
+correttamente l'acronimo.
 
-:::::::::::::::  solution
+::::::::::::::: solution
 
-## Solution
+## Soluzione
 
 ```python
 acronym = ""
@@ -340,13 +348,13 @@ print(acronym)
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-:::::::::::::::::::::::::::::::::::::::  challenge
+::::::::::::::::::::::::::::::::::::::: challenge
 
-## Cumulative Sum
+## Somma cumulativa
 
-Reorder and properly indent the lines of code below
-so that they print a list with the cumulative sum of data.
-The result should be `[1, 3, 5, 10]`.
+Riordinate e indentate correttamente le righe di codice sottostanti in modo da stampare
+un elenco con la somma cumulativa dei dati. Il risultato dovrebbe essere `[1, 3, 5,
+10]`.
 
 ```python
 cumulative.append(total)
@@ -358,9 +366,9 @@ print(cumulative)
 data = [1,2,2,5]
 ```
 
-:::::::::::::::  solution
+::::::::::::::: solution
 
-## Solution
+## Soluzione
 
 ```python
 total = 0
@@ -376,18 +384,16 @@ print(cumulative)
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-:::::::::::::::::::::::::::::::::::::::  challenge
+::::::::::::::::::::::::::::::::::::::: challenge
 
-## Identifying Variable Name Errors
+## Errori di identificazione del nome della variabile
 
-1. Read the code below and try to identify what the errors are
-  *without* running it.
-2. Run the code and read the error message.
-  What type of `NameError` do you think this is?
-  Is it a string with no quotes, a misspelled variable, or a
-  variable that should have been defined but was not?
-3. Fix the error.
-4. Repeat steps 2 and 3, until you have fixed all the errors.
+1. Leggete il codice qui sotto e cercate di identificare gli errori *senza* eseguirlo.
+2. Eseguite il codice e leggete il messaggio di errore. Che tipo di `NameError` pensate
+   che sia? Si tratta di una stringa senza virgolette, di una variabile scritta male o
+   di una variabile che avrebbe dovuto essere definita ma non lo è stata?
+3. Correggere l'errore.
+4. Ripetete i passi 2 e 3, finché non avete risolto tutti gli errori.
 
 ```python
 for number in range(10):
@@ -399,13 +405,14 @@ for number in range(10):
 print(message)
 ```
 
-:::::::::::::::  solution
+::::::::::::::: solution
 
-## Solution
+## Soluzione
 
-- Python variable names are case sensitive: `number` and `Number` refer to different variables.
-- The variable `message` needs to be initialized as an empty string.
-- We want to add the string `"a"` to `message`, not the undefined variable `a`.
+- I nomi delle variabili Python sono sensibili alle maiuscole e alle minuscole: `number`
+  e `Number` si riferiscono a variabili diverse.
+- La variabile `message` deve essere inizializzata come una stringa vuota.
+- Vogliamo aggiungere la stringa `"a"` a `message`, non la variabile indefinita `a`.
 
 ```python
 message = ""
@@ -422,25 +429,25 @@ print(message)
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-:::::::::::::::::::::::::::::::::::::::  challenge
+::::::::::::::::::::::::::::::::::::::: challenge
 
-## Identifying Item Errors
+## Identificazione degli errori degli elementi
 
-1. Read the code below and try to identify what the errors are
-  *without* running it.
-2. Run the code, and read the error message. What type of error is it?
-3. Fix the error.
+1. Leggete il codice qui sotto e cercate di identificare gli errori *senza* eseguirlo.
+2. Eseguite il codice e leggete il messaggio di errore. Di che tipo di errore si tratta?
+3. Correggere l'errore.
 
 ```python
 seasons = ['Spring', 'Summer', 'Fall', 'Winter']
 print('My favorite season is ', seasons[4])
 ```
 
-:::::::::::::::  solution
+::::::::::::::: solution
 
-## Solution
+## Soluzione
 
-This list has 4 elements and the index to access the last element in the list is `3`.
+Questa lista ha 4 elementi e l'indice per accedere all'ultimo elemento della lista è
+`3`.
 
 ```python
 seasons = ['Spring', 'Summer', 'Fall', 'Winter']
@@ -453,15 +460,18 @@ print('My favorite season is ', seasons[3])
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- A *for loop* executes commands once for each value in a collection.
-- A `for` loop is made up of a collection, a loop variable, and a body.
-- The first line of the `for` loop must end with a colon, and the body must be indented.
-- Indentation is always meaningful in Python.
-- Loop variables can be called anything (but it is strongly advised to have a meaningful name to the looping variable).
-- The body of a loop can contain many statements.
-- Use `range` to iterate over a sequence of numbers.
-- The Accumulator pattern turns many values into one.
+- Un ciclo *for* esegue i comandi una volta per ogni valore di un insieme.
+- Un ciclo `for` è composto da un insieme, una variabile del ciclo e un corpo.
+- La prima riga del ciclo `for` deve terminare con i due punti e il corpo deve essere
+  indentato.
+- L'indentazione è sempre significativa in Python.
+- Le variabili di loop possono essere chiamate in qualsiasi modo (ma si consiglia
+  vivamente di dare un nome significativo alla variabile di loop).
+- Il corpo di un ciclo può contenere molte istruzioni.
+- Usare `range` per iterare su una sequenza di numeri.
+- Lo schema Accumulatore trasforma molti valori in uno.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 
