@@ -801,7 +801,7 @@ il vostro flusso di lavoro?</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Dopo aver creato le schede necessarie, è possibile trascinare una
 delle schede al centro di un pannello per spostare la scheda nel
@@ -868,7 +868,7 @@ scorciatoie per annullare l’ultima operazione eseguita sulla cella.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>La modalità Comando ha un bordo grigio e la modalità Modifica ha un
 bordo blu. Usate <kbd>Esc</kbd> e <kbd>Retro</kbd> per passare da una
@@ -923,7 +923,95 @@ modalità Comando (<kbd>Esc</kbd>/grigio) e premendo il tasto
 <h3 id="markdown-fa-la-maggior-parte-di-ciò-che-fa-lhtml-">Markdown fa la maggior parte di ciò che fa l’HTML.<a class="anchor" aria-label="anchor" href="#markdown-fa-la-maggior-parte-di-ci%C3%B2-che-fa-lhtml-"></a></h3>
 <p>Tabella: Mostra una sintassi di markdown e il suo output
 renderizzato.</p>
-<div id="creare-elenchi-in-markdown" class="callout challenge">
+<table class="table"><colgroup><col width="44%"><col width="55%"></colgroup><thead><tr class="header"><th>Markdown code</th>
+<th>Rendered output</th>
+</tr></thead><tbody><tr class="odd"><td></td>
+<td></td>
+</tr><tr class="even"><td><pre><code>*   Use asterisks
+*   to create
+*   bullet lists.</code></pre></td>
+<td>
+<p>
+</p>
+<ul><li>Use asterisks</li>
+<li>to create</li>
+<li>bullet lists.</li>
+</ul></td>
+</tr><tr class="odd"><td></td>
+<td></td>
+</tr><tr class="even"><td><pre><code>1.   Use numbers
+1.   to create
+1.   bullet lists.</code></pre></td>
+<td>
+<p>
+</p>
+<ol style="list-style-type: decimal"><li>Use numbers</li>
+<li>to create</li>
+<li>numbered lists.</li>
+</ol></td>
+</tr><tr class="odd"><td></td>
+<td></td>
+</tr><tr class="even"><td><pre><code>*  You can use indents
+  *  To create sublists
+  *  of the same type
+*  Or sublists
+  1. Of different
+  1. types</code></pre></td>
+<td>
+<p>
+</p>
+<ul><li>You can use indents
+<ul><li>To create sublists</li>
+<li>of the same type</li>
+</ul></li>
+<li>Or sublists
+<ol style="list-style-type: decimal"><li>Of different</li>
+<li>types</li>
+</ol></li>
+</ul></td>
+</tr><tr class="odd"><td></td>
+<td></td>
+</tr><tr class="even"><td><pre><code><span><span class="co"># A Level-1 Heading</span></span></code></pre></td>
+<td>
+<p>
+</p>
+<h2 id="a-level-1-heading">A Level-1 Heading</h2>
+</td>
+</tr><tr class="odd"><td></td>
+<td></td>
+</tr><tr class="even"><td><pre><code><span><span class="co">## A Level-2 Heading (etc.)</span></span></code></pre></td>
+<td>
+<p>
+</p>
+<h3 id="a-level-2-heading-etc.">A Level-2 Heading (etc.)</h3>
+</td>
+</tr><tr class="odd"><td></td>
+<td></td>
+</tr><tr class="even"><td><pre><code>Line breaks
+don't matter.
+
+But blank lines
+create new paragraphs.</code></pre></td>
+<td>
+<p>
+</p>
+<p>Line breaks don’t matter.</p>
+<p>But blank lines create new paragraphs.</p>
+</td>
+</tr><tr class="odd"><td></td>
+<td></td>
+</tr><tr class="even"><td><pre><code>[Links](http://software-carpentry.org)
+are created with `[...](...)`.
+Or use [named links][data-carp].
+
+[data-carp]: http://datacarpentry.org</code></pre></td>
+<td>
+<p>
+</p>
+<p><a href="https://software-carpentry.org" class="external-link">Links</a> are created with
+<code>[...](...)</code>. Or use <a href="https://datacarpentry.org" class="external-link">named links</a>.</p>
+</td>
+</tr></tbody></table><div id="creare-elenchi-in-markdown" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -949,7 +1037,7 @@ che assomiglia a questo:</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Questa sfida integra sia l’elenco numerato che l’elenco puntato. Si
 noti che l’elenco puntato è rientrato di 2 spazi in modo da essere in
@@ -975,11 +1063,11 @@ linea con gli elementi dell’elenco numerato.</p>
 <p>Cosa viene visualizzato quando viene eseguita una cella Python in un
 blocco note che contiene diversi calcoli? Ad esempio, cosa succede
 quando viene eseguita questa cella?</p>
-<div class="codewrapper sourceCode" id="cb4">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="dv">7</span> <span class="op">*</span> <span class="dv">3</span></span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="dv">7</span> <span class="op">*</span> <span class="dv">3</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -991,13 +1079,13 @@ quando viene eseguita questa cella?</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>Python restituisce l’output dell’ultimo calcolo.</p>
-<div class="codewrapper sourceCode" id="cb5">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="dv">3</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="dv">3</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -1013,11 +1101,11 @@ quando viene eseguita questa cella?</p>
 <p>Cosa succede se si scrive Python in una cella di codice e poi si
 passa a una cella di Markdown? Ad esempio, inserite quanto segue in una
 cella di codice:</p>
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">6</span> <span class="op">*</span> <span class="dv">7</span> <span class="op">+</span> <span class="dv">12</span></span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="bu">print</span>(x)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">6</span> <span class="op">*</span> <span class="dv">7</span> <span class="op">+</span> <span class="dv">12</span></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="bu">print</span>(x)</span></code></pre>
 </div>
 <p>e poi eseguirlo con <kbd>Shift</kbd>+<kbd>Return</kbd> per essere
 sicuri che funzioni come cella di codice. Ora tornate alla cella e usate
@@ -1034,16 +1122,16 @@ come potrebbe essere utile?</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <p>Il codice Python viene trattato come testo Markdown. Le righe
 appaiono come se facessero parte di un unico paragrafo contiguo. Questo
 potrebbe essere utile per attivare e disattivare temporaneamente le
 celle nei quaderni che vengono utilizzati per più scopi.</p>
-<div class="codewrapper sourceCode" id="cb7">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">6</span> <span class="op">*</span> <span class="dv">7</span> <span class="op">+</span> <span class="dv">12</span> <span class="bu">print</span>(x)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">6</span> <span class="op">*</span> <span class="dv">7</span> <span class="op">+</span> <span class="dv">12</span> <span class="bu">print</span>(x)</span></code></pre>
 </div>
 </div>
 </div>
@@ -1073,7 +1161,7 @@ pensate che facciano il trattino basso, <code>_</code>, il circonflesso,
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <p>Il blocco note mostra l’equazione come verrebbe resa dalla sintassi
 di equazione LaTeX. Il segno del dollaro, <code>$</code>, è usato per
