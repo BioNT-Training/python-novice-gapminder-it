@@ -4,24 +4,26 @@ teaching: 0
 exercises: 15
 ---
 
+
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Gather feedback on the class
+- Raccogliere il feedback sul corso
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- How did the class go?
+- Come è andato il corso?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Gather feedback from participants.
+Raccogliere il feedback dei partecipanti.
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- We are constantly seeking to improve this course.
+- Cerchiamo costantemente di migliorare questo corso.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 

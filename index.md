@@ -3,29 +3,30 @@ permalink: index.html
 site: sandpaper::sandpaper_site
 ---
 
-This lesson is an introduction to programming in Python 3 for people with little or no previous
-programming experience. It uses plotting as its motivating example and is designed to be used in
-both [Data Carpentry][dc-lessons] and [Software Carpentry][swc-lessons] workshops.
-This lesson references [JupyterLab][jupyterlab] but can be taught using alternative Python 3 interpreters
-as well (e.g., repl.it, Anaconda).
 
-::::::::::::::::::::::::::::::::::::::::::  prereq
+Questa lezione è un'introduzione alla programmazione in Python 3 per persone con poca o
+nessuna esperienza di programmazione precedente. Utilizza il plottaggio come esempio
+motivante ed è pensata per essere utilizzata sia nei laboratori di [Data
+Carpentry][dc-lessons] che di [Software Carpentry][swc-lessons]. Questa lezione fa
+riferimento a [JupyterLab][jupyterlab], ma può essere insegnata anche utilizzando
+interpreti Python 3 alternativi (ad esempio, repl.it, Anaconda).
 
-## Prerequisites
+:::::::::::::::::::::::::::::::::::::::::: prereq
 
-1. Learners need to understand what files and directories are,
-  what a working directory is,
-  and how to start a Python interpreter.
+## Prerequisiti
 
-2. Learners must install Python 3 before the class starts.
+1. Gli studenti devono capire cosa sono i file e le directory, cos'è una directory di
+   lavoro e come avviare un interprete Python.
 
-3. Learners must get the gapminder data before class starts:
-  please download and unzip the file
-  [python-novice-gapminder-data.zip](episodes/files/python-novice-gapminder-data.zip).
+2. Gli studenti devono installare Python 3 prima dell'inizio del corso.
 
-Please see [the setup instructions](learners/setup.md)
-for more details.
+3. Gli studenti devono ottenere i dati del gapminder prima dell'inizio della lezione:
+   scaricare e decomprimere il file
+   [python-novice-gapminder-data.zip](episodes/files/python-novice-gapminder-data.zip).
+
+Per maggiori dettagli, consultare [le istruzioni di installazione](learners/setup.md).
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 

@@ -1,104 +1,125 @@
 ---
-title: 'Reference'
+title: Riferimento
 ---
 
-## Reference
 
-## [Running and Quitting](episodes/01-run-quit.md)
+## Riferimento
 
-- Python files have the `.py` extension.
-- Can be written in a text file or a [Jupyter Notebook][jupyter].
-  - Jupyter notebooks have the extension `.ipynb`
-  - Jupyter notebooks can be opened from [Anaconda](https://docs.continuum.io/anaconda/install) or through the command line by entering `$ jupyter notebook`
-    - Markdown and HTML are allowed in markdown cells for documenting code.
+## [Esecuzione e chiusura](episodes/01-run-quit.md)
 
-## [Variables and Assignment](episodes/02-variables.md)
+- I file Python hanno l'estensione `.py`.
+- Può essere scritto in un file di testo o in un [Jupyter Notebook][jupyter].
+  - I quaderni Jupyter hanno l'estensione `.ipynb`
+  - I taccuini Jupyter possono essere aperti da
+    [Anaconda](https://docs.continuum.io/anaconda/install) o dalla riga di comando
+    digitando `$ jupyter notebook`
+    - Markdown e HTML sono ammessi nelle celle markdown per documentare il codice.
 
-- Variables are stored using `=`.
-  - Strings are defined in quotations `'...'`.
-  - Integers and floating point numbers are defined without quotations.
-- Variables can contain letters, digits, and underscores `_`.
-  - Cannot start with a digit.
-  - Variables that start with underscores should be avoided.
-- Use `print(...)` to display values as text.
-- Can use indexing on strings.
-  - Indexing starts at 0.
-  - Position is given in square brackets `[position]` following the variable name.
-  - Take a slice using `[start:stop]`. This makes a copy of part of the original string.
-    - `start` is the index of the first element.
-    - `stop` is the index of the element after the last desired element.
-- Use `len(...)` to find the length of a variable or string.
+## [Variabili e assegnazione](episodes/02-variables.md)
 
-## [Data Types and Type Conversion](episodes/03-types-conversion.md)
+- Le variabili sono memorizzate con `=`.
+  - Le stringhe sono definite tra virgolette `'...'`.
+  - Gli interi e i numeri in virgola mobile sono definiti senza virgolette.
+- Le variabili possono contenere lettere, cifre e trattini bassi `_`.
+  - Non può iniziare con una cifra.
+  - Le variabili che iniziano con caratteri di sottolineatura devono essere evitate.
+- Usare `print(...)` per visualizzare i valori come testo.
+- Può utilizzare l'indicizzazione delle stringhe.
+  - L'indicizzazione inizia da 0.
+  - La posizione è indicata tra parentesi quadre `[position]` dopo il nome della
+    variabile.
+  - Prende una fetta usando `[start:stop]`. Questo crea una copia di una parte della
+    stringa originale.
+    - `start` è l'indice del primo elemento.
+    - `stop` è l'indice dell'elemento successivo all'ultimo elemento desiderato.
+- Usare `len(...)` per trovare la lunghezza di una variabile o di una stringa.
 
-- Each value has a type. This controls what can be done with it.
-  - `int` represents an integer
-  - `float` represents a floating point number.
-  - `str` represents a string.
-- To determine a variables type, use the built-in function `type(...)`, including the variable name in the parenthesis.
-- Modifying strings:
-  - Use `+` to concatenate strings.
-  - Use `*` to repeat a string.
-  - Numbers and strings cannot be added to on another.
-    - Convert string to integer: `int(...)`.
-    - Convert integer to string: `str(...)`.
+## [Tipi di dati e conversione dei tipi](episodes/03-types-conversion.md)
 
-## [Built-in Functions and Help](episodes/04-built-in.md)
+- Ogni valore ha un tipo. Questo controlla ciò che può essere fatto con esso.
+  - `int` rappresenta un numero intero
+  - `float` rappresenta un numero in virgola mobile.
+  - `str` rappresenta una stringa.
+- Per determinare il tipo di variabile, utilizzare la funzione integrata `type(...)`,
+  includendo il nome della variabile tra le parentesi.
+- Modifica delle stringhe:
+  - Usare `+` per concatenare le stringhe.
+  - Usare `*` per ripetere una stringa.
+  - I numeri e le stringhe non possono essere aggiunti ad altri.
+    - Convertire una stringa in un numero intero: `int(...)`.
+    - Converte un numero intero in stringa: `str(...)`.
 
-- To add a comment, place `#` before the thing you do not with to be executed.
-- Commonly used built-in functions:
-  - `min()` finds the smallest value.
-  - `max()` finds the largest value.
-  - `round()` rounds off a floating point number.
-  - `help()` displays documentation for the function in the parenthesis.
-    - Other ways to get help include holding down `shift` and pressing `tab` in Jupyter Notebooks.
+## [Funzioni integrate e aiuto](episodes/04-built-in.md)
 
-## [Libraries](episodes/06-libraries.md)
+- Per aggiungere un commento, anteporre `#` alla cosa che non si desidera venga
+  eseguita.
+- Funzioni incorporate comunemente utilizzate:
+  - `min()` trova il valore più piccolo.
+  - `max()` trova il valore più grande.
+  - `round()` arrotonda un numero in virgola mobile.
+  - `help()` visualizza la documentazione della funzione tra parentesi.
+    - Altri modi per ottenere aiuto sono tenere premuto `shift` e premere `tab` in
+      Jupyter Notebooks.
 
-- Importing a library:
-  - Use `import ...` to load a library.
-  - Refer to this library by using `module_name.thing_name`.
-    - `.` indicates 'part of'.
-- To import a specific item from a library: `from ... import ...`
-- To import a library using an alias: `import ... as ...`
-- Importing the math library: `import math`
-  - Example of referring to an item with the module's name: `math.cos(math.pi)`.
-- Importing the plotting library as an alias: `import matplotlib as mpl`
+## [Librerie](episodes/06-libraries.md)
 
-## [Reading Tabular Data into DataFrames](episodes/07-reading-tabular.md)
+- Importazione di una libreria:
+  - Usare `import ...` per caricare una libreria.
+  - Fare riferimento a questa libreria utilizzando `module_name.thing_name`.
+    - `.` indica "parte di".
+- Per importare un elemento specifico da una libreria: `from ... import ...`
+- Per importare una libreria usando un alias: `import ... as ...`
+- Importazione della libreria matematica: `import math`
+  - Esempio di riferimento a un elemento con il nome del modulo: `math.cos(math.pi)`.
+- Importazione della libreria di plottaggio come alias: `import matplotlib as mpl`
 
-- Use the pandas library to do statistics on tabular data. Load with `import pandas as pd`.
-  - To read in a csv: `pd.read_csv()`, including the path name in the parenthesis.
-    - To specify a column's values should be used as row headings: `pd.read_csv('path', index_col='column name')`, where path and column name should be replaced with the relevant values.
-- To get more information about a DataFrame, use `DataFrame.info`, replacing `DataFrame` with the variable name of your DataFrame.
-- Use `DataFrame.columns` to view the column names.
-- Use `DataFrame.T` to transpose a DataFrame.
-- Use `DataFrame.describe` to get summary statistics about your data.
+## [Lettura di dati tabulari in DataFrames](episodes/07-reading-tabular.md)
+
+- Utilizzare la libreria pandas per eseguire statistiche su dati tabellari. Caricare con
+  `import pandas as pd`.
+  - Per leggere un csv: `pd.read_csv()`, includendo il nome del percorso tra le
+    parentesi.
+    - Per specificare che i valori di una colonna devono essere usati come intestazioni
+      di riga: `pd.read_csv('path', index_col='column name')`, dove il percorso e il
+      nome della colonna devono essere sostituiti con i valori pertinenti.
+- Per ottenere ulteriori informazioni su un DataFrame, usare `DataFrame.info`,
+  sostituendo `DataFrame` con il nome della variabile del DataFrame.
+- Usare `DataFrame.columns` per visualizzare i nomi delle colonne.
+- Usare `DataFrame.T` per trasporre un DataFrame.
+- Usare `DataFrame.describe` per ottenere statistiche riassuntive sui dati.
 
 ## [Pandas DataFrames](episodes/08-data-frames.md)
 
-- Select data using `[i,j]`
-  - To select by entry position: `DataFrame.iloc[..., ...]`
-    - This is inclusive of everything except the final index.
-  - To select by entry label: `DataFrame.loc[..., ...]`
-    - Can select multiple rows or columns by listing labels.
-    - This is inclusive to both ends.
-  - Use `:` to select all rows or columns.
-- Can also select data based on values using `True` and `False`. This is a Boolean mask.
+- Seleziona i dati utilizzando `[i,j]`
+  - Per selezionare in base alla posizione della voce: `DataFrame.iloc[..., ...]`
+    - Questo include tutto tranne l'indice finale.
+  - Per selezionare in base all'etichetta della voce: `DataFrame.loc[..., ...]`
+    - Può selezionare più righe o colonne elencando le etichette.
+    - Questo è comprensivo di entrambe le estremità.
+  - Usare `:` per selezionare tutte le righe o le colonne.
+- Si possono anche selezionare i dati in base ai valori usando `True` e `False`. Si
+  tratta di una maschera booleana.
   - `mask = subset > 10000`
-  - We can then use this to select values.
-- To use a select-apply-combine operation we use `data.apply(lambda x: x > x.mean())` where `mean()` can be any operation the user would like to be applied to x.
+  - Possiamo quindi usarlo per selezionare i valori.
+- Per usare un'operazione select-apply-combine si usa `data.apply(lambda x: x >
+  x.mean())` dove `mean()` può essere qualsiasi operazione che l'utente desidera
+  applicare a x.
 
 ## [Plotting](episodes/09-plotting.md)
 
-- The most widely used plotting library is `matplotlib`.
-  - Usually imported using `import matplotlib.pyplot as plt`.
-  - To plot we use the command `plt.plot(time, position)`.
-  - To create a legend use `plt.legend(['label1', 'label2'], loc='upper left')`
-    - Can also define labels within the plot statements by using `plt.plot(time, position, label='label')`. To make the legend show up, use `plt.legend()`
-  - To label x and y axis `plt.xlabel('label')` and `plt.ylabel('label')` are used.
-- Pandas DataFrames can be used to plot by using `DataFrame.plot()`. Any operations that can be used on a DataFrame can be applied while plotting.
-  - To plot a bar plot `data.plot(kind='bar')`
+- La libreria di plottaggio più utilizzata è `matplotlib`.
+  - Di solito importato con `import matplotlib.pyplot as plt`.
+  - Per tracciare un grafico si usa il comando `plt.plot(time, position)`.
+  - Per creare una legenda usare `plt.legend(['label1', 'label2'], loc='upper left')`
+    - Si possono anche definire etichette all'interno delle istruzioni del grafico
+      usando `plt.plot(time, position, label='label')`. Per far apparire la legenda,
+      usare `plt.legend()`
+  - Per etichettare gli assi x e y si usano `plt.xlabel('label')` e
+    `plt.ylabel('label')`.
+- I DataFrame di Pandas possono essere usati per tracciare utilizzando
+  `DataFrame.plot()`. Tutte le operazioni che possono essere utilizzate su un DataFrame
+  possono essere applicate durante il plottaggio.
+  - Per tracciare un grafico a barre `data.plot(kind='bar')`
 
 ```python
 import matplotlib.puplot as plot
@@ -108,44 +129,46 @@ plt.ylabel('y axis label')
 plt.legend()
 ```
 
-## [Lists](episodes/11-lists.md)
+## [Elenchi](episodi/11-elenchi.md)
 
-- Defined within `[...]` and separated by `,`.
-  - An empty list can be created by using `[]`.
-- Can use `len(...)` to determine how many values are in a list.
-- Can index just as done in previous lessons.
-  - Indexing can be used to reassign values `list_name[0] = newvalue`.
-- To add an item to a list use `list_name.append()`, with the item to append in the parenthesis.
-- To combine two lists use `list_name_1.extend(list_name_2)`.
-- To remove an item from a list use `del list_name[index]`.
+- Definiti all'interno di `[...]` e separati da `,`.
+  - Un elenco vuoto può essere creato utilizzando `[]`.
+- Può usare `len(...)` per determinare quanti valori ci sono in un elenco.
+- Può indicizzare proprio come fatto nelle lezioni precedenti.
+  - L'indicizzazione può essere utilizzata per riassegnare i valori `list_name[0] =
+    newvalue`.
+- Per aggiungere un elemento a un elenco, usare `list_name.append()`, con l'elemento da
+  aggiungere tra le parentesi.
+- Per combinare due elenchi usare `list_name_1.extend(list_name_2)`.
+- Per rimuovere un elemento da un elenco, usare `del list_name[index]`.
 
 ## [For Loops](episodes/12-for-loops.md)
 
-- Start a for loop with `for number in [1, 2, 3]:`, with the following lines indented.
-  - `[1, 2, 3]` is considered the collection.
-  - `number` is the loop variable.
-  - The action following the collection is the body.
-- To iterate over a sequence of numbers use `range(start, end)`
+- Iniziare un ciclo for con `for number in [1, 2, 3]:`, con le seguenti righe indentate.
+  - `[1, 2, 3]` è considerato un insieme.
+  - `number` è la variabile del ciclo.
+  - L'azione che segue la raccolta è il corpo.
+- Per iterare su una sequenza di numeri usare `range(start, end)`
 
 ```python
 for number in range(0,5):
     print(number)
 ```
 
-## [Conditionals](episodes/13-conditionals.md)
+## [Condizionali](episodi/13-condizionali.md)
 
-- Defined similarly to a loop, using `if variable conditional value:`.
-  - For example, `if variable > 5:`.
-- Use `elif:` for additional tests.
-- Use `else:` for when if statement is not true.
-- Can combine more than one conditional by using `and` or `or`.
-- Often used in combination with for loops.
-- Conditions that can be used:
-  - `==` equal to.
-  - `>=` greater than or equal to.
-  - `<=` less than or equal to.
-  - `>` greater than.
-  - `<` less than.
+- Definita in modo simile a un ciclo, utilizzando `if variable conditional value:`.
+  - Ad esempio, `if variable > 5:`.
+- Utilizzare `elif:` per ulteriori test.
+- Usare `else:` per quando l'istruzione if non è vera.
+- Si possono combinare più condizionali usando `and` o `or`.
+- Spesso usato in combinazione con i cicli for.
+- Condizioni che possono essere utilizzate:
+  - `==` uguale a.
+  - `>=` maggiore o uguale a.
+  - `<=` minore o uguale a.
+  - `>` maggiore di.
+  - `<` meno di.
 
 ```python
 for m in [3, 6, 7, 2, 8]:
@@ -157,26 +180,29 @@ for m in [3, 6, 7, 2, 8]:
         print(m, 'is small')
 ```
 
-## [Looping Over Data Sets](episodes/14-looping-data-sets.md)
+## [Looping su insiemi di dati](episodes/14-looping-data-sets.md)
 
-- Use a for loop: `for filename in [file1, file2]:`
-- To find a set of files using a pattern use `glob.glob`
-  - Must import first using `import glob`.
-  - `*` indicates "match zero or more characters"
-  - `?` indicates "match exactly one character"
-    - For example: `glob.glob(*.txt)` will find all files that end with `.txt` in the current directory.
-- Combine these by writing a loop using: `for filename in glob.glob(*.txt):`
+- Usa un ciclo for: `for filename in [file1, file2]:`
+- Per trovare un insieme di file utilizzando un modello, utilizzare `glob.glob`
+  - Deve essere importato prima usando `import glob`.
+  - `*` indica "corrisponde a zero o più caratteri"
+  - `?` indica "corrisponde esattamente a un carattere"
+    - Per esempio: `glob.glob(*.txt)` troverà tutti i file che finiscono con `.txt`
+      nella directory corrente.
+- Combinate questi elementi scrivendo un ciclo utilizzando: `for filename in
+  glob.glob(*.txt):`
 
 ```python
 for filename in glob.glob(*.txt):
   data = pd.read_csv(filename)
 ```
 
-## [Writing Functions](episodes/16-writing-functions.md)
+## [Funzioni di scrittura](episodes/16-writing-functions.md)
 
-- Define a function using `def function_name(parameters):`. Replace `parameters` with the variables to use when the function is executed.
-- Run by using `function_name(parameters)`.
-- To return a result to the caller use `return ...` in the function.
+- Definire una funzione utilizzando `def function_name(parameters):`. Sostituire
+  `parameters` con le variabili da utilizzare quando la funzione viene eseguita.
+- Eseguito utilizzando `function_name(parameters)`.
+- Per restituire un risultato al chiamante, utilizzare `return ...` nella funzione.
 
 ```python
 def add_numbers(a, b):
@@ -186,74 +212,65 @@ def add_numbers(a, b):
 add_numbers(1, 4)
 ```
 
-## [Variable Scope](episodes/17-scope.md)
+## [Ambito delle variabili](episodes/17-scope.md)
 
-- A local variable is defined in a function and can only be seen and used within that function.
-- A global variable is defined outside of a function and can be seen or used anywhere after definition.
+- Una variabile locale è definita in una funzione e può essere vista e utilizzata solo
+  all'interno di quella funzione.
+- Una variabile globale è definita al di fuori di una funzione e può essere vista o
+  utilizzata ovunque dopo la definizione.
 
-## [Programming Style](episodes/18-style.md)
+## [Stile di programmazione](episodi/18-style.md)
 
-- Document your code.
-- Use clear and meaningful variable names.
-- Follow [the PEP8 style guide](https://www.python.org/dev/peps/pep-0008) when setting up your code.
-- Use assertions to check for internal errors.
-- Use docstrings to provide help.
+- Documentate il vostro codice.
+- Utilizzare nomi di variabili chiari e significativi.
+- Seguire [la guida di stile PEP8](https://www.python.org/dev/peps/pep-0008) quando si
+  imposta il codice.
+- Utilizzare le asserzioni per verificare la presenza di errori interni.
+- Utilizzare le docstringhe per fornire aiuto.
 
-## Glossary
+## Glossario
 
-Arguments
-:     Values passed to functions.
+Argomenti : Valori passati alle funzioni.
 
-Array
-:     A container holding elements of the same type.
+Array : Un contenitore che contiene elementi dello stesso tipo.
 
-Boolean
-:     An object composed of `True` and `False`.
+Booleano : Un oggetto composto da `True` e `False`.
 
-DataFrame
-:     The way Pandas represents a table; a collection of series.
+DataFrame : Il modo in cui Pandas rappresenta una tabella; una raccolta di serie.
 
-Element
-:     An item in a list or an array. For a string, these are the individual characters.
+Elemento : Un elemento di un elenco o di una matrice. Per una stringa, questi sono i
+singoli caratteri.
 
-Function
-:     A block of code that can be called and re-used elsewhere.
+Funzione : Un blocco di codice che può essere richiamato e riutilizzato altrove.
 
-Global variable
-:     A variable defined outside of a function that can be used anywhere.
+Variabile globale : Una variabile definita al di fuori di una funzione che può essere
+utilizzata ovunque.
 
-Index
-:     The position of a given element.
+Indice : La posizione di un dato elemento.
 
-Jupyter Notebook
-:     Interactive coding environment allowing a combination of code and markdown.
+Jupyter Notebook : Ambiente di codifica interattivo che consente una combinazione di
+codice e markdown.
 
-Library
-:     A collection of files containing functions used by other programs.
+Libreria : Una raccolta di file contenenti funzioni utilizzate da altri programmi.
 
-Local Variable
-:     A variable defined inside of a function that can only be used inside of that function.
+Variabile locale : Una variabile definita all'interno di una funzione che può essere
+utilizzata solo all'interno di quella funzione.
 
-Mask
-:     A boolean object used for selecting data from another object.
+Maschera : Un oggetto booleano usato per selezionare i dati da un altro oggetto.
 
-Method
-:     An action tied to a particular object. Called by using `object.method`.
+Metodo : Un'azione legata a un particolare oggetto. Viene richiamata utilizzando
+`object.method`.
 
-Modules
-:     The files within a library containing functions used by other programs.
+Moduli : I file di una libreria che contengono funzioni utilizzate da altri programmi.
 
-Parameters
-:     Variables used when executing a function.
+Parametri : Variabili utilizzate durante l'esecuzione di una funzione.
 
-Series
-:     A Pandas data structure to represent a column.
+Serie : Una struttura dati Pandas per rappresentare una colonna.
 
-Substring
-:     A part of a string.
+Substringa : Una parte di una stringa.
 
-Variables
-:     Names for values.
+Variabili : Nomi per i valori.
+
 
 
 
