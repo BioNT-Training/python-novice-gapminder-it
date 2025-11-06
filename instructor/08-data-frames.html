@@ -279,11 +279,12 @@ in base alla loro etichetta (di ingresso).</a></li>
 le righe.</a></li>
 <li><a href="#seleziona-pi%C3%B9-colonne-o-righe-usando-dataframe.loc-e-una-slice-con-nome.">Seleziona più colonne o righe usando <code>DataFrame.loc</code> e
 una slice con nome.</a></li>
-<li><a href="#il-risultato-dellaffettatura-pu%C3%B2-essere-usato-in-altre-operazioni.">Il risultato dell’affettatura può essere usato in altre
+<li><a href="#il-risultato-dello-slicing-pu%C3%B2-essere-usato-in-altre-operazioni.">Il risultato dello slicing può essere usato in altre
 operazioni.</a></li>
 <li><a href="#usa-i-confronti-per-selezionare-i-dati-in-base-al-valore.">Usa i confronti per selezionare i dati in base al valore.</a></li>
-<li><a href="#seleziona-valori-o-nan-usando-una-maschera-booleana.">Seleziona valori o NaN usando una maschera booleana.</a></li>
-<li><a href="#raggruppa-per-dividere-applicare-combinare">Raggruppa per: dividere-applicare-combinare</a></li>
+<li><a href="#selezionare-valori-o-celle-vuote-nan-tramite-una-maschera-booleana.">Selezionare valori o celle vuote (NaN) tramite una maschera
+booleana.</a></li>
+<li><a href="#raggruppa-per-split-apply-combine">Raggruppa per: split-apply-combine</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -456,7 +457,7 @@ operazioni.</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Pandas Telai di dati</h1>
-        <p>Ultimo aggiornamento il 2025-03-02 |
+        <p>Ultimo aggiornamento il 2025-11-06 |
 
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/08-data-frames.md" class="external-link">Modifica questa pagina <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -571,7 +572,7 @@ gdpPercap_2002    4604.211737
 gdpPercap_2007    5937.029526
 Name: Albania, dtype: float64</code></pre>
 </div>
-<ul><li>Otterrebbe lo stesso risultato stampando
+<ul><li>Si otterrebbe lo stesso risultato stampando
 <code>data.loc["Albania"]</code> (senza un secondo indice).</li>
 </ul><div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -594,8 +595,8 @@ Name: gdpPercap_1952, dtype: float64</code></pre>
 <ul><li>Si otterrebbe lo stesso risultato stampando
 <code>data["gdpPercap_1952"]</code>
 </li>
-<li>Si ottiene lo stesso risultato anche stampando
-<code>data.gdpPercap_1952</code> (non consigliato, perché facilmente
+<li>Lo stesso risultato si otterrebbe anche stampando
+<code>data.gdpPercap_1952</code> (non consigliato,perché facilmente
 confondibile con la notazione <code>.</code> per i metodi)</li>
 </ul></section><section><h2 class="section-heading" id="seleziona-più-colonne-o-righe-usando-dataframe-loc-e-una-slice-con-nome-">Seleziona più colonne o righe usando <code>DataFrame.loc</code> e
 una slice con nome.<a class="anchor" aria-label="anchor" href="#seleziona-pi%C3%B9-colonne-o-righe-usando-dataframe-loc-e-una-slice-con-nome-"></a></h2>
@@ -615,16 +616,16 @@ Netherlands    12790.849560    15363.251360    18794.745670
 Norway         13450.401510    16361.876470    18965.055510
 Poland          5338.752143     6557.152776     8006.506993</code></pre>
 </div>
-<p>Nel codice sopra riportato, scopriamo che <strong>l’affettatura con
-<code>loc</code> è inclusiva ad entrambe le estremità</strong>, a
-differenza dell’affettatura con <code>iloc</code>**, in cui
-l’affettatura indica tutto fino all’indice finale escluso.</p>
-</section><section><h2 class="section-heading" id="il-risultato-dellaffettatura-può-essere-usato-in-altre-operazioni-">Il risultato dell’affettatura può essere usato in altre
-operazioni.<a class="anchor" aria-label="anchor" href="#il-risultato-dellaffettatura-pu%C3%B2-essere-usato-in-altre-operazioni-"></a></h2>
-<hr class="half-width"><ul><li>Di solito non si stampa solo una fetta.</li>
-<li>Tutti gli operatori statistici che lavorano su interi dataframe
-funzionano allo stesso modo sulle fette.</li>
-<li>Ad esempio, calcolare il massimo di una fetta.</li>
+<p>Nel codice riportato sopra, scopriamo che <strong>l’operazione di
+slicing con loc è inclusiva a entrambe le estremit</strong>à, a
+differenza di quella con iloc, in cui vengono selezionati tutti gli
+elementi fino all’indice finale escluso.</p>
+</section><section><h2 class="section-heading" id="il-risultato-dello-slicing-può-essere-usato-in-altre-operazioni-">Il risultato dello slicing può essere usato in altre
+operazioni.<a class="anchor" aria-label="anchor" href="#il-risultato-dello-slicing-pu%C3%B2-essere-usato-in-altre-operazioni-"></a></h2>
+<hr class="half-width"><ul><li>Di solito non si stampa solo una slice.</li>
+<li>Tutti gli operatori statistici che lavorano su interi DataFrame
+funzionano allo stesso modo anche sulle slice.</li>
+<li>Ad esempio, possiamo calcolare il valore massimo di una slice.</li>
 </ul><div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -658,11 +659,11 @@ dtype: float64</code></pre>
 </ul><div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="co"># Use a subset of data to keep output readable.</span></span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="co"># Usiamo solo una parte dei dati per ottenere un risultato leggibile.</span></span>
 <span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>subset <span class="op">=</span> data.loc[<span class="st">'Italy'</span>:<span class="st">'Poland'</span>, <span class="st">'gdpPercap_1962'</span>:<span class="st">'gdpPercap_1972'</span>]</span>
 <span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Subset of data:</span><span class="ch">\n</span><span class="st">'</span>, subset)</span>
 <span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a><span class="co"># Which values were greater than 10000 ?</span></span>
+<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a><span class="co"># Quali valori sono maggiori di 10000 ?</span></span>
 <span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">Where are values large?</span><span class="ch">\n</span><span class="st">'</span>, subset <span class="op">&gt;</span> <span class="dv">10000</span>)</span></code></pre>
 </div>
 <div class="codewrapper">
@@ -686,9 +687,11 @@ Netherlands           True           True           True
 Norway                True           True           True
 Poland               False          False          False</code></pre>
 </div>
-</section><section><h2 class="section-heading" id="seleziona-valori-o-nan-usando-una-maschera-booleana-">Seleziona valori o NaN usando una maschera booleana.<a class="anchor" aria-label="anchor" href="#seleziona-valori-o-nan-usando-una-maschera-booleana-"></a></h2>
-<hr class="half-width"><ul><li>Un riquadro pieno di booleani viene talvolta chiamato
-<em>maschera</em> per il modo in cui può essere utilizzato.</li>
+</section><section><h2 class="section-heading" id="selezionare-valori-o-celle-vuote-nan-tramite-una-maschera-booleana-">Selezionare valori o celle vuote (NaN) tramite una maschera
+booleana.<a class="anchor" aria-label="anchor" href="#selezionare-valori-o-celle-vuote-nan-tramite-una-maschera-booleana-"></a></h2>
+<hr class="half-width"><ul><li>Un insieme di valori booleani disposto in una tabella viene talvolta
+chiamato <em>maschera (mask)</em>, per via del modo in cui può essere
+utilizzato.</li>
 </ul><div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -706,10 +709,10 @@ Netherlands     12790.84956     15363.25136     18794.74567
 Norway          13450.40151     16361.87647     18965.05551
 Poland                  NaN             NaN             NaN</code></pre>
 </div>
-<ul><li>Ottiene il valore quando la maschera è vera e NaN (Not a Number)
-quando è falsa.</li>
-<li>Utile perché i NaN vengono ignorati da operazioni come max, min,
-media, ecc.</li>
+<ul><li>Restituisce il valore quando la maschera è True e NaN (Not a Number)
+quando è False.</li>
+<li>Questo è utile perché i valori NaN vengono ignorati da operazioni
+come max, min, media, ecc.</li>
 </ul><div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -728,7 +731,7 @@ min      12790.849560    10022.401310    12269.273780
 75%      13285.513523    15862.563915    18879.900590
 max      13450.401510    16361.876470    18965.055510</code></pre>
 </div>
-</section><section><h2 class="section-heading" id="raggruppa-per-dividere-applicare-combinare">Raggruppa per: dividere-applicare-combinare<a class="anchor" aria-label="anchor" href="#raggruppa-per-dividere-applicare-combinare"></a></h2>
+</section><section><h2 class="section-heading" id="raggruppa-per-split-apply-combine">Raggruppa per: split-apply-combine<a class="anchor" aria-label="anchor" href="#raggruppa-per-split-apply-combine"></a></h2>
 <hr class="half-width"><div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
@@ -737,7 +740,7 @@ max      13450.401510    16361.876470    18965.055510</code></pre>
 <div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Gli studenti hanno spesso difficoltà in questo caso, molti non
-lavorano con i dati e i concetti finanziari e quindi trovano i concetti
+lavorano con i dati e concetti finanziari e quindi trovano i concetti
 dell’esempio difficili da comprendere. Il problema più grande, tuttavia,
 è la linea che genera il wealth_score: questo passaggio deve essere
 spiegato a fondo: * Utilizza una conversione implicita tra valori
@@ -805,8 +808,8 @@ United Kingdom            1.000000
 dtype: float64</code></pre>
 </div>
 <p>Infine, per ogni gruppo nella tabella <code>wealth_score</code>,
-sommiamo il suo contributo (finanziario) per tutti gli anni presi in
-esame utilizzando metodi concatenati:</p>
+sommiamo il contributo (finanziario) per tutti gli anni presi in esame
+utilizzando metodi concatenati:</p>
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -906,8 +909,7 @@ nelle fette numeriche e nelle fette denominate in Pandas?</li>
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
-<p>No, non producono lo stesso output! L’output della prima istruzione
-è:</p>
+<p>No, non producono lo stesso output! L’output della prima è:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1445,7 +1447,7 @@ valore.</li>
   "url": "https://swcarpentry.github.io/python-novice-gapminder/instructor/08-data-frames.html",
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/instructor/08-data-frames.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2025-03-02",
+  "dateModified": "2025-11-06",
   "datePublished": "2025-11-06"
 }
 
