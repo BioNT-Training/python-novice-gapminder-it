@@ -8,8 +8,7 @@ exercises: 10
 ::::::::::::::::::::::::::::::::::::::: objectives
 
 - Spiegare perché i programmi hanno bisogno di collezioni di valori.
-- Scrivere programmi che creino elenchi piatti, li indicizzino, li affettino e li
-  modifichino attraverso assegnazioni e chiamate di metodo.
+- Scrivere programmi che creino elenchi semplici, li indicizzino, li suddividano (slice) e li modifichino tramite assegnazioni o chiamate a metodi.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -107,8 +106,7 @@ primes has now become: [2, 3, 5, 7, 11, 13, 17, 19]
 primes has finally become: [2, 3, 5, 7, 11, 13, 17, 19, [37, 41, 43, 47]]
 ```
 
-Si noti che mentre `extend` mantiene la struttura "piatta" dell'elenco, l'aggiunta di un
-elenco a un elenco significa che l'ultimo elemento di `primes` sarà esso stesso un
+Si noti che mentre `extend` mantiene la struttura "piatta" dell'elenco, l'aggiunta di un elenco a un elenco significa che l'ultimo elemento di `primes` sarà esso stesso un
 elenco, non un intero. Gli elenchi possono contenere valori di qualsiasi tipo; sono
 quindi possibili elenchi di elenchi.
 
