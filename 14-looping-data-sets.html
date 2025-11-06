@@ -447,7 +447,7 @@ file.</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Eseguire cicli su insiemi di dati</h1>
-        <p>Ultimo aggiornamento il 2025-03-02 |
+        <p>Ultimo aggiornamento il 2025-11-06 |
 
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/14-looping-data-sets.md" class="external-link">Modifica questa pagina <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -466,7 +466,7 @@ file.</a></li>
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Domande</h3>
-<ul><li>Come si possono elaborare molti set di dati con un solo
+<ul><li>Come si possono elaborare molti insiemi di dati con un solo
 comando?</li>
 </ul></div>
 </div>
@@ -532,10 +532,10 @@ caratteri”</li>
 carattere”</li>
 </ul></li>
 <li>La libreria standard di Python contiene il modulo <a href="https://docs.python.org/3/library/glob.html" class="external-link"><code>glob</code></a>
-per fornire funzionalità di pattern matching</li>
+er fornire funzionalità di corrispondenza rispetto a uno schema.</li>
 <li>Il modulo <a href="https://docs.python.org/3/library/glob.html" class="external-link"><code>glob</code></a>
 contiene una funzione, chiamata anche <code>glob</code>, per la ricerca
-di pattern di file</li>
+di file tramite schema.</li>
 <li>Ad esempio, <code>glob.glob('*.txt')</code> corrisponde a tutti i
 file nella directory corrente i cui nomi terminano con
 <code>.txt</code>.</li>
@@ -567,7 +567,7 @@ caratteri.</li>
 </section><section><h2 class="section-heading" id="usare-glob-e-for-per-elaborare-gruppi-di-file-">Usare <code>glob</code> e <code>for</code> per elaborare gruppi di
 file.<a class="anchor" aria-label="anchor" href="#usare-glob-e-for-per-elaborare-gruppi-di-file-"></a></h2>
 <hr class="half-width"><ul><li>Aiuta molto se i file sono nominati e memorizzati in modo
-sistematico e coerente, in modo che semplici modelli trovino i dati
+sistematico e coerente, in modo che semplici schemi trovino i dati
 giusti.</li>
 </ul><div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -586,12 +586,11 @@ data/gapminder_gdp_asia.csv 331.0
 data/gapminder_gdp_europe.csv 973.5331948
 data/gapminder_gdp_oceania.csv 10039.59564</code></pre>
 </div>
-<ul><li>Questo include tutti i dati, così come i dati per regione.</li>
+<ul><li>Questo include tutti i dati, compresi i dati per regione.</li>
 <li>Utilizzare uno schema più specifico negli esercizi per escludere
 l’intero set di dati.</li>
-<li>Ma si noti che il minimo dell’intero insieme di dati è anche il
-minimo di uno degli insiemi di dati, il che è un bel controllo di
-correttezza.</li>
+<li>Si noti che il minimo dell’intero insieme di dati è anche il minimo
+di uno degli insiemi di dati: un utile controllo di correttezza.</li>
 </ul><div id="determinazione-delle-corrispondenze" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -615,7 +614,7 @@ correttezza.</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>1 non corrisponde al glob.</p>
 </div>
@@ -643,7 +642,7 @@ nel file che ha il minor numero di record.</p>
 <span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>    fewest <span class="op">=</span> <span class="bu">min</span>(____, dataframe.shape[<span class="dv">0</span>])</span>
 <span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'smallest file has'</span>, fewest, <span class="st">'records'</span>)</span></code></pre>
 </div>
-<p>Si noti che il metodo <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.shape.html" class="external-link"><code>DataFrame.shape()</code></a>
+<p>Si noti che l’attributo <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.shape.html" class="external-link"><code>DataFrame.shape()</code></a>
 restituisce una tupla con il numero di righe e colonne del data
 frame.</p>
 </div>
@@ -656,7 +655,7 @@ frame.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -669,12 +668,12 @@ frame.</p>
 <span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a>    fewest <span class="op">=</span> <span class="bu">min</span>(fewest, dataframe.shape[<span class="dv">0</span>])</span>
 <span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'smallest file has'</span>, fewest, <span class="st">'records'</span>)</span></code></pre>
 </div>
-<p>Si potrebbe aver scelto di inizializzare la variabile
-<code>fewest</code> con un numero maggiore dei numeri con cui si ha a
-che fare, ma questo potrebbe portare a problemi se si riutilizza il
-codice con numeri più grandi. Python consente di utilizzare l’infinito
-positivo, che funzionerà indipendentemente dalla grandezza dei numeri.
-Quali altre stringhe speciali riconosce la funzione <a href="https://docs.python.org/3/library/functions.html#float" class="external-link"><code>float</code></a>?</p>
+<p>Si potrebbe aver scelto di inizializzare la variabile fewest con un
+numero maggiore dei numeri con cui si ha a che fare, ma questo potrebbe
+portare a problemi se si riutilizza il codice con numeri più grandi.
+Python consente di utilizzare l’infinito positivo, che funzionerà
+indipendentemente dalla grandezza dei numeri. Quali altre stringhe
+speciali riconosce la funzione <a href="https://docs.python.org/3/library/functions.html#float" class="external-link"><code>float</code></a>?</p>
 </div>
 </div>
 </div>
@@ -702,45 +701,55 @@ o dire a pandas di ignorarle.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
-<p>Questa soluzione costruisce un’utile legenda usando il metodo <a href="https://docs.python.org/3/library/stdtypes.html#str.split" class="external-link">stringa
-<code>split</code></a> per estrarre il <code>region</code> dal percorso
+<p>Questa soluzione costruisce un’utile legenda usando il metodo di <a href="https://docs.python.org/3/library/stdtypes.html#str.split" class="external-link">stringa
+<code>split</code></a> pper estrarre <code>region</code> dal percorso
 ‘data/gapminder_gdp_a_region.csv’.</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="im">import</span> glob</span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>mport glob</span>
 <span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>,<span class="dv">1</span>)</span>
-<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a><span class="cf">for</span> filename <span class="kw">in</span> glob.glob(<span class="st">'data/gapminder_gdp*.csv'</span>):</span>
-<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a>    dataframe <span class="op">=</span> pd.read_csv(filename)</span>
-<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a>    <span class="co"># extract &lt;region&gt; from the filename, expected to be in the format 'data/gapminder_gdp_&lt;region&gt;.csv'.</span></span>
-<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a>    <span class="co"># we will split the string using the split method and `_` as our separator,</span></span>
-<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a>    <span class="co"># retrieve the last string in the list that split returns (`&lt;region&gt;.csv`), </span></span>
-<span id="cb11-10"><a href="#cb11-10" tabindex="-1"></a>    <span class="co"># and then remove the `.csv` extension from that string.</span></span>
-<span id="cb11-11"><a href="#cb11-11" tabindex="-1"></a>    <span class="co"># </span><span class="al">NOTE</span><span class="co">: the pathlib module covered in the next callout also offers</span></span>
-<span id="cb11-12"><a href="#cb11-12" tabindex="-1"></a>    <span class="co"># convenient abstractions for working with filesystem paths and could solve this as well:</span></span>
-<span id="cb11-13"><a href="#cb11-13" tabindex="-1"></a>    <span class="co"># from pathlib import Path</span></span>
-<span id="cb11-14"><a href="#cb11-14" tabindex="-1"></a>    <span class="co"># region = Path(filename).stem.split('_')[-1]</span></span>
-<span id="cb11-15"><a href="#cb11-15" tabindex="-1"></a>    region <span class="op">=</span> filename.split(<span class="st">'_'</span>)[<span class="op">-</span><span class="dv">1</span>][:<span class="op">-</span><span class="dv">4</span>]</span>
-<span id="cb11-16"><a href="#cb11-16" tabindex="-1"></a>    <span class="co"># extract the years from the columns of the dataframe </span></span>
-<span id="cb11-17"><a href="#cb11-17" tabindex="-1"></a>    headings <span class="op">=</span> dataframe.columns[<span class="dv">1</span>:]</span>
-<span id="cb11-18"><a href="#cb11-18" tabindex="-1"></a>    years <span class="op">=</span> headings.<span class="bu">str</span>.split(<span class="st">'_'</span>).<span class="bu">str</span>.get(<span class="dv">1</span>)</span>
-<span id="cb11-19"><a href="#cb11-19" tabindex="-1"></a>    <span class="co"># pandas raises errors when it encounters non-numeric columns in a dataframe computation</span></span>
-<span id="cb11-20"><a href="#cb11-20" tabindex="-1"></a>    <span class="co"># but we can tell pandas to ignore them with the `numeric_only` parameter</span></span>
-<span id="cb11-21"><a href="#cb11-21" tabindex="-1"></a>    dataframe.mean(numeric_only<span class="op">=</span><span class="va">True</span>).plot(ax<span class="op">=</span>ax, label<span class="op">=</span>region)</span>
-<span id="cb11-22"><a href="#cb11-22" tabindex="-1"></a>    <span class="co"># </span><span class="al">NOTE</span><span class="co">: another way of doing this selects just the columns with gdp in their name using the filter method</span></span>
-<span id="cb11-23"><a href="#cb11-23" tabindex="-1"></a>    <span class="co"># dataframe.filter(like="gdp").mean().plot(ax=ax, label=region)</span></span>
-<span id="cb11-24"><a href="#cb11-24" tabindex="-1"></a><span class="co"># set the title and labels</span></span>
-<span id="cb11-25"><a href="#cb11-25" tabindex="-1"></a>ax.set_title(<span class="st">'GDP Per Capita for Regions Over Time'</span>)</span>
-<span id="cb11-26"><a href="#cb11-26" tabindex="-1"></a>ax.set_xticks(<span class="bu">range</span>(<span class="bu">len</span>(years)))</span>
-<span id="cb11-27"><a href="#cb11-27" tabindex="-1"></a>ax.set_xticklabels(years)</span>
-<span id="cb11-28"><a href="#cb11-28" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Year'</span>)</span>
-<span id="cb11-29"><a href="#cb11-29" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb11-30"><a href="#cb11-30" tabindex="-1"></a>plt.legend()</span>
-<span id="cb11-31"><a href="#cb11-31" tabindex="-1"></a>plt.show()</span></code></pre>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a><span class="cf">for</span> filename <span class="kw">in</span> glob.glob(<span class="st">'data/gapminder_gdp*.csv'</span>):</span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a>    dataframe <span class="op">=</span> pd.read_csv(filename)</span>
+<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a>    <span class="co"># Estrai la &lt;regione&gt; dal nome del file, che si trova nel formato</span></span>
+<span id="cb11-10"><a href="#cb11-10" tabindex="-1"></a>    <span class="co"># 'data/gapminder_gdp_&lt;regione&gt;.csv'.</span></span>
+<span id="cb11-11"><a href="#cb11-11" tabindex="-1"></a>    <span class="co"># Divideremo la stringa usando il metodo split con '_' come separatore,</span></span>
+<span id="cb11-12"><a href="#cb11-12" tabindex="-1"></a>    <span class="co"># prenderemo l’ultima parte della lista restituita (che sarà '&lt;regione&gt;.csv')</span></span>
+<span id="cb11-13"><a href="#cb11-13" tabindex="-1"></a>    <span class="co"># e poi rimuoveremo l’estensione '.csv' da quella stringa.</span></span>
+<span id="cb11-14"><a href="#cb11-14" tabindex="-1"></a>    <span class="co"># NOTA: il modulo pathlib, presentato nel prossimo riquadro, offre</span></span>
+<span id="cb11-15"><a href="#cb11-15" tabindex="-1"></a>    <span class="co"># anche astrazioni pratiche per lavorare con i percorsi dei file e</span></span>
+<span id="cb11-16"><a href="#cb11-16" tabindex="-1"></a>    <span class="co"># può risolvere questo problema nello stesso modo:</span></span>
+<span id="cb11-17"><a href="#cb11-17" tabindex="-1"></a>    <span class="co"># from pathlib import Path</span></span>
+<span id="cb11-18"><a href="#cb11-18" tabindex="-1"></a>    <span class="co"># region = Path(filename).stem.split('_')[-1]</span></span>
+<span id="cb11-19"><a href="#cb11-19" tabindex="-1"></a>    region <span class="op">=</span> filename.split(<span class="st">'_'</span>)[<span class="op">-</span><span class="dv">1</span>][:<span class="op">-</span><span class="dv">4</span>]</span>
+<span id="cb11-20"><a href="#cb11-20" tabindex="-1"></a></span>
+<span id="cb11-21"><a href="#cb11-21" tabindex="-1"></a>    <span class="co"># Estrai gli anni dai nomi delle colonne del dataframe</span></span>
+<span id="cb11-22"><a href="#cb11-22" tabindex="-1"></a>    headings <span class="op">=</span> dataframe.columns[<span class="dv">1</span>:]</span>
+<span id="cb11-23"><a href="#cb11-23" tabindex="-1"></a>    years <span class="op">=</span> headings.<span class="bu">str</span>.split(<span class="st">'_'</span>).<span class="bu">str</span>.get(<span class="dv">1</span>)</span>
+<span id="cb11-24"><a href="#cb11-24" tabindex="-1"></a></span>
+<span id="cb11-25"><a href="#cb11-25" tabindex="-1"></a>    <span class="co"># Pandas genera un errore quando incontra colonne non numeriche</span></span>
+<span id="cb11-26"><a href="#cb11-26" tabindex="-1"></a>    <span class="co"># durante le operazioni su un dataframe, ma possiamo dirgli di ignorarle</span></span>
+<span id="cb11-27"><a href="#cb11-27" tabindex="-1"></a>    <span class="co"># con il parametro `numeric_only=True`</span></span>
+<span id="cb11-28"><a href="#cb11-28" tabindex="-1"></a>    dataframe.mean(numeric_only<span class="op">=</span><span class="va">True</span>).plot(ax<span class="op">=</span>ax, label<span class="op">=</span>region)</span>
+<span id="cb11-29"><a href="#cb11-29" tabindex="-1"></a></span>
+<span id="cb11-30"><a href="#cb11-30" tabindex="-1"></a>    <span class="co"># NOTA: un altro modo per ottenere lo stesso risultato consiste nel</span></span>
+<span id="cb11-31"><a href="#cb11-31" tabindex="-1"></a>    <span class="co"># selezionare solo le colonne che contengono "gdp" nel nome, usando il metodo filter:</span></span>
+<span id="cb11-32"><a href="#cb11-32" tabindex="-1"></a>    <span class="co"># dataframe.filter(like="gdp").mean().plot(ax=ax, label=region)</span></span>
+<span id="cb11-33"><a href="#cb11-33" tabindex="-1"></a></span>
+<span id="cb11-34"><a href="#cb11-34" tabindex="-1"></a><span class="co"># Imposta il titolo e le etichette del grafico</span></span>
+<span id="cb11-35"><a href="#cb11-35" tabindex="-1"></a>ax.set_title(<span class="st">'PIL pro capite per regione nel tempo'</span>)</span>
+<span id="cb11-36"><a href="#cb11-36" tabindex="-1"></a>ax.set_xticks(<span class="bu">range</span>(<span class="bu">len</span>(years)))</span>
+<span id="cb11-37"><a href="#cb11-37" tabindex="-1"></a>ax.set_xticklabels(years)</span>
+<span id="cb11-38"><a href="#cb11-38" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Anno'</span>)</span>
+<span id="cb11-39"><a href="#cb11-39" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb11-40"><a href="#cb11-40" tabindex="-1"></a>plt.legend()</span>
+<span id="cb11-41"><a href="#cb11-41" tabindex="-1"></a>plt.show()</span></code></pre>
 </div>
 </div>
 </div>
@@ -755,11 +764,11 @@ o dire a pandas di ignorarle.</p>
 <h3 class="callout-title">Trattare i percorsi dei file</h3>
 <div class="callout-content">
 <p>Il modulo <a href="https://docs.python.org/3/library/pathlib.html" class="external-link"><code>pathlib</code></a>
-fornisce utili astrazioni per la manipolazione di file e percorsi, come
-la restituzione del nome di un file senza l’estensione. Questo è molto
-utile quando si esegue il looping di file e directory. Nell’esempio
-seguente, creiamo un oggetto <code>Path</code> e ne ispezioniamo gli
-attributi.</p>
+fornisce pratiche astrazioni per la gestione di file e percorsi, come ad
+esempio l’ottenimento del nome di un file senza estensione. Questo
+risulta particolarmente utile quando si eseguono cicli su file e
+directory. Nell’esempio seguente creiamo un oggetto <code>Path</code> e
+ne ispezioniamo alcuni attributi.</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -857,7 +866,7 @@ file.</li>
   "url": "https://swcarpentry.github.io/python-novice-gapminder/14-looping-data-sets.html",
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/14-looping-data-sets.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2025-03-02",
+  "dateModified": "2025-11-06",
   "datePublished": "2025-11-06"
 }
 
