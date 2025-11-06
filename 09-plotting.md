@@ -23,14 +23,13 @@ exercises: 15
 
 - Comunemente si usa una sottolibreria chiamata
   [`matplotlib.pyplot`](https://matplotlib.org/stable/tutorials/introductory/pyplot.html).
-- Per impostazione predefinita, Jupyter Notebook esegue il rendering dei grafici in
-  linea.
+- Per impostazione predefinita, Jupyter Notebook esegue il rendering dei grafici.
 
 ```python
 import matplotlib.pyplot as plt
 ```
 
-- I grafici semplici sono (abbastanza) semplici da creare.
+- I grafici semplici si creano (abbastanza) facilmente
 
 ```python
 time = [0, 1, 2, 3]
@@ -52,10 +51,7 @@ input.'}
 ## Visualizza tutte le figure aperte
 
 Nel nostro esempio di Jupyter Notebook, l'esecuzione della cella dovrebbe generare la
-figura direttamente sotto il codice. La figura è anche inclusa nel documento del blocco
-note per una visualizzazione futura. Tuttavia, altri ambienti Python, come una sessione
-Python interattiva avviata da un terminale o uno script Python eseguito dalla riga di
-comando, richiedono un comando aggiuntivo per visualizzare la figura.
+figura direttamente sotto il codice. La figura è anche inclusa nel documento del notebook per una visualizzazione futura. Tuttavia, altri ambienti Python, come una sessione Python interattiva avviata da un terminale o uno script Python eseguito dalla riga di comando, richiedono un comando aggiuntivo per visualizzare la figura.
 
 Indica a `matplotlib` di mostrare una figura:
 
@@ -85,15 +81,15 @@ import pandas as pd
 
 data = pd.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
 
-# Extract year from last 4 characters of each column name
-# The current column names are structured as 'gdpPercap_(year)', 
-# so we want to keep the (year) part only for clarity when plotting GDP vs. years
-# To do this we use replace(), which removes from the string the characters stated in the argument
-# This method works on strings, so we use replace() from Pandas Series.str vectorized string functions
+# Estrae l’anno dagli ultimi 4 caratteri di ciascun nome di colonna.
+# I nomi delle colonne attuali sono nella forma 'gdpPercap_(anno)',
+# quindi vogliamo mantenere solo la parte (anno) per rendere più chiaro il grafico PIL vs anni.
+# Usiamo il metodo replace(), che rimuove dalla stringa i caratteri specificati come argomento.
+# Questo metodo agisce su stringhe, quindi utilizziamo replace() attraverso le funzioni vettorializzate per stringhe di Pandas (Series.str).
 
 years = data.columns.str.replace('gdpPercap_', '')
 
-# Convert year values to integers, saving results back to dataframe
+# Converte i valori degli anni in interi e salva i risultati di nuovo nel DataFrame.
 
 data.columns = years.astype(int)
 
@@ -118,7 +114,7 @@ plt.ylabel('GDP per capita')
 
 ## Sono disponibili molti stili di grafico.
 
-- Ad esempio, per creare un grafico a barre utilizzando uno stile più sofisticato.
+- Ad esempio, si può creare un grafico a barre utilizzando uno stile più sofisticato.
 
 ```python
 plt.style.use('ggplot')
@@ -146,18 +142,18 @@ plt.plot(years, gdp_australia, 'g--')
 
 ![](fig/9_gdp_australia_formatted.svg){alt='Grafico formattato del PIL per l'Australia'}
 
-## Può tracciare molti insiemi di dati insieme.
+## Può tracciare molti insiemi di dati contemporaneamente.
 
 ```python
-# Select two countries' worth of data.
+# Selezionare i dati relativi a due Paesi
 gdp_australia = data.loc['Australia']
 gdp_nz = data.loc['New Zealand']
 
-# Plot with differently-colored markers.
+# Graficali con due diversi colori.
 plt.plot(years, gdp_australia, 'b-', label='Australia')
 plt.plot(years, gdp_nz, 'g-', label='New Zealand')
 
-# Create legend.
+# Creare una legenda.
 plt.legend(loc='upper left')
 plt.xlabel('Year')
 plt.ylabel('GDP per capita ($)')
@@ -186,9 +182,8 @@ plt.legend()
 ```
 
 Per impostazione predefinita, matplotlib tenta di posizionare la legenda in una
-posizione adeguata. Se si preferisce specificare una posizione, è possibile farlo con
-l'argomento `loc=`, ad esempio per posizionare la legenda nell'angolo superiore sinistro
-del grafico, specificare `loc='upper left'`
+posizione centrale. Se si preferisce specificare una posizione, è possibile farlo con
+l'argomento `loc=`, ad esempio per posizionare la legenda nell'angolo superiore sinistro del grafico, specificare `loc='upper left'`
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -216,9 +211,7 @@ data.T.plot.scatter'}
 
 ## Minimi e massimi
 
-Compilate gli spazi vuoti qui sotto per tracciare il PIL minimo pro capite nel tempo per
-tutti i paesi europei. Modificatelo di nuovo per tracciare il PIL pro capite massimo nel
-tempo per l'Europa.
+Compilate gli spazi vuoti qui sotto per tracciare il PIL minimo pro capite nel tempo per tutti i paesi europei. Modificatelo di nuovo per tracciare il PIL pro capite massimo nel tempo per l'Europa.
 
 ```python
 data_europe = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
@@ -291,9 +284,7 @@ print(data_asia.idxmin())
 
 Sembra che la variabilità di questo valore sia dovuta a un forte calo dopo il 1972.
 Forse è in gioco la geopolitica? Data la predominanza dei paesi produttori di petrolio,
-forse l'indice del Brent potrebbe essere un confronto interessante? Mentre il Myanmar ha
-costantemente il PIL più basso, la nazione con il PIL più alto ha subito variazioni più
-marcate.
+forse l'indice del Brent potrebbe essere un confronto interessante? Mentre il Myanmar ha costantemente il PIL più basso, la nazione con il PIL più alto ha subito variazioni più marcate.
 
 
 
@@ -331,8 +322,7 @@ kind - Come già visto, determina il tipo di grafico da disegnare.
 x e y - Nome di una colonna o indice che determina quali dati saranno posizionati sugli
 assi x e y del grafico
 
-s - I dettagli sono disponibili nella documentazione di plt.scatter. Un singolo numero o
-un valore per ogni punto di dati. Determina la dimensione dei punti tracciati.
+s - I dettagli sono disponibili nella documentazione di plt.scatter. Un singolo numero o un valore per ogni punto di dati. Determina la dimensione dei punti tracciati.
 
 
 
@@ -344,9 +334,7 @@ un valore per ogni punto di dati. Determina la dimensione dei punti tracciati.
 
 ## Salvataggio del grafico in un file
 
-Se siete soddisfatti del grafico che vedete, potreste volerlo salvare in un file, magari
-per includerlo in una pubblicazione. Esiste una funzione nel modulo matplotlib.pyplot
-che permette di farlo:
+Se siete soddisfatti del grafico che vedete, potreste volerlo salvare in un file, magari per includerlo in una pubblicazione. Esiste una funzione nel modulo matplotlib.pyplot che permette di farlo:
 [savefig](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html).
 Chiamando questa funzione, ad esempio con
 
@@ -364,10 +352,7 @@ matplotlib farà in modo che questa variabile faccia riferimento a una nuova fig
 vuota. Pertanto, assicurarsi di chiamare `plt.savefig` prima che il grafico venga
 visualizzato sullo schermo, altrimenti si potrebbe trovare un file con un grafico vuoto.
 
-Quando si usano i dataframe, i dati vengono spesso generati e tracciati sullo schermo in
-un'unica riga. Oltre a usare `plt.savefig`, si può salvare un riferimento alla figura
-corrente in una variabile locale (con `plt.gcf`) e chiamare il metodo della classe
-`savefig` da quella variabile per salvare la figura su file.
+Quando si usano i dataframe, i dati vengono spesso generati e tracciati sullo schermo in un'unica riga. Oltre a usare `plt.savefig`, si può salvare un riferimento alla figura corrente in una variabile locale (con `plt.gcf`) e chiamare il metodo della classe  `savefig` da quella variabile per salvare la figura su file.
 
 ```python
 data.plot(kind='bar')
@@ -384,10 +369,9 @@ fig.savefig('my_figure.png')
 Ogni volta che si generano grafici da inserire in un documento o in una presentazione,
 ci sono alcune cose da fare per assicurarsi che tutti possano capire i grafici.
 
-- Assicuratevi sempre che il testo sia abbastanza grande da essere letto. Usate il
+- Assicuratevi sempre che il testo sia abbastanza visibile da essere letto. Usate il
   parametro `fontsize` in `xlabel`, `ylabel`, `title` e `legend` e [`tick_params` con
-  `labelsize`](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.tick_params.html)
-  per aumentare la dimensione del testo dei numeri sugli assi.
+  `labelsize`](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.tick_params.html) per aumentare la dimensione del testo dei numeri sugli assi.
 - Allo stesso modo, è necessario che gli elementi del grafico siano facili da vedere.
   Usate `s` per aumentare le dimensioni dei marcatori del grafico di dispersione e
   `linewidth` per aumentare le dimensioni delle linee del grafico.
@@ -406,11 +390,11 @@ ci sono alcune cose da fare per assicurarsi che tutti possano capire i grafici.
 
 - [`matplotlib`](https://matplotlib.org/) è la libreria di grafici scientifici più
   utilizzata in Python.
-- Traccia i dati direttamente da un dataframe Pandas.
-- Selezionare e trasformare i dati, quindi tracciarli.
+- Grafica i dati direttamente da un dataframe Pandas.
+- Selezionare e trasformare i dati, quindi graficarli.
 - Sono disponibili molti stili di grafico: per ulteriori opzioni, consultare la [Python
   Graph Gallery](https://python-graph-gallery.com/matplotlib/).
-- Può tracciare molti insiemi di dati insieme.
+- Si possono graficare molti insiemi di dati insieme.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
