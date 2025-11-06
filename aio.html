@@ -2011,7 +2011,7 @@ lunghezza di una stringa.</li>
 </div>
 </section></section><section id="aio-03-types-conversion"><p>Content from <a href="03-types-conversion.html">Tipi di dati e conversione dei tipi</a></p>
 <hr>
-<p>Ultimo aggiornamento il 2025-03-02 |
+<p>Ultimo aggiornamento il 2025-11-06 |
 
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/03-types-conversion.md" class="external-link">Modifica questa pagina <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2036,12 +2036,11 @@ lunghezza di una stringa.</li>
 <div class="inner bordered">
 <h3 class="card-title">Obiettivi</h3>
 <ul>
-<li>Spiegare le principali differenze tra numeri interi e numeri in
-virgola mobile.</li>
-<li>Spiegare le principali differenze tra numeri e stringhe di
-caratteri.</li>
-<li>Utilizzare le funzioni integrate per convertire tra numeri interi,
-numeri in virgola mobile e stringhe.</li>
+<li>Spiegare le principali differenze tra numeri interi e numeri con la
+virgola.</li>
+<li>Spiegare le principali differenze tra numeri e stringhe.</li>
+<li>Utilizzare le funzioni integrate per convertire numeri interi,
+numeri con la virgola mobile e stringhe.</li>
 </ul>
 </div>
 </div>
@@ -2055,8 +2054,8 @@ numeri in virgola mobile e stringhe.</li>
 <li>Ogni valore in un programma ha un tipo specifico.</li>
 <li>Numero intero (<code>int</code>): rappresenta numeri interi positivi
 o negativi come 3 o -512.</li>
-<li>Numero in virgola mobile (<code>float</code>): rappresenta numeri
-reali come 3,14159 o -2,5.</li>
+<li>Numero con la virgola (<code>float</code>): rappresenta numeri reali
+come 3,14159 o -2,5.</li>
 <li>Stringa di caratteri (solitamente chiamata “stringa”,
 <code>str</code>): testo.
 <ul>
@@ -2072,7 +2071,7 @@ un valore.<a class="anchor" aria-label="anchor" href="#usare-la-funzione-integra
 <ul>
 <li>Usare la funzione integrata <code>type</code> per scoprire il tipo
 di un valore.</li>
-<li>funziona anche con le variabili.
+<li>Funziona anche con le variabili.
 <ul>
 <li>Ma ricordate: il <em>valore</em> ha il tipo — la <em>variabile</em>
 è solo un’etichetta.</li>
@@ -2105,8 +2104,8 @@ eseguite su un dato valore.<a class="anchor" aria-label="anchor" href="#i-tipi-c
 </h2>
 <hr class="half-width">
 <ul>
-<li>Il tipo di un valore determina ciò che il programma può fare su di
-esso.</li>
+<li>Il tipo di un valore determina quali operazioni il programma può
+eseguire su di esso</li>
 </ul>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2210,7 +2209,7 @@ essi.<a class="anchor" aria-label="anchor" href="#convertire-numeri-e-stringhe">
 </h2>
 <hr class="half-width">
 <ul>
-<li>Non può sommare numeri e stringhe.</li>
+<li>Non si possono sommare numeri e stringhe.</li>
 </ul>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2245,12 +2244,13 @@ nome del tipo come funzione.</li>
 <pre class="output" tabindex="0"><code><span><span class="fl">3</span></span>
 <span><span class="fl">12</span></span></code></pre>
 </div>
-</section><section><h2 class="section-heading" id="può-mischiare-liberamente-interi-e-float-nelle-operazioni-">Può mischiare liberamente interi e float nelle operazioni.<a class="anchor" aria-label="anchor" href="#pu%C3%B2-mischiare-liberamente-interi-e-float-nelle-operazioni-"></a>
+</section><section><h2 class="section-heading" id="può-mischiare-liberamente-interi-e-numeri-con-la-virgola-float-nelle-operazioni-">Può mischiare liberamente interi e numeri con la virgola (float)
+nelle operazioni.<a class="anchor" aria-label="anchor" href="#pu%C3%B2-mischiare-liberamente-interi-e-numeri-con-la-virgola-float-nelle-operazioni-"></a>
 </h2>
 <hr class="half-width">
 <ul>
-<li>Gli interi e i numeri a virgola mobile possono essere mescolati
-nell’aritmetica.
+<li>Gli interi e i numeri con la virgola possono essere usati insieme in
+aritmetica.
 <ul>
 <li>Python 3 converte automaticamente gli interi in float quando
 necessario.</li>
@@ -2319,9 +2319,9 @@ il suo valore non cambia automaticamente quando cambia
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<p>è un numero in virgola mobile (spesso abbreviato in “float”). È
+<p>È un numero con la virgola (spesso abbreviato in “float”). È
 possibile scoprirlo utilizzando la funzione integrata
 <code>type()</code>.</p>
 <div class="codewrapper sourceCode" id="cb25">
@@ -2346,7 +2346,7 @@ possibile scoprirlo utilizzando la funzione integrata
 <div id="conversione-automatica-di-tipo" class="callout-inner">
 <h3 class="callout-title">Conversione automatica di tipo</h3>
 <div class="callout-content">
-<p>Che tipo di valore è 3,25 + 4?</p>
+<p>Che tipo di numero è 3,25 + 4?</p>
 </div>
 </div>
 </div>
@@ -2357,9 +2357,9 @@ possibile scoprirlo utilizzando la funzione integrata
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
-<p>è un float: i numeri interi vengono automaticamente convertiti in
+<p>È un float: i numeri interi vengono automaticamente convertiti in
 float se necessario.</p>
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2384,17 +2384,17 @@ float se necessario.</p>
 <div id="scegliere-un-tipo" class="callout-inner">
 <h3 class="callout-title">Scegliere un tipo</h3>
 <div class="callout-content">
-<p>Quale tipo di valore (intero, numero in virgola mobile o stringa di
+<p>Quale tipo di valore (intero, numero con la virgola o stringa di
 caratteri) usereste per rappresentare ciascuno dei seguenti elementi?
 Cercate di dare più di una risposta valida per ogni problema. Per
 esempio, nel punto 1, quando avrebbe più senso contare i giorni con una
-variabile in virgola mobile piuttosto che con un numero intero?</p>
+variabile float piuttosto che con un numero intero?</p>
 <ol style="list-style-type: decimal">
 <li>Numero di giorni dall’inizio dell’anno.</li>
 <li>Tempo trascorso dall’inizio dell’anno a oggi in giorni.</li>
 <li>Numero di serie di un pezzo di attrezzatura da laboratorio.</li>
 <li>Età di un campione di laboratorio</li>
-<li>popolazione attuale di una città.</li>
+<li>Popolazione attuale di una città.</li>
 <li>Popolazione media di una città nel tempo.</li>
 </ol>
 </div>
@@ -2407,21 +2407,20 @@ variabile in virgola mobile piuttosto che con un numero intero?</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Le risposte alle domande sono:</p>
 <ol style="list-style-type: decimal">
-<li>intero, poiché il numero di giorni è compreso tra 1 e 365.</li>
-<li>virgola mobile, poiché sono richiesti giorni frazionari</li>
-<li>stringa di caratteri se il numero di serie contiene lettere e
-numeri, altrimenti numero intero se il numero di serie è composto solo
-da numeri</li>
+<li>Intero, poiché il numero di giorni è compreso tra 1 e 365.</li>
+<li>Virgola (float), poiché sono richiesti giorni frazionati</li>
+<li>Stringa se il numero di serie contiene lettere e numeri, altrimenti
+numero intero se il numero di serie è composto solo da numeri</li>
 <li>Questo varia! Come si definisce l’età di un campione? Giorni interi
 dalla raccolta (intero)? Data e ora (stringa)?</li>
-<li>Scegliere i numeri in virgola mobile per rappresentare la
-popolazione in grandi aggregati (ad esempio, milioni) o i numeri interi
-per rappresentare la popolazione in unità di individui.</li>
-<li>Numero in virgola mobile, poiché è probabile che una media abbia una
+<li>Scegliere float per rappresentare la popolazione in grandi aggregati
+(ad esempio, milioni) o i numeri interi per rappresentare la popolazione
+in unità di individui.</li>
+<li>Numeri con la virgola, poiché è probabile che una media abbia una
 parte frazionaria.</li>
 </ol>
 </div>
@@ -2437,9 +2436,9 @@ parte frazionaria.</li>
 <h3 class="callout-title">Tipi di divisione</h3>
 <div class="callout-content">
 <p>In Python 3, l’operatore <code>//</code> esegue la divisione intera
-(numeri interi), l’operatore <code>/</code> esegue la divisione in
-virgola mobile e l’operatore <code>%</code> (o <em>modulo</em>) calcola
-e restituisce il resto della divisione intera:</p>
+(numeri interi), l’operatore <code>/</code> esegue la divisione con la
+virgola e l’operatore <code>%</code> (o <em>modulo</em>) calcola e
+restituisce il resto della divisione intera:</p>
 <div class="codewrapper sourceCode" id="cb29">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2469,7 +2468,7 @@ volta.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>Vogliamo il numero minimo di sondaggi che raggiunge tutti una volta,
 che è il valore arrotondato per eccesso di
@@ -2504,9 +2503,8 @@ caso in cui <code>num_subjects</code> sia uniformemente divisibile per
 <div id="stringhe-a-numeri" class="callout-inner">
 <h3 class="callout-title">Stringhe a numeri</h3>
 <div class="callout-content">
-<p>Se ragionevole, <code>float()</code> convertirà una stringa in un
-numero in virgola mobile e <code>int()</code> convertirà un numero in
-virgola mobile in un intero:</p>
+<p>Se possibile, <code>float()</code> convertirà una stringa in un
+numero float e <code>int()</code> convertirà float in un intero:</p>
 <div class="codewrapper sourceCode" id="cb33">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2555,13 +2553,13 @@ programma?</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
-<p>Cosa ci si aspetta che faccia questo programma? Non sarebbe così
-irragionevole aspettarsi che il comando <code>int</code> di Python 3
-converta la stringa “3.4” in 3.4 e un’ulteriore conversione di tipo in
-3. Dopotutto, Python 3 compie molte altre magie: non è forse parte del
-suo fascino?</p>
+<p>Cosa ci si aspetta che faccia questo programma? Ci si potrebbe
+aspettare che il comando <code>int</code> di Python 3 converta la
+stringa “3.4” in 3.4 e un’ulteriore conversione di tipo in 3. Dopotutto,
+Python 3 compie molte altre magie: non è forse parte del suo
+fascino?</p>
 <div class="codewrapper sourceCode" id="cb38">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2601,9 +2599,8 @@ convertirli esplicitamente nel codice.</p>
 <div id="aritmetica-con-tipi-diversi" class="callout-inner">
 <h3 class="callout-title">Aritmetica con tipi diversi</h3>
 <div class="callout-content">
-<p>Quale delle seguenti operazioni restituirà il numero in virgola
-mobile <code>2.0</code>? Nota: può esserci più di una risposta
-giusta.</p>
+<p>Quale delle seguenti operazioni restituirà il numero float
+<code>2.0</code>? Nota: può esserci più di una risposta giusta.</p>
 <div class="codewrapper sourceCode" id="cb42">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2629,7 +2626,7 @@ giusta.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
 <p>Risposta: 1 e 4</p>
 </div>
@@ -2678,7 +2675,7 @@ punti</em> come <code>val.real</code> e <code>val.imag</code>.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>I trattamenti matematici standard di solito usano <code>i</code> per
@@ -5056,7 +5053,7 @@ nel 2007.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Soluzione </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>La selezione può essere effettuata utilizzando le etichette sia per
 la riga (“Serbia”) sia per la colonna (“gdpPercap_2007”):</p>
@@ -5102,7 +5099,7 @@ nelle fette numeriche e nelle fette denominate in Pandas?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Soluzione </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>No, non producono lo stesso output! L’output della prima istruzione
 è:</p>
@@ -5161,7 +5158,7 @@ fornito, mentre una slice denominata, ‘gdpPercap\1952’:‘gdpPercap\1962’,
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Soluzione </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Esaminiamo questo pezzo di codice riga per riga.</p>
 <div class="codewrapper sourceCode" id="cb32">
@@ -5244,7 +5241,7 @@ questi metodi?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Soluzione </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>Per ogni colonna in <code>data</code>, <code>idxmin</code> restituirà
 il valore dell’indice corrispondente al minimo di ogni colonna;
@@ -5284,7 +5281,7 @@ capite di quel Paese nel 1952.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Soluzione </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <p>1:</p>
 <div class="codewrapper sourceCode" id="cb38">
@@ -5349,7 +5346,7 @@ DataFrame:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution6" aria-expanded="false" aria-controls="collapseSolution6">
   <h4 class="accordion-header" id="headingSolution6"> Soluzione </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <p>1. Accedere a una singola colonna:</p>
 <div class="codewrapper sourceCode" id="cb42">
@@ -5540,7 +5537,7 @@ cui sono disponibili le informazioni.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution7" aria-expanded="false" aria-controls="collapseSolution7">
   <h4 class="accordion-header" id="headingSolution7"> Soluzione </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
 <div class="accordion-body">
 <p>Tra le tante scelte, <code>dir()</code> elenca la funzione
 <code>median()</code> come una possibilità. Quindi,</p>
@@ -6464,7 +6461,7 @@ second time: [3, 5]</code></pre>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6502,7 +6499,7 @@ non negativi, quanto è lunga la lista
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>L’elenco <code>values[start:stop]</code> ha fino a
 <code>stop - start</code> elementi. Per esempio,
@@ -6550,7 +6547,7 @@ list to string: gold</code></pre>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>
@@ -6604,7 +6601,7 @@ combinare l’affettatura e l’indicizzazione negativa)</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>Il programma stampa <code>m</code>.</p>
 <ol style="list-style-type: decimal">
@@ -6654,7 +6651,7 @@ insieme?</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <p>il programma stampa</p>
 <div class="codewrapper sourceCode" id="cb27">
@@ -6703,7 +6700,7 @@ elemento).</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6754,7 +6751,7 @@ differenza tra <code>sorted(letters)</code> e
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
 <div class="accordion-body">
 <p>Il programma A stampa</p>
 <div class="codewrapper">
@@ -6815,7 +6812,7 @@ differenza tra <code>new = old</code> e <code>new = old[:]</code>.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
+<div id="collapseSolution8" class="accordion-collapse collapse" data-bs-parent="#accordionSolution8" aria-labelledby="headingSolution8">
 <div class="accordion-body">
 <p>Il programma A stampa</p>
 <div class="codewrapper">
@@ -7145,7 +7142,7 @@ runtime?</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Un IndentationError è un errore di sintassi. I programmi con errori
 di sintassi non possono essere avviati. Un programma con un errore di
@@ -7183,7 +7180,7 @@ variabili dopo l’esecuzione di ogni riga.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <table class="table">
 <thead><tr class="header">
@@ -7254,7 +7251,7 @@ variabili dopo l’esecuzione di ogni riga.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7298,7 +7295,7 @@ produrre il risultato indicato.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7341,7 +7338,7 @@ produrre il risultato indicato.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7385,7 +7382,7 @@ produrre il risultato indicato.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7425,7 +7422,7 @@ metodo stringa per formattare correttamente l’acronimo.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7471,7 +7468,7 @@ risultato dovrebbe essere <code>[1, 3, 5, 10]</code>.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution8" class="accordion-collapse collapse" data-bs-parent="#accordionSolution8" aria-labelledby="headingSolution8">
+<div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7529,7 +7526,7 @@ errori.</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution9" class="accordion-collapse collapse" data-bs-parent="#accordionSolution9" aria-labelledby="headingSolution9">
+<div id="collapseSolution9" class="accordion-collapse collapse" aria-labelledby="headingSolution9" data-bs-parent="#accordionSolution9">
 <div class="accordion-body">
 <ul>
 <li>I nomi delle variabili Python sono sensibili alle maiuscole e alle
@@ -7588,7 +7585,7 @@ errore si tratta?</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution10" class="accordion-collapse collapse" data-bs-parent="#accordionSolution10" aria-labelledby="headingSolution10">
+<div id="collapseSolution10" class="accordion-collapse collapse" aria-labelledby="headingSolution10" data-bs-parent="#accordionSolution10">
 <div class="accordion-body">
 <p>Questa lista ha 4 elementi e l’indice per accedere all’ultimo
 elemento della lista è <code>3</code>.</p>
@@ -8018,7 +8015,7 @@ si intende veramente.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -8067,7 +8064,7 @@ negativi e uno dove i valori dell’elenco originale erano positivi.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -8115,7 +8112,7 @@ di 50 record.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -8167,7 +8164,7 @@ trovare l’intervallo dei dati?</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -8897,7 +8894,7 @@ errori.</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -8938,7 +8935,7 @@ errori.</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -9015,7 +9012,7 @@ result of call is: None</code></pre>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><p>Il problema dell’esempio è che la funzione
@@ -9068,7 +9065,7 @@ dall’argomento e restituisca il valore minimo in quei dati.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -9113,7 +9110,7 @@ contiene numeri negativi?</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -9179,7 +9176,7 @@ con nome</em>, in questo modo:</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><code>2003/2/1</code></li>
@@ -9271,7 +9268,7 @@ essere <code>25 too light, probably spoiled</code>.</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb34">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -9355,7 +9352,7 @@ corrispondono al decennio, invece di enumerarle nel codice)</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
+<div id="collapseSolution8" class="accordion-collapse collapse" data-bs-parent="#accordionSolution8" aria-labelledby="headingSolution8">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Il PIL medio del Giappone negli anni riportati per gli anni ’80 è
@@ -9468,7 +9465,7 @@ stazionario?</p></li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution9" class="accordion-collapse collapse" aria-labelledby="headingSolution9" data-bs-parent="#accordionSolution9">
+<div id="collapseSolution9" class="accordion-collapse collapse" data-bs-parent="#accordionSolution9" aria-labelledby="headingSolution9">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>
 </li></ol>
@@ -10037,7 +10034,7 @@ verificate che <code>help</code> la visualizzi correttamente.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -10099,7 +10096,7 @@ cosa avete fatto di uguale? Cosa avete fatto di diverso e perché?</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Ecco una soluzione.</p>
 <div class="codewrapper sourceCode" id="cb9">
