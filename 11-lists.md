@@ -15,15 +15,14 @@ exercises: 10
 :::::::::::::::::::::::::::::::::::::::: questions
 
 - Come si possono memorizzare più valori?
-
+  
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Un elenco memorizza molti valori in un'unica struttura.
 
-- Fare calcoli con un centinaio di variabili chiamate `pressure_001`, `pressure_002`,
-  ecc. sarebbe almeno altrettanto lento che farli a mano.
+- Fare calcoli con un centinaio di variabili chiamate `pressure_001`, `pressure_002`, ecc. sarebbe almeno altrettanto lento che farli a mano.
 - Utilizzare un *elenco* per memorizzare molti valori insieme.
-  - Contenuto tra parentesi quadre `[...]`.
+  - Racchiuso tra parentesi quadre `[...]`.
   - Valori separati da virgole `,`.
 - Usare `len` per scoprire quanti valori ci sono in un elenco.
 
@@ -52,10 +51,9 @@ zeroth item of pressures: 0.273
 fourth item of pressures: 0.276
 ```
 
-## I valori degli elenchi possono essere sostituiti assegnandoli.
+## I valori di un elenco possono essere sostituiti tramite assegnazione
 
-- Utilizzare un'espressione di indice a sinistra dell'assegnazione per sostituire un
-  valore.
+- Utilizzare un'espressione di indice a sinistra dell'assegnazione per sostituire un valore.
 
 ```python
 pressures[0] = 0.265
@@ -66,7 +64,7 @@ print('pressures is now:', pressures)
 pressures is now: [0.265, 0.275, 0.277, 0.275, 0.276]
 ```
 
-## L'aggiunta di elementi a un elenco lo allunga.
+## L'aggiunta di elementi a un elenco ne aumenta la lunghezza
 
 - Usare `list_name.append` per aggiungere elementi alla fine di un elenco.
 
@@ -82,11 +80,11 @@ primes is initially: [2, 3, 5]
 primes has become: [2, 3, 5, 7]
 ```
 
-- `append` è un *metodo* di liste.
-  - Come una funzione, ma legata a un particolare oggetto.
+- `append` è un *metodo* delle liste.
+  - È simile a una funzione, ma associato a un particolare oggetto.
 - Usare `object_name.method_name` per chiamare i metodi.
-  - Assomiglia volutamente al modo in cui ci si riferisce alle cose in una libreria.
-- Nel corso della trattazione incontreremo altri metodi di elenchi.
+  - Questo stile ricorda volutamente il modo in cui ci si riferisce agli elementi in una libreria.
+- Nel corso della trattazione incontreremo altri metodi delle liste.
   - Utilizzare `help(list)` per un'anteprima.
 - `extend` è simile a `append`, ma consente di combinare due elenchi. Ad esempio:
 
@@ -106,15 +104,14 @@ primes has now become: [2, 3, 5, 7, 11, 13, 17, 19]
 primes has finally become: [2, 3, 5, 7, 11, 13, 17, 19, [37, 41, 43, 47]]
 ```
 
-Si noti che mentre `extend` mantiene la struttura "piatta" dell'elenco, l'aggiunta di un elenco a un elenco significa che l'ultimo elemento di `primes` sarà esso stesso un
-elenco, non un intero. Gli elenchi possono contenere valori di qualsiasi tipo; sono
-quindi possibili elenchi di elenchi.
+Si noti che mentre `extend` mantiene la struttura "piatta" dell'elenco, l, aggiungere un elenco a un altro fa sì che l’ultimo elemento di `primes` ssia a sua volta un elenco, non un intero.
+Gli elenchi possono contenere valori di qualsiasi tipo; sono quindi possibili elenchi di elenchi.
 
-## Usare `del` per rimuovere completamente gli elementi da un elenco.
+## Usare `del` per rimuovere completamente un elemento da una lista.
 
-- Si usa `del list_name[index]` per rimuovere un elemento da un elenco (nell'esempio, 9
+- Si usa `del list_name[index]` per rimuovere un elemento da una lista (nell'esempio, 9
   non è un numero primo) e quindi accorciarlo.
-- `del` non è una funzione o un metodo, ma una dichiarazione del linguaggio.
+- `del` non è una funzione o un metodo, ma un’istruzione del linguaggio.
 
 ```python
 primes = [2, 3, 5, 7, 9]
@@ -128,22 +125,22 @@ primes before removing last item: [2, 3, 5, 7, 9]
 primes after removing last item: [2, 3, 5, 7]
 ```
 
-## L'elenco vuoto non contiene valori.
+## La lista vuota non contiene valori.
 
-- Utilizzare `[]` da solo per rappresentare un elenco che non contiene valori.
-  - "Lo zero degli elenchi"
+- Utilizzare `[]` da solo per rappresentare una lista che non contiene valori.
+  - "Lo zero della lista"
 - Utile come punto di partenza per la raccolta di valori (che vedremo nel [prossimo
   episodio](12-for-loops.md)).
 
-## Gli elenchi possono contenere valori di tipi diversi.
+## Le liste possono contenere valori di tipi diversi.
 
-- Un singolo elenco può contenere numeri, stringhe e qualsiasi altra cosa.
+- Una singola lista può contenere numeri, stringhe e qualsiasi altra cosa.
 
 ```python
 goals = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lists.']
 ```
 
-## Le stringhe di caratteri possono essere indicizzate come gli elenchi.
+## Le stringhe di caratteri possono essere indicizzate come le liste.
 
 - Ottenere singoli caratteri da una stringa di caratteri utilizzando gli indici tra
   parentesi quadre.
@@ -163,7 +160,7 @@ third character: b
 
 - Non è possibile modificare i caratteri di una stringa dopo la sua creazione.
   - *Immutabile*: non può essere modificato dopo la creazione.
-  - Al contrario, gli elenchi sono *mutabili*: possono essere modificati sul posto.
+  - Al contrario, le liste sono *mutabili*: possono essere modificati sul posto.
 - Python considera la stringa come un singolo valore con parti, non come un insieme di
   valori.
 
@@ -175,14 +172,13 @@ element[0] = 'C'
 TypeError: 'str' object does not support item assignment
 ```
 
-- Gli elenchi e le stringhe di caratteri sono entrambi *collezioni*.
+- Le liste e le stringhe di caratteri sono entrambi *collezioni*.
 
 ## L'indicizzazione oltre la fine dell'insieme è un errore.
 
 - Python segnala un `IndexError` se si tenta di accedere a un valore che non esiste.
   - Questo è un tipo di [errore di runtime] (04-built-in.md).
-  - Non può essere rilevato durante l'analisi del codice perché l'indice potrebbe essere
-    calcolato in base ai dati.
+  - Non può essere rilevato durante l'analisi del codice perché l'indice potrebbe essere calcolato in base ai dati.
 
 ```python
 print('99th element of element is:', element[99])
@@ -256,7 +252,7 @@ del previsto.
 
 ::::::::::::::::::::::::::::::::::::::: challenge
 
-## Da stringhe a elenchi e viceversa
+## Da stringhe a liste e viceversa
 
 Dato questo:
 
@@ -281,7 +277,7 @@ list to string: gold
    converte una stringa in un elenco contenente tutti i suoi caratteri.
 2. [`join`](https://docs.python.org/3/library/stdtypes.html#str.join) restituisce una
    stringa che è la *concatenazione* di ogni elemento di stringa dell'elenco e aggiunge
-   il separatore tra ogni elemento dell'elenco. Il risultato è `x-y-z`. Il separatore
+   il separatore tra ogni elemento della lista. Il risultato è `x-y-z`. Il separatore
    tra gli elementi è la stringa che fornisce questo metodo.
 
 :::::::::::::::::::::::::
@@ -300,9 +296,8 @@ print(element[-1])
 ```
 
 1. Come interpreta Python un indice negativo?
-2. Se un elenco o una stringa ha N elementi, qual è l'indice più negativo che può essere
-   usato con sicurezza e quale posizione rappresenta tale indice?
-3. Se `values` è un elenco, cosa fa `del values[-1]`?
+2. Se un elenco o una stringa ha N elementi, qual è l'indice più negativo che può essere usato con sicurezza e quale posizione rappresenta tale indice?
+3. Se `values` è una lista, cosa fa `del values[-1]`?
 4. Come si possono visualizzare tutti gli elementi tranne l'ultimo senza cambiare
    `values`? (Suggerimento: è necessario combinare l'affettatura e l'indicizzazione
    negativa)
@@ -317,7 +312,7 @@ Il programma stampa `m`.
    dall'inizio). L'ultimo elemento è `-1`.
 2. L'ultimo indice che può essere usato con sicurezza con un elenco di N elementi è
    l'elemento `-N`, che rappresenta il primo elemento.
-3. `del values[-1]` rimuove l'ultimo elemento dell'elenco.
+3. `del values[-1]` rimuove l'ultimo elemento della lista.
 4. `values[:-1]`
 
 :::::::::::::::::::::::::
@@ -326,7 +321,7 @@ Il programma stampa `m`.
 
 ::::::::::::::::::::::::::::::::::::::: challenge
 
-## Passaggio attraverso un elenco
+## Passaggio attraverso una lista
 
 Cosa stampa il seguente programma?
 
@@ -428,9 +423,8 @@ Il programma B stampa
 letters is ['d', 'g', 'l', 'o'] and result is None
 ```
 
-`sorted(letters)` restituisce una copia ordinata dell'elenco `letters` (l'elenco
-originale `letters` rimane invariato), mentre `letters.sort()` ordina l'elenco `letters`
-sul posto e non restituisce nulla.
+`sorted(letters)` restituisce una copia ordinata della lista `letters` (l'elenco
+originale `letters` rimane invariato), mentre `letters.sort()` ordina la lista `letters` sul posto e non restituisce nulla.
 
 
 
@@ -442,8 +436,7 @@ sul posto e non restituisce nulla.
 
 ## Copiare (o no)
 
-Cosa stampano questi due programmi? In termini semplici, spiegare la differenza tra `new
-= old` e `new = old[:]`.
+Cosa stampano questi due programmi? In termini semplici, spiegare la differenza tra `new= old` e `new = old[:]`.
 
 ```python
 # Program A
@@ -480,8 +473,7 @@ new is ['D', 'o', 'l', 'd'] and old is ['g', 'o', 'l', 'd']
 `new = old` rende `new` un riferimento all'elenco `old`; `new` e `old` puntano allo
 stesso oggetto.
 
-`new = old[:]` crea comunque un nuovo oggetto elenco `new` contenente tutti gli elementi
-dell'elenco `old`; `new` e `old` sono oggetti diversi.
+`new = old[:]` crea comunque un nuovo oggetto elenco `new` contenente tutti gli elementi dell'elenco `old`; `new` e `old` sono oggetti diversi.
 
 
 
@@ -491,14 +483,14 @@ dell'elenco `old`; `new` e `old` sono oggetti diversi.
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Un elenco memorizza molti valori in un'unica struttura.
-- Utilizzare l'indice di un elemento per recuperarlo da un elenco.
-- I valori degli elenchi possono essere sostituiti assegnandoli.
-- L'aggiunta di elementi a un elenco lo allunga.
-- Usare `del` per rimuovere completamente gli elementi da un elenco.
-- L'elenco vuoto non contiene valori.
-- Gli elenchi possono contenere valori di tipi diversi.
-- Le stringhe di caratteri possono essere indicizzate come gli elenchi.
+- Una lista memorizza molti valori in un'unica struttura.
+- Utilizzare l'indice di un elemento per recuperarlo da una lista.
+- I valori delle liste possono essere sostituiti assegnandoli.
+- L'aggiunta di elementi a una lista lo allunga.
+- Usare `del` per rimuovere completamente gli elementi da una lista.
+- Una lista vuota non contiene valori.
+- Le liste possono contenere valori di tipi diversi.
+- Le stringhe di caratteri possono essere indicizzate come le liste.
 - Le stringhe di caratteri sono immutabili.
 - L'indicizzazione oltre la fine dell'insieme è un errore.
 
