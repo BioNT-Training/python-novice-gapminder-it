@@ -316,9 +316,9 @@
       <div class="accordion-body">
         <ul><li><a href="#usare-le-istruzioni-if-per-controllare-se-un-blocco-di-codice-viene-eseguito-o-meno.">Usare le istruzioni <code>if</code> per controllare se un blocco di
 codice viene eseguito o meno.</a></li>
-<li><a href="#le-condizioni-sono-spesso-utilizzate-allinterno-dei-cicli.">Le condizioni sono spesso utilizzate all’interno dei cicli.</a></li>
-<li><a href="#usare-else-per-eseguire-un-blocco-di-codice-quando-una-condizione-if-%C3%A8-non-vera.">Usare <code>else</code> per eseguire un blocco di codice quando una
-condizione <code>if</code> è <em>non</em> vera.</a></li>
+<li><a href="#i-condizionali-sono-spesso-utilizzati-allinterno-dei-cicli.">I condizionali sono spesso utilizzati all’interno dei cicli.</a></li>
+<li><a href="#usare-else-per-eseguire-un-blocco-di-codice-quando-listruzione-condizionale-if-non-%C3%A8-vera.">Usare <code>else</code> per eseguire un blocco di codice quando
+l’istruzione condizionale <code>if</code> <em>non</em> è vera.</a></li>
 <li><a href="#usare-elif-per-specificare-test-aggiuntivi.">Usare <code>elif</code> per specificare test aggiuntivi.</a></li>
 <li><a href="#le-condizioni-sono-testate-una-volta-in-ordine.">Le condizioni sono testate una volta, in ordine.</a></li>
 <li><a href="#creare-una-tabella-che-mostri-i-valori-delle-variabili-per-tracciare-lesecuzione-di-un-programma.">Creare una tabella che mostri i valori delle variabili per tracciare
@@ -450,7 +450,7 @@ l’esecuzione di un programma.</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Condizionali</h1>
-        <p>Ultimo aggiornamento il 2025-03-02 |
+        <p>Ultimo aggiornamento il 2025-11-06 |
 
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/13-conditionals.md" class="external-link">Modifica questa pagina <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -515,8 +515,8 @@ spazi)</li>
 </h3>
 <pre class="output" tabindex="0"><code>3.54 is large</code></pre>
 </div>
-</section><section><h2 class="section-heading" id="le-condizioni-sono-spesso-utilizzate-allinterno-dei-cicli-">Le condizioni sono spesso utilizzate all’interno dei cicli.<a class="anchor" aria-label="anchor" href="#le-condizioni-sono-spesso-utilizzate-allinterno-dei-cicli-"></a></h2>
-<hr class="half-width"><ul><li>Non ha molto senso usare una condizione quando si conosce il valore
+</section><section><h2 class="section-heading" id="i-condizionali-sono-spesso-utilizzati-allinterno-dei-cicli-">I condizionali sono spesso utilizzati all’interno dei cicli.<a class="anchor" aria-label="anchor" href="#i-condizionali-sono-spesso-utilizzati-allinterno-dei-cicli-"></a></h2>
+<hr class="half-width"><ul><li>Non ha molto senso usare un condizionale quando si conosce il valore
 (come sopra).</li>
 <li>Ma è utile quando abbiamo una collezione da elaborare.</li>
 </ul><div class="codewrapper sourceCode" id="cb3">
@@ -533,12 +533,13 @@ spazi)</li>
 <pre class="output" tabindex="0"><code>3.54 is large
 9.22 is large</code></pre>
 </div>
-</section><section><h2 class="section-heading" id="usare-else-per-eseguire-un-blocco-di-codice-quando-una-condizione-if-è-non-vera-">Usare <code>else</code> per eseguire un blocco di codice quando una
-condizione <code>if</code> è <em>non</em> vera.<a class="anchor" aria-label="anchor" href="#usare-else-per-eseguire-un-blocco-di-codice-quando-una-condizione-if-%C3%A8-non-vera-"></a></h2>
+</section><section><h2 class="section-heading" id="usare-else-per-eseguire-un-blocco-di-codice-quando-listruzione-condizionale-if-non-è-vera-">Usare <code>else</code> per eseguire un blocco di codice quando
+l’istruzione condizionale <code>if</code> <em>non</em> è vera.<a class="anchor" aria-label="anchor" href="#usare-else-per-eseguire-un-blocco-di-codice-quando-listruzione-condizionale-if-non-%C3%A8-vera-"></a></h2>
 <hr class="half-width"><ul><li>
-<code>else</code> può essere usato dopo un <code>if</code>.</li>
-<li>Permette di specificare un’alternativa da eseguire quando il ramo
-<code>if</code> non viene preso.</li>
+<code>else</code> si usa dopo un blocco <code>if</code>.</li>
+<li>Permette di specificare un’alternativa da eseguire quando il blocco
+<code>if</code> non viene eseguito (cioè quando la condizione è
+falsa).</li>
 </ul><div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -561,10 +562,11 @@ condizione <code>if</code> è <em>non</em> vera.<a class="anchor" aria-label="an
 </section><section><h2 class="section-heading" id="usare-elif-per-specificare-test-aggiuntivi-">Usare <code>elif</code> per specificare test aggiuntivi.<a class="anchor" aria-label="anchor" href="#usare-elif-per-specificare-test-aggiuntivi-"></a></h2>
 <hr class="half-width"><ul><li>Si possono fornire diverse scelte alternative, ognuna con il proprio
 test.</li>
-<li>Usate <code>elif</code> (abbreviazione di “else if”) e una
-condizione per specificare queste condizioni.</li>
-<li>Sempre associato a un <code>if</code>.</li>
-<li>Deve precedere il <code>else</code> (che è il “catch all”).</li>
+<li>Si usa <code>elif</code> (abbreviazione di “else if”) seguito da una
+condizione per specificare queste alternative.</li>
+<li>È sempre associato a un <code>if</code>.</li>
+<li>Deve precedere l’eventuale <code>else</code> (che funge da “caso di
+default”).</li>
 </ul><div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -587,8 +589,8 @@ condizione per specificare queste condizioni.</li>
 1.71 is small</code></pre>
 </div>
 </section><section><h2 class="section-heading" id="le-condizioni-sono-testate-una-volta-in-ordine-">Le condizioni sono testate una volta, in ordine.<a class="anchor" aria-label="anchor" href="#le-condizioni-sono-testate-una-volta-in-ordine-"></a></h2>
-<hr class="half-width"><ul><li>Python passa attraverso i rami della condizione in ordine, testando
-ciascuno di essi a turno.</li>
+<hr class="half-width"><ul><li>Python esamina i rami delle condizioni in ordine, testando ciascuno
+di essi a turno</li>
 <li>L’ordine è importante.</li>
 </ul><div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -722,9 +724,9 @@ l’esecuzione di un programma.<a class="anchor" aria-label="anchor" href="#crea
 <td>
 30.0
 </td>
-</tr></table><ul><li>Il programma deve avere un’istruzione <code>print</code>
+</tr></table><ul><li>Il programma deve includere un’istruzione <code>print</code>
 <em>fuori</em> dal corpo del ciclo per mostrare il valore finale di
-<code>velocity</code>, poiché il suo valore viene aggiornato dall’ultima
+<code>velocity</code>, poiché il suo valore viene aggiornato nell’ultima
 iterazione del ciclo.</li>
 </ul><div id="relazioni-composte-con-and-or-e-parentesi" class="callout">
 <div class="callout-square">
@@ -807,7 +809,7 @@ si intende veramente.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -826,7 +828,7 @@ si intende veramente.</p>
 <div id="valori-di-taglio" class="callout-inner">
 <h3 class="callout-title">Valori di taglio</h3>
 <div class="callout-content">
-<p>Riempite gli spazi vuoti in modo che questo programma crei un nuovo
+<p>Riempite gli spazi in modo che il codice sottostante crei un nuovo
 elenco contenente zeri dove i valori dell’elenco originale erano
 negativi e uno dove i valori dell’elenco originale erano positivi.</p>
 <div class="codewrapper sourceCode" id="cb20">
@@ -856,7 +858,7 @@ negativi e uno dove i valori dell’elenco originale erano positivi.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -904,7 +906,7 @@ di 50 record.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -928,8 +930,8 @@ di 50 record.</p>
 <div id="inizializzazione" class="callout-inner">
 <h3 class="callout-title">Inizializzazione</h3>
 <div class="callout-content">
-<p>Modificate questo programma in modo che trovi i valori più grandi e
-più piccoli dell’elenco, indipendentemente dall’intervallo di valori
+<p>Modificate questo codice in modo che trovi i valori più grandi e più
+piccoli dell’elenco, indipendentemente dall’intervallo di valori
 originario.</p>
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -956,7 +958,7 @@ trovare l’intervallo dei dati?</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1087,7 +1089,7 @@ l’esecuzione di un programma.</li>
   "url": "https://swcarpentry.github.io/python-novice-gapminder/instructor/13-conditionals.html",
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/instructor/13-conditionals.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2025-03-02",
+  "dateModified": "2025-11-06",
   "datePublished": "2025-11-06"
 }
 
