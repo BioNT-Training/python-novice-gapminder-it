@@ -298,14 +298,15 @@
       <div class="accordion-body">
         <ul><li><a href="#un-elenco-memorizza-molti-valori-in-ununica-struttura.">Un elenco memorizza molti valori in un’unica struttura.</a></li>
 <li><a href="#usare-lindice-di-un-elemento-per-recuperarlo-da-un-elenco.">Usare l’indice di un elemento per recuperarlo da un elenco.</a></li>
-<li><a href="#i-valori-degli-elenchi-possono-essere-sostituiti-assegnandoli.">I valori degli elenchi possono essere sostituiti assegnandoli.</a></li>
-<li><a href="#laggiunta-di-elementi-a-un-elenco-lo-allunga.">L’aggiunta di elementi a un elenco lo allunga.</a></li>
-<li><a href="#usare-del-per-rimuovere-completamente-gli-elementi-da-un-elenco.">Usare <code>del</code> per rimuovere completamente gli elementi da
-un elenco.</a></li>
-<li><a href="#lelenco-vuoto-non-contiene-valori.">L’elenco vuoto non contiene valori.</a></li>
-<li><a href="#gli-elenchi-possono-contenere-valori-di-tipi-diversi.">Gli elenchi possono contenere valori di tipi diversi.</a></li>
-<li><a href="#le-stringhe-di-caratteri-possono-essere-indicizzate-come-gli-elenchi.">Le stringhe di caratteri possono essere indicizzate come gli
-elenchi.</a></li>
+<li><a href="#i-valori-di-un-elenco-possono-essere-sostituiti-tramite-assegnazione">I valori di un elenco possono essere sostituiti tramite
+assegnazione</a></li>
+<li><a href="#laggiunta-di-elementi-a-un-elenco-ne-aumenta-la-lunghezza">L’aggiunta di elementi a un elenco ne aumenta la lunghezza</a></li>
+<li><a href="#usare-del-per-rimuovere-completamente-un-elemento-da-una-lista.">Usare <code>del</code> per rimuovere completamente un elemento da
+una lista.</a></li>
+<li><a href="#la-lista-vuota-non-contiene-valori.">La lista vuota non contiene valori.</a></li>
+<li><a href="#le-liste-possono-contenere-valori-di-tipi-diversi.">Le liste possono contenere valori di tipi diversi.</a></li>
+<li><a href="#le-stringhe-di-caratteri-possono-essere-indicizzate-come-le-liste.">Le stringhe di caratteri possono essere indicizzate come le
+liste.</a></li>
 <li><a href="#le-stringhe-di-caratteri-sono-immutabili.">Le stringhe di caratteri sono immutabili.</a></li>
 <li><a href="#lindicizzazione-oltre-la-fine-dellinsieme-%C3%A8-un-errore.">L’indicizzazione oltre la fine dell’insieme è un errore.</a></li>
         </ul></div><!--/div.accordion-body-->
@@ -495,7 +496,7 @@ metodi.</li>
 <code>pressure_001</code>, <code>pressure_002</code>, ecc. sarebbe
 almeno altrettanto lento che farli a mano.</li>
 <li>Utilizzare un <em>elenco</em> per memorizzare molti valori insieme.
-<ul><li>Contenuto tra parentesi quadre <code>[...]</code>.</li>
+<ul><li>Racchiuso tra parentesi quadre <code>[...]</code>.</li>
 <li>Valori separati da virgole <code>,</code>.</li>
 </ul></li>
 <li>Usare <code>len</code> per scoprire quanti valori ci sono in un
@@ -527,7 +528,8 @@ length: 5</code></pre>
 <pre class="output" tabindex="0"><code>zeroth item of pressures: 0.273
 fourth item of pressures: 0.276</code></pre>
 </div>
-</section><section><h2 class="section-heading" id="i-valori-degli-elenchi-possono-essere-sostituiti-assegnandoli-">I valori degli elenchi possono essere sostituiti assegnandoli.<a class="anchor" aria-label="anchor" href="#i-valori-degli-elenchi-possono-essere-sostituiti-assegnandoli-"></a></h2>
+</section><section><h2 class="section-heading" id="i-valori-di-un-elenco-possono-essere-sostituiti-tramite-assegnazione">I valori di un elenco possono essere sostituiti tramite
+assegnazione<a class="anchor" aria-label="anchor" href="#i-valori-di-un-elenco-possono-essere-sostituiti-tramite-assegnazione"></a></h2>
 <hr class="half-width"><ul><li>Utilizzare un’espressione di indice a sinistra dell’assegnazione per
 sostituire un valore.</li>
 </ul><div class="codewrapper sourceCode" id="cb5">
@@ -541,7 +543,7 @@ sostituire un valore.</li>
 </h3>
 <pre class="output" tabindex="0"><code>pressures is now: [0.265, 0.275, 0.277, 0.275, 0.276]</code></pre>
 </div>
-</section><section><h2 class="section-heading" id="laggiunta-di-elementi-a-un-elenco-lo-allunga-">L’aggiunta di elementi a un elenco lo allunga.<a class="anchor" aria-label="anchor" href="#laggiunta-di-elementi-a-un-elenco-lo-allunga-"></a></h2>
+</section><section><h2 class="section-heading" id="laggiunta-di-elementi-a-un-elenco-ne-aumenta-la-lunghezza">L’aggiunta di elementi a un elenco ne aumenta la lunghezza<a class="anchor" aria-label="anchor" href="#laggiunta-di-elementi-a-un-elenco-ne-aumenta-la-lunghezza"></a></h2>
 <hr class="half-width"><ul><li>Usare <code>list_name.append</code> per aggiungere elementi alla
 fine di un elenco.</li>
 </ul><div class="codewrapper sourceCode" id="cb7">
@@ -559,14 +561,14 @@ fine di un elenco.</li>
 primes has become: [2, 3, 5, 7]</code></pre>
 </div>
 <ul><li>
-<code>append</code> è un <em>metodo</em> di liste.
-<ul><li>Come una funzione, ma legata a un particolare oggetto.</li>
+<code>append</code> è un <em>metodo</em> delle liste.
+<ul><li>È simile a una funzione, ma associato a un particolare oggetto.</li>
 </ul></li>
 <li>Usare <code>object_name.method_name</code> per chiamare i metodi.
-<ul><li>Assomiglia volutamente al modo in cui ci si riferisce alle cose in
-una libreria.</li>
+<ul><li>Questo stile ricorda volutamente il modo in cui ci si riferisce agli
+elementi in una libreria.</li>
 </ul></li>
-<li>Nel corso della trattazione incontreremo altri metodi di elenchi.
+<li>Nel corso della trattazione incontreremo altri metodi delle liste.
 <ul><li>Utilizzare <code>help(list)</code> per un’anteprima.</li>
 </ul></li>
 <li>
@@ -591,18 +593,18 @@ primes has now become: [2, 3, 5, 7, 11, 13, 17, 19]
 primes has finally become: [2, 3, 5, 7, 11, 13, 17, 19, [37, 41, 43, 47]]</code></pre>
 </div>
 <p>Si noti che mentre <code>extend</code> mantiene la struttura “piatta”
-dell’elenco, l’aggiunta di un elenco a un elenco significa che l’ultimo
-elemento di <code>primes</code> sarà esso stesso un elenco, non un
+dell’elenco, l, aggiungere un elenco a un altro fa sì che l’ultimo
+elemento di <code>primes</code> ssia a sua volta un elenco, non un
 intero. Gli elenchi possono contenere valori di qualsiasi tipo; sono
 quindi possibili elenchi di elenchi.</p>
-</section><section><h2 class="section-heading" id="usare-del-per-rimuovere-completamente-gli-elementi-da-un-elenco-">Usare <code>del</code> per rimuovere completamente gli elementi da
-un elenco.<a class="anchor" aria-label="anchor" href="#usare-del-per-rimuovere-completamente-gli-elementi-da-un-elenco-"></a></h2>
+</section><section><h2 class="section-heading" id="usare-del-per-rimuovere-completamente-un-elemento-da-una-lista-">Usare <code>del</code> per rimuovere completamente un elemento da
+una lista.<a class="anchor" aria-label="anchor" href="#usare-del-per-rimuovere-completamente-un-elemento-da-una-lista-"></a></h2>
 <hr class="half-width"><ul><li>Si usa <code>del list_name[index]</code> per rimuovere un elemento
-da un elenco (nell’esempio, 9 non è un numero primo) e quindi
+da una lista (nell’esempio, 9 non è un numero primo) e quindi
 accorciarlo.</li>
 <li>
-<code>del</code> non è una funzione o un metodo, ma una
-dichiarazione del linguaggio.</li>
+<code>del</code> non è una funzione o un metodo, ma un’istruzione
+del linguaggio.</li>
 </ul><div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -617,23 +619,23 @@ dichiarazione del linguaggio.</li>
 <pre class="output" tabindex="0"><code>primes before removing last item: [2, 3, 5, 7, 9]
 primes after removing last item: [2, 3, 5, 7]</code></pre>
 </div>
-</section><section><h2 class="section-heading" id="lelenco-vuoto-non-contiene-valori-">L’elenco vuoto non contiene valori.<a class="anchor" aria-label="anchor" href="#lelenco-vuoto-non-contiene-valori-"></a></h2>
-<hr class="half-width"><ul><li>Utilizzare <code>[]</code> da solo per rappresentare un elenco che
+</section><section><h2 class="section-heading" id="la-lista-vuota-non-contiene-valori-">La lista vuota non contiene valori.<a class="anchor" aria-label="anchor" href="#la-lista-vuota-non-contiene-valori-"></a></h2>
+<hr class="half-width"><ul><li>Utilizzare <code>[]</code> da solo per rappresentare una lista che
 non contiene valori.
-<ul><li>“Lo zero degli elenchi”</li>
+<ul><li>“Lo zero della lista”</li>
 </ul></li>
 <li>Utile come punto di partenza per la raccolta di valori (che vedremo
 nel <a href="12-for-loops.html">prossimo episodio</a>).</li>
-</ul></section><section><h2 class="section-heading" id="gli-elenchi-possono-contenere-valori-di-tipi-diversi-">Gli elenchi possono contenere valori di tipi diversi.<a class="anchor" aria-label="anchor" href="#gli-elenchi-possono-contenere-valori-di-tipi-diversi-"></a></h2>
-<hr class="half-width"><ul><li>Un singolo elenco può contenere numeri, stringhe e qualsiasi altra
+</ul></section><section><h2 class="section-heading" id="le-liste-possono-contenere-valori-di-tipi-diversi-">Le liste possono contenere valori di tipi diversi.<a class="anchor" aria-label="anchor" href="#le-liste-possono-contenere-valori-di-tipi-diversi-"></a></h2>
+<hr class="half-width"><ul><li>Una singola lista può contenere numeri, stringhe e qualsiasi altra
 cosa.</li>
 </ul><div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>goals <span class="op">=</span> [<span class="dv">1</span>, <span class="st">'Create lists.'</span>, <span class="dv">2</span>, <span class="st">'Extract items from lists.'</span>, <span class="dv">3</span>, <span class="st">'Modify lists.'</span>]</span></code></pre>
 </div>
-</section><section><h2 class="section-heading" id="le-stringhe-di-caratteri-possono-essere-indicizzate-come-gli-elenchi-">Le stringhe di caratteri possono essere indicizzate come gli
-elenchi.<a class="anchor" aria-label="anchor" href="#le-stringhe-di-caratteri-possono-essere-indicizzate-come-gli-elenchi-"></a></h2>
+</section><section><h2 class="section-heading" id="le-stringhe-di-caratteri-possono-essere-indicizzate-come-le-liste-">Le stringhe di caratteri possono essere indicizzate come le
+liste.<a class="anchor" aria-label="anchor" href="#le-stringhe-di-caratteri-possono-essere-indicizzate-come-le-liste-"></a></h2>
 <hr class="half-width"><ul><li>Ottenere singoli caratteri da una stringa di caratteri utilizzando
 gli indici tra parentesi quadre.</li>
 </ul><div class="codewrapper sourceCode" id="cb14">
@@ -655,7 +657,7 @@ creazione.
 <ul><li>
 <em>Immutabile</em>: non può essere modificato dopo la
 creazione.</li>
-<li>Al contrario, gli elenchi sono <em>mutabili</em>: possono essere
+<li>Al contrario, le liste sono <em>mutabili</em>: possono essere
 modificati sul posto.</li>
 </ul></li>
 <li>Python considera la stringa come un singolo valore con parti, non
@@ -670,7 +672,7 @@ come un insieme di valori.</li>
 </h3>
 <pre class="error" tabindex="0"><code>TypeError: 'str' object does not support item assignment</code></pre>
 </div>
-<ul><li>Gli elenchi e le stringhe di caratteri sono entrambi
+<ul><li>Le liste e le stringhe di caratteri sono entrambi
 <em>collezioni</em>.</li>
 </ul></section><section><h2 class="section-heading" id="lindicizzazione-oltre-la-fine-dellinsieme-è-un-errore-">L’indicizzazione oltre la fine dell’insieme è un errore.<a class="anchor" aria-label="anchor" href="#lindicizzazione-oltre-la-fine-dellinsieme-%C3%A8-un-errore-"></a></h2>
 <hr class="half-width"><ul><li>Python segnala un <code>IndexError</code> se si tenta di accedere a
@@ -726,7 +728,7 @@ second time: [3, 5]</code></pre>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -764,7 +766,7 @@ non negativi, quanto è lunga la lista
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>L’elenco <code>values[start:stop]</code> ha fino a
 <code>stop - start</code> elementi. Per esempio,
@@ -777,13 +779,13 @@ otterremo comunque una lista, ma sarà più corta del previsto.</p>
 </div>
 </div>
 </div>
-<div id="da-stringhe-a-elenchi-e-viceversa" class="callout challenge">
+<div id="da-stringhe-a-liste-e-viceversa" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Sfida</span>
-<div id="da-stringhe-a-elenchi-e-viceversa" class="callout-inner">
-<h3 class="callout-title">Da stringhe a elenchi e viceversa</h3>
+<div id="da-stringhe-a-liste-e-viceversa" class="callout-inner">
+<h3 class="callout-title">Da stringhe a liste e viceversa</h3>
 <div class="callout-content">
 <p>Dato questo:</p>
 <div class="codewrapper sourceCode" id="cb23">
@@ -810,7 +812,7 @@ list to string: gold</code></pre>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>
 <a href="https://docs.python.org/3/library/stdtypes.html#list" class="external-link"><code>list('some string')</code></a>
@@ -820,7 +822,7 @@ caratteri.</li>
 <a href="https://docs.python.org/3/library/stdtypes.html#str.join" class="external-link"><code>join</code></a>
 restituisce una stringa che è la <em>concatenazione</em> di ogni
 elemento di stringa dell’elenco e aggiunge il separatore tra ogni
-elemento dell’elenco. Il risultato è <code>x-y-z</code>. Il separatore
+elemento della lista. Il risultato è <code>x-y-z</code>. Il separatore
 tra gli elementi è la stringa che fornisce questo metodo.</li>
 </ol></div>
 </div>
@@ -845,7 +847,7 @@ tra gli elementi è la stringa che fornisce questo metodo.</li>
 <li>Se un elenco o una stringa ha N elementi, qual è l’indice più
 negativo che può essere usato con sicurezza e quale posizione
 rappresenta tale indice?</li>
-<li>Se <code>values</code> è un elenco, cosa fa
+<li>Se <code>values</code> è una lista, cosa fa
 <code>del values[-1]</code>?</li>
 <li>Come si possono visualizzare tutti gli elementi tranne l’ultimo
 senza cambiare <code>values</code>? (Suggerimento: è necessario
@@ -860,7 +862,7 @@ combinare l’affettatura e l’indicizzazione negativa)</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>Il programma stampa <code>m</code>.</p>
 <ol style="list-style-type: decimal"><li>Python interpreta un indice negativo come se partisse dalla fine
@@ -869,20 +871,20 @@ combinare l’affettatura e l’indicizzazione negativa)</li>
 N elementi è l’elemento <code>-N</code>, che rappresenta il primo
 elemento.</li>
 <li>
-<code>del values[-1]</code> rimuove l’ultimo elemento
-dell’elenco.</li>
+<code>del values[-1]</code> rimuove l’ultimo elemento della
+lista.</li>
 <li><code>values[:-1]</code></li>
 </ol></div>
 </div>
 </div>
 </div>
-<div id="passaggio-attraverso-un-elenco" class="callout challenge">
+<div id="passaggio-attraverso-una-lista" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Sfida</span>
-<div id="passaggio-attraverso-un-elenco" class="callout-inner">
-<h3 class="callout-title">Passaggio attraverso un elenco</h3>
+<div id="passaggio-attraverso-una-lista" class="callout-inner">
+<h3 class="callout-title">Passaggio attraverso una lista</h3>
 <div class="callout-content">
 <p>Cosa stampa il seguente programma?</p>
 <div class="codewrapper sourceCode" id="cb26">
@@ -906,7 +908,7 @@ insieme?</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <p>il programma stampa</p>
 <div class="codewrapper sourceCode" id="cb27">
@@ -953,7 +955,7 @@ elemento).</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1004,7 +1006,7 @@ differenza tra <code>sorted(letters)</code> e
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
 <div class="accordion-body">
 <p>Il programma A stampa</p>
 <div class="codewrapper">
@@ -1018,11 +1020,10 @@ differenza tra <code>sorted(letters)</code> e
 </h3>
 <pre class="output" tabindex="0"><code>letters is ['d', 'g', 'l', 'o'] and result is None</code></pre>
 </div>
-<p><code>sorted(letters)</code> restituisce una copia ordinata
-dell’elenco <code>letters</code> (l’elenco originale
-<code>letters</code> rimane invariato), mentre
-<code>letters.sort()</code> ordina l’elenco <code>letters</code> sul
-posto e non restituisce nulla.</p>
+<p><code>sorted(letters)</code> restituisce una copia ordinata della
+lista <code>letters</code> (l’elenco originale <code>letters</code>
+rimane invariato), mentre <code>letters.sort()</code> ordina la lista
+<code>letters</code> sul posto e non restituisce nulla.</p>
 </div>
 </div>
 </div>
@@ -1036,7 +1037,7 @@ posto e non restituisce nulla.</p>
 <h3 class="callout-title">Copiare (o no)</h3>
 <div class="callout-content">
 <p>Cosa stampano questi due programmi? In termini semplici, spiegare la
-differenza tra <code>new = old</code> e <code>new = old[:]</code>.</p>
+differenza tra <code>new= old</code> e <code>new = old[:]</code>.</p>
 <div class="codewrapper sourceCode" id="cb34">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1065,7 +1066,7 @@ differenza tra <code>new = old</code> e <code>new = old[:]</code>.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
+<div id="collapseSolution8" class="accordion-collapse collapse" data-bs-parent="#accordionSolution8" aria-labelledby="headingSolution8">
 <div class="accordion-body">
 <p>Il programma A stampa</p>
 <div class="codewrapper">
@@ -1097,17 +1098,17 @@ diversi.</p>
 <span class="callout-header">Punti Chiave</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>Un elenco memorizza molti valori in un’unica struttura.</li>
-<li>Utilizzare l’indice di un elemento per recuperarlo da un
-elenco.</li>
-<li>I valori degli elenchi possono essere sostituiti assegnandoli.</li>
-<li>L’aggiunta di elementi a un elenco lo allunga.</li>
+<ul><li>Una lista memorizza molti valori in un’unica struttura.</li>
+<li>Utilizzare l’indice di un elemento per recuperarlo da una
+lista.</li>
+<li>I valori delle liste possono essere sostituiti assegnandoli.</li>
+<li>L’aggiunta di elementi a una lista lo allunga.</li>
 <li>Usare <code>del</code> per rimuovere completamente gli elementi da
-un elenco.</li>
-<li>L’elenco vuoto non contiene valori.</li>
-<li>Gli elenchi possono contenere valori di tipi diversi.</li>
-<li>Le stringhe di caratteri possono essere indicizzate come gli
-elenchi.</li>
+una lista.</li>
+<li>Una lista vuota non contiene valori.</li>
+<li>Le liste possono contenere valori di tipi diversi.</li>
+<li>Le stringhe di caratteri possono essere indicizzate come le
+liste.</li>
 <li>Le stringhe di caratteri sono immutabili.</li>
 <li>L’indicizzazione oltre la fine dell’insieme è un errore.</li>
 </ul></div>
