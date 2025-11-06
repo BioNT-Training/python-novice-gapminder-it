@@ -7,16 +7,16 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Spiegare a cosa servono normalmente i cicli for.
+- Spiegare a cosa servono normalmente i cicli **for**.
 - Tracciare l'esecuzione di un ciclo semplice (non annidato) e indicare correttamente i
   valori delle variabili in ogni iterazione.
-- Scrivere cicli for che utilizzano lo schema Accumulator per aggregare valori.
+- Scrivere cicli **for** che utilizzano lo schema Accumulator per aggregare valori.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- Come posso fare in modo che un programma faccia molte cose?
+- Come posso fare in modo che un programma faccia molte cose contemporaneamente?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -25,7 +25,7 @@ exercises: 15
 - Fare calcoli sui valori di un elenco uno per uno è doloroso come lavorare con
   `pressure_001`, `pressure_002`, ecc.
 - Un ciclo *for* dice a Python di eseguire alcune istruzioni una volta per ogni valore
-  di un elenco, di una stringa di caratteri o di un altro insieme.
+  di una lista, di una stringa di caratteri o di un altro insieme.
 - "per ogni cosa in questo gruppo, fare queste operazioni"
 
 ```python
@@ -97,7 +97,7 @@ IndentationError: unexpected indent
 ## Le variabili di loop possono essere chiamate in qualsiasi modo.
 
 - Come tutte le variabili, le variabili del ciclo sono:
-  - Creato su richiesta.
+  - Create su richiesta.
   - Senza senso: i loro nomi possono essere qualsiasi cosa.
 
 ```python
@@ -259,7 +259,7 @@ print(result)
 
 ## Pratica di Accumulazione
 
-Riempite gli spazi vuoti in ciascuno dei programmi seguenti per produrre il risultato
+Riempite gli spazi vuoti in ciascuno degli esercizi seguenti per produrre il risultato
 indicato.
 
 ```python
@@ -305,7 +305,7 @@ print(lengths)
 :::::::::::::::::::::::::
 
 ```python
-# Concatenate all words: ["red", "green", "blue"] => "redgreenblue"
+# Cooncatenare le parole: ["red", "green", "blue"] => "redgreenblue"
 words = ["red", "green", "blue"]
 result = ____
 for ____ in ____:
@@ -327,7 +327,7 @@ print(result)
 
 :::::::::::::::::::::::::
 
-**Creare un acronimo:** Partendo dall'elenco `["red", "green", "blue"]`, creare
+**Creare un acronimo:** Partendo dalla lista `["red", "green", "blue"]`, creare
 l'acronimo `"RGB"` usando un ciclo for.
 
 **Consiglio:** Potrebbe essere necessario utilizzare un metodo stringa per formattare
@@ -353,7 +353,7 @@ print(acronym)
 ## Somma cumulativa
 
 Riordinate e indentate correttamente le righe di codice sottostanti in modo da stampare
-un elenco con la somma cumulativa dei dati. Il risultato dovrebbe essere `[1, 3, 5,
+una lista con la somma cumulativa dei dati. Il risultato dovrebbe essere `[1, 3, 5,
 10]`.
 
 ```python
@@ -465,8 +465,8 @@ print('My favorite season is ', seasons[3])
 - La prima riga del ciclo `for` deve terminare con i due punti e il corpo deve essere
   indentato.
 - L'indentazione è sempre significativa in Python.
-- Le variabili di loop possono essere chiamate in qualsiasi modo (ma si consiglia
-  vivamente di dare un nome significativo alla variabile di loop).
+- Le variabili del loop possono essere chiamate in qualsiasi modo (ma si consiglia
+  vivamente di dare un nome significativo).
 - Il corpo di un ciclo può contenere molte istruzioni.
 - Usare `range` per iterare su una sequenza di numeri.
 - Lo schema Accumulatore trasforma molti valori in uno.
