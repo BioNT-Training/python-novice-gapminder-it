@@ -19,26 +19,26 @@ exercises: 10
 
 - Come posso usare le funzioni integrate?
 - Come posso scoprire cosa fanno?
-- Che tipo di errori possono verificarsi nei programmi?
+- Che tipo di errori possono verificarsi?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Usare i commenti per aggiungere documentazione ai programmi.
 
 ```python
-# This sentence isn't executed by Python.
-adjustment = 0.5   # Neither is this - anything after '#' is ignored.
+# Questa frase non è eseguita ma solo una descrizione
+adjustment = 0.5   # Nemmeno questo, tutto quello che si trova dopo  '#' viene ignorato.
 ```
 
 ## Una funzione può accettare zero o più argomenti.
 
 - Abbiamo già visto alcune funzioni, ora diamo un'occhiata più da vicino.
-- Un *argomento* è un valore passato in una funzione.
-- `len` prende esattamente uno.
-- `int`, `str` e `float` creano un nuovo valore da uno esistente.
-- `print` prende zero o più.
+- Chiamiamo argomento il valore che si passa a una funzione quando la si utilizza
+- `len` prende solo un argomento.
+- `int`, `str` e `float` creano un nuovo valore a partire da uno esistente.
+- `print` può essere chiamata senza argomenti o più
 - `print` senza argomenti stampa una riga vuota.
-  - Bisogna sempre usare le parentesi, anche se sono vuote, in modo che Python sappia
+  - Bisogna sempre usare le parentesi, anche senza argomenti, in modo che Python sappia
     che si sta chiamando una funzione.
 
 ```python
@@ -55,9 +55,9 @@ after
 
 ## Ogni funzione restituisce qualcosa.
 
-- Ogni chiamata di funzione produce un risultato.
+- Ogni funzione eseguita produce un risultato.
 - Se la funzione non ha un risultato utile da restituire, di solito restituisce il
-  valore speciale `None`. `None` è un oggetto Python che si sostituisce ogni volta che
+  valore speciale `None`. `None` è un oggetto Python che ritorna ogni volta che
   non c'è un valore.
 
 ```python
@@ -72,10 +72,10 @@ result of print is None
 
 ## Le funzioni incorporate di uso comune includono `max`, `min` e `round`.
 
-- Usare `max` per trovare il valore più grande di uno o più valori.
-- Usare `min` per trovare il più piccolo.
+- Usare `max` per trovare il valore maggiore di uno o più valori.
+- Usare `min` per trovare il minore.
 - Entrambi funzionano su stringhe di caratteri e numeri.
-  - "Più grande" e "più piccolo" usano (0-9, A-Z, a-z) per confrontare le lettere.
+  - "Max" e "Min" usano (0-9, A-Z, a-z) per confrontare le lettere.
 
 ```python
 print(max(1, 2, 3))
@@ -87,10 +87,10 @@ print(min('a', 'A', '0'))
 0
 ```
 
-## Le funzioni possono funzionare solo per alcune (combinazioni di) argomenti.
+## Le funzioni possono essere seguite solo con alcuni o combinazioni di argomenti.
 
-- a `max` e `min` deve essere dato almeno un argomento.
-  - "La più grande dell'insieme vuoto" è una domanda senza senso.
+- A `max` e `min` deve essere dato almeno un argomento.
+  - "La richiesta di un massino di un insieme vuoto" è una domanda senza senso.
 - E devono essere dati oggetti che possono essere confrontati in modo significativo.
 
 ```python
@@ -107,8 +107,8 @@ TypeError: '>' not supported between instances of 'str' and 'int'
 
 ## Le funzioni possono avere valori predefiniti per alcuni argomenti.
 
-- `round` arrotonda un numero in virgola mobile.
-- Per impostazione predefinita, arrotonda a zero decimali.
+- `round` arrotonda un numero float.
+- Per impostazione predefinita, arrotonda con zero cifre decimali.
 
 ```python
 round(3.712)
@@ -118,7 +118,7 @@ round(3.712)
 4
 ```
 
-- Possiamo specificare il numero di cifre decimali che desideriamo.
+- Possiamo specificare il numero di cifre decimali che desideriamo come argomento.
 
 ```python
 round(3.712, 1)
@@ -130,19 +130,19 @@ round(3.712, 1)
 
 ## Le funzioni collegate agli oggetti sono chiamate metodi
 
-- Le funzioni assumono un'altra forma che sarà comune negli episodi di pandas.
+- Le funzioni possono assumere un’altra forma, che sarà comune negli episodi dedicati a pandas.
 - I metodi hanno le parentesi come le funzioni, ma vengono dopo la variabile.
 - Alcuni metodi sono utilizzati per operazioni interne a Python e sono contrassegnati da
   doppie sottolineature.
 
 ```python
-my_string = 'Hello world!'  # creation of a string object 
+my_string = 'Hello world!'  # creazione di un oggetto stringa
 
-print(len(my_string))       # the len function takes a string as an argument and returns the length of the string
+print(len(my_string))       # la funzione len prende una stringa come argomento e restituisce la sua lunghezza
 
-print(my_string.swapcase()) # calling the swapcase method on the my_string object
+print(my_string.swapcase()) # chiamata al metodo swapcase sull'oggetto my_string
 
-print(my_string.__len__())  # calling the internal __len__ method on the my_string object, used by len(my_string)
+print(my_string.__len__())  # chiamata diretta al metodo interno __len__, usato da len(my_string)
 
 ```
 
@@ -154,11 +154,10 @@ hELLO WORLD!
 
 - Potreste anche vederli concatenati. Funzionano da sinistra a destra.
 
-```python
-print(my_string.isupper())          # Not all the letters are uppercase
-print(my_string.upper())            # This capitalizes all the letters
+print(my_string.isupper())          # Non tutte le lettere sono maiuscole
+print(my_string.upper())            # Questo converte tutte le lettere in maiuscole
 
-print(my_string.upper().isupper())  # Now all the letters are uppercase
+print(my_string.upper().isupper())  # Ora tutte le lettere sono maiuscole
 ```
 
 ```output
@@ -185,7 +184,7 @@ round(number, ndigits=None)
     the return value has the same type as the number.  ndigits may be negative.
 ```
 
-## Il Quaderno Jupyter offre due modi per ottenere aiuto.
+## Il Jupyter notebook offre due modi per ottenere aiuto.
 
 - Opzione 1: posizionare il cursore vicino al punto in cui viene invocata la funzione in
   una cella (cioè il nome della funzione o i suoi parametri),
@@ -199,7 +198,7 @@ round(number, ndigits=None)
 - Non prova nemmeno a eseguire il programma se non può essere analizzato.
 
 ```python
-# Forgot to close the quote marks around the string.
+# Dimenticato di chiudere le virgolette.
 name = 'Feng
 ```
 
@@ -211,7 +210,7 @@ SyntaxError: EOL while scanning string literal
 ```
 
 ```python
-# An extra '=' in the assignment.
+# Un extra '='.
 age = = 52
 ```
 
@@ -296,7 +295,7 @@ radiance = max(2.1, 2.0 + min(radiance, 1.1 * radiance - 0.5))
 
 ## Individuare la differenza
 
-1. Prevedere cosa stamperà ciascuna delle dichiarazioni `print` del programma qui sotto.
+1. Prevedere cosa stamperà ciascuna delle funzioni `print` del programma qui sotto.
 2. `max(len(rich), poor)` viene eseguito o produce un messaggio di errore? Se viene
    eseguito, il suo risultato ha senso?
 
@@ -416,7 +415,7 @@ utili.
 - Le funzioni possono funzionare solo per determinate combinazioni di argomenti.
 - Le funzioni possono avere valori predefiniti per alcuni argomenti.
 - Usare la funzione integrata `help` per ottenere aiuto per una funzione.
-- Il Quaderno Jupyter offre due modi per ottenere aiuto.
+- Il Jupyter notebook offre due modi per ottenere aiuto.
 - Ogni funzione restituisce qualcosa.
 - Python segnala un errore di sintassi quando non riesce a capire il sorgente di un
   programma.
