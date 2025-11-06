@@ -3346,7 +3346,7 @@ errori di runtime tracciando l’esecuzione del programma.</li>
 scriviamo il codice?</li>
 </ul></section></section><section id="aio-06-libraries"><p>Content from <a href="06-libraries.html">Le biblioteche</a></p>
 <hr>
-<p>Ultimo aggiornamento il 2025-03-02 |
+<p>Ultimo aggiornamento il 2025-11-06 |
 
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/06-libraries.md" class="external-link">Modifica questa pagina <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -3426,7 +3426,7 @@ utilizzarlo.<a class="anchor" aria-label="anchor" href="#un-programma-deve-impor
 <ul>
 <li>Usare <code>import</code> per caricare un modulo di libreria nella
 memoria di un programma.</li>
-<li>quindi fare riferimento agli elementi del modulo come
+<li>Quindi fare riferimento agli elementi del modulo come
 <code>module_name.thing_name</code>.
 <ul>
 <li>Python usa <code>.</code> per indicare “parte di”.</li>
@@ -3525,7 +3525,7 @@ accorciare i programmi.<a class="anchor" aria-label="anchor" href="#creare-un-al
 <ul>
 <li>Usare <code>import ... as ...</code> per dare a una libreria un
 breve <em>alias</em> durante l’importazione.</li>
-<li>quindi fare riferimento agli elementi della libreria usando questo
+<li>Quindi fare riferimento agli elementi della libreria usando questo
 nome abbreviato.</li>
 </ul>
 <div class="codewrapper sourceCode" id="cb7">
@@ -3544,20 +3544,20 @@ nome abbreviato.</li>
 <li>comunemente usato per le librerie usate di frequente o con nomi
 lunghi.
 <ul>
-<li>Ad esempio, la libreria di plottaggio <code>matplotlib</code> è
-spesso indicata con l’alias <code>mpl</code>.</li>
+<li>Ad esempio, la libreria per grafici <code>matplotlib</code> è spesso
+indicata con l’alias <code>mpl</code>.</li>
 </ul>
 </li>
 <li>Ma può rendere i programmi più difficili da capire, poiché i lettori
 devono imparare gli alias del programma.</li>
 </ul>
-<div id="esplorazione-del-modulo-matematico" class="callout challenge">
+<div id="esplorazione-del-modulo-math" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Sfida</span>
-<div id="esplorazione-del-modulo-matematico" class="callout-inner">
-<h3 class="callout-title">Esplorazione del modulo matematico</h3>
+<div id="esplorazione-del-modulo-math" class="callout-inner">
+<h3 class="callout-title">Esplorazione del modulo math</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal">
 <li>Quale funzione del modulo <code>math</code> si può usare per
@@ -3576,7 +3576,7 @@ calcolare una radice quadrata <em>senza</em> usare
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><p>Usando <code>help(math)</code> vediamo che abbiamo
@@ -3628,10 +3628,10 @@ alternative?</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Il <a href="https://docs.python.org/3/library/random.html" class="external-link">modulo
-random</a> sembra poter essere utile.</p>
+random</a> sembra essere utile.</p>
 <p>La stringa ha 11 caratteri, ognuno dei quali ha un indice posizionale
 da 0 a 10. Si possono usare le funzioni <a href="https://docs.python.org/3/library/random.html#random.randrange" class="external-link"><code>random.randrange</code></a>
 o <a href="https://docs.python.org/3/library/random.html#random.randint" class="external-link"><code>random.randint</code></a>
@@ -3654,8 +3654,8 @@ selezionare il carattere <code>bases</code> a quell’indice:</p>
 <span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="bu">print</span>(bases[randrange(<span class="bu">len</span>(bases))])</span></code></pre>
 </div>
 <p>Forse avete trovato la funzione <a href="https://docs.python.org/3/library/random.html#random.sample" class="external-link"><code>random.sample</code></a>?
-Consente una digitazione leggermente inferiore, ma potrebbe essere un
-po’ più difficile da capire leggendo:</p>
+Consente di risparmiare di digitare troppo, ma potrebbe essere un po’
+più difficile da capire leggendo:</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -3678,14 +3678,13 @@ che fa esattamente quello che vogliamo:</p>
 </div>
 </div>
 </div>
-<div id="esempio-di-programmazione-del-puzzle-problema-di-parson" class="callout challenge">
+<div id="jigsaw-puzzle-problema-di-parson" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Sfida</span>
-<div id="esempio-di-programmazione-del-puzzle-problema-di-parson" class="callout-inner">
-<h3 class="callout-title">Esempio di programmazione del puzzle (problema
-di Parson)</h3>
+<div id="jigsaw-puzzle-problema-di-parson" class="callout-inner">
+<h3 class="callout-title">Jigsaw Puzzle (problema di Parson)</h3>
 <div class="callout-content">
 <p>Riorganizzare le seguenti istruzioni in modo da stampare una base di
 DNA casuale e il suo indice nella stringa. Non tutte le istruzioni sono
@@ -3711,7 +3710,7 @@ intermedie.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3742,7 +3741,7 @@ segnala un errore:</p>
 </h3>
 <pre class="error" tabindex="0"><code>NameError: name 'math' is not defined</code></pre>
 </div>
-<p>Cosa ha dimenticato di fare il vostro collega?</p>
+<p>Cosa ha dimenticato di fare?</p>
 </div>
 </div>
 </div>
@@ -3753,7 +3752,7 @@ segnala un errore:</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>Importazione del modulo matematico (<code>import math</code>)</p>
 </div>
@@ -3792,7 +3791,7 @@ segnala un errore:</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3811,10 +3810,10 @@ segnala un errore:</p>
 </div>
 <p>Dal momento che avete appena scritto il codice e avete familiarità
 con esso, potreste trovare la prima versione più facile da leggere. Ma
-quando si cerca di leggere un enorme pezzo di codice scritto da qualcun
-altro, o quando si torna al proprio enorme pezzo di codice dopo diversi
-mesi, i nomi non abbreviati sono spesso più facili, a meno che non ci
-siano chiare convenzioni di abbreviazione.</p>
+quando si cerca di leggere un molte righe di codice, scritte da qualcun
+altro, o quando si rivede dopo diversi mesi, i nomi non abbreviati sono
+spesso più facili, a meno che non ci siano chiare convenzioni di
+abbreviazione.</p>
 </div>
 </div>
 </div>
@@ -3828,7 +3827,7 @@ siano chiare convenzioni di abbreviazione.</p>
 <h3 class="callout-title">Ci sono molti modi per importare le
 librerie!</h3>
 <div class="callout-content">
-<p>abbinare le seguenti istruzioni di stampa alle chiamate di libreria
+<p>Abbinare le seguenti istruzioni di stampa alle chiamate di libreria
 appropriate.</p>
 <p>Comandi di stampa:</p>
 <ol style="list-style-type: decimal">
@@ -3853,7 +3852,7 @@ appropriate.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Chiamate di libreria 1 e 4. Per fare riferimento direttamente a
@@ -3863,7 +3862,7 @@ prefisso, è necessario usare l’istruzione
 importa specificamente le due funzioni <code>sin</code> e
 <code>pi</code>, la chiamata di libreria 4 importa tutte le funzioni del
 modulo <code>math</code>.</li>
-<li>Chiamata alla biblioteca 3. In questo caso, <code>sin</code> e
+<li>Chiamata alla libreria 3. In questo caso, <code>sin</code> e
 <code>pi</code> sono indicati con il nome abbreviato di libreria
 <code>m</code> invece di <code>math</code>. La chiamata di libreria 3 fa
 esattamente questo usando la sintassi <code>import ... as ...</code>:
@@ -3897,8 +3896,8 @@ la chiamata di libreria 4 non fornisce questa informazione.</p>
 <ol style="list-style-type: decimal">
 <li>Riempire gli spazi vuoti in modo che il programma sottostante stampi
 <code>90.0</code>.</li>
-<li>Trovate questa versione più facile da leggere rispetto alle
-precedenti?</li>
+<li>Trovate quale version è più facile da leggere rispetto alle
+precedenti.</li>
 <li>Perché i programmatori non dovrebbero usare sempre questa forma di
 <code>import</code>?</li>
 </ol>
@@ -3919,7 +3918,7 @@ precedenti?</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3969,7 +3968,7 @@ errore si tratta?</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution8" class="accordion-collapse collapse" data-bs-parent="#accordionSolution8" aria-labelledby="headingSolution8">
+<div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4004,7 +4003,7 @@ problema.</li>
 <ul>
 <li>La maggior parte della potenza di un linguaggio di programmazione è
 nelle sue librerie.</li>
-<li>Un programma deve importare un modulo di libreria per poterlo
+<li>Un programma deve importare un modulo di una libreria per poterlo
 utilizzare.</li>
 <li>Usare <code>help</code> per conoscere il contenuto di un modulo di
 libreria.</li>
@@ -4349,7 +4348,7 @@ riassuntive.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Per leggere un CSV, si usa <code>pd.read_csv</code> e gli si passa il
 nome del file <code>'data/gapminder_gdp_americas.csv'</code>. Passiamo
@@ -4396,7 +4395,7 @@ visualizzazione dei dati)</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Possiamo controllare le prime cinque righe di
@@ -4536,7 +4535,7 @@ chiamata <code>thesis</code>:</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Dobbiamo specificare il percorso del file di interesse nella chiamata
 a <code>pd.read_csv</code>. Dobbiamo prima ‘saltare’ dalla cartella
@@ -4577,7 +4576,7 @@ ottenere informazioni su come utilizzare <code>to_csv</code>.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>Per scrivere il DataFrame <code>data_americas</code> in un file
 chiamato <code>processed.csv</code>, eseguire il seguente comando:</p>
@@ -6458,7 +6457,7 @@ second time: [3, 5]</code></pre>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6496,7 +6495,7 @@ non negativi, quanto è lunga la lista
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>L’elenco <code>values[start:stop]</code> ha fino a
 <code>stop - start</code> elementi. Per esempio,
@@ -6544,7 +6543,7 @@ list to string: gold</code></pre>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>
@@ -6598,7 +6597,7 @@ combinare l’affettatura e l’indicizzazione negativa)</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>Il programma stampa <code>m</code>.</p>
 <ol style="list-style-type: decimal">
@@ -6648,7 +6647,7 @@ insieme?</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <p>il programma stampa</p>
 <div class="codewrapper sourceCode" id="cb27">
@@ -6697,7 +6696,7 @@ elemento).</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6748,7 +6747,7 @@ differenza tra <code>sorted(letters)</code> e
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
 <div class="accordion-body">
 <p>Il programma A stampa</p>
 <div class="codewrapper">
@@ -6809,7 +6808,7 @@ differenza tra <code>new = old</code> e <code>new = old[:]</code>.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution8" class="accordion-collapse collapse" data-bs-parent="#accordionSolution8" aria-labelledby="headingSolution8">
+<div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
 <div class="accordion-body">
 <p>Il programma A stampa</p>
 <div class="codewrapper">
@@ -7139,7 +7138,7 @@ runtime?</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Un IndentationError è un errore di sintassi. I programmi con errori
 di sintassi non possono essere avviati. Un programma con un errore di
@@ -7177,7 +7176,7 @@ variabili dopo l’esecuzione di ogni riga.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <table class="table">
 <thead><tr class="header">
@@ -7248,7 +7247,7 @@ variabili dopo l’esecuzione di ogni riga.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7292,7 +7291,7 @@ produrre il risultato indicato.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7335,7 +7334,7 @@ produrre il risultato indicato.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7379,7 +7378,7 @@ produrre il risultato indicato.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7419,7 +7418,7 @@ metodo stringa per formattare correttamente l’acronimo.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7465,7 +7464,7 @@ risultato dovrebbe essere <code>[1, 3, 5, 10]</code>.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution8" class="accordion-collapse collapse" data-bs-parent="#accordionSolution8" aria-labelledby="headingSolution8">
+<div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7523,7 +7522,7 @@ errori.</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution9" class="accordion-collapse collapse" data-bs-parent="#accordionSolution9" aria-labelledby="headingSolution9">
+<div id="collapseSolution9" class="accordion-collapse collapse" aria-labelledby="headingSolution9" data-bs-parent="#accordionSolution9">
 <div class="accordion-body">
 <ul>
 <li>I nomi delle variabili Python sono sensibili alle maiuscole e alle
@@ -7582,7 +7581,7 @@ errore si tratta?</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution10" class="accordion-collapse collapse" data-bs-parent="#accordionSolution10" aria-labelledby="headingSolution10">
+<div id="collapseSolution10" class="accordion-collapse collapse" aria-labelledby="headingSolution10" data-bs-parent="#accordionSolution10">
 <div class="accordion-body">
 <p>Questa lista ha 4 elementi e l’indice per accedere all’ultimo
 elemento della lista è <code>3</code>.</p>
@@ -8422,7 +8421,7 @@ correttezza.</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>1 non corrisponde al glob.</p>
 </div>
@@ -8463,7 +8462,7 @@ frame.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -8509,7 +8508,7 @@ o dire a pandas di ignorarle.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Questa soluzione costruisce un’utile legenda usando il metodo <a href="https://docs.python.org/3/library/stdtypes.html#str.split" class="external-link">stringa
 <code>split</code></a> per estrarre il <code>region</code> dal percorso
@@ -8891,7 +8890,7 @@ errori.</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -8932,7 +8931,7 @@ errori.</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -9009,7 +9008,7 @@ result of call is: None</code></pre>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><p>Il problema dell’esempio è che la funzione
@@ -9062,7 +9061,7 @@ dall’argomento e restituisca il valore minimo in quei dati.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -9107,7 +9106,7 @@ contiene numeri negativi?</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -9173,7 +9172,7 @@ con nome</em>, in questo modo:</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><code>2003/2/1</code></li>
@@ -9265,7 +9264,7 @@ essere <code>25 too light, probably spoiled</code>.</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb34">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -9349,7 +9348,7 @@ corrispondono al decennio, invece di enumerarle nel codice)</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution8" class="accordion-collapse collapse" data-bs-parent="#accordionSolution8" aria-labelledby="headingSolution8">
+<div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Il PIL medio del Giappone negli anni riportati per gli anni ’80 è
@@ -9462,7 +9461,7 @@ stazionario?</p></li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution9" class="accordion-collapse collapse" data-bs-parent="#accordionSolution9" aria-labelledby="headingSolution9">
+<div id="collapseSolution9" class="accordion-collapse collapse" aria-labelledby="headingSolution9" data-bs-parent="#accordionSolution9">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>
 </li></ol>
@@ -9768,7 +9767,7 @@ KeyError: 'Friday'</code></pre>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Tre livelli.</li>

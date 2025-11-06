@@ -451,7 +451,7 @@ accorciare i programmi.</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Le biblioteche</h1>
-        <p>Ultimo aggiornamento il 2025-03-02 |
+        <p>Ultimo aggiornamento il 2025-11-06 |
 
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/06-libraries.md" class="external-link">Modifica questa pagina <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -526,7 +526,7 @@ mischiate.</p>
 utilizzarlo.<a class="anchor" aria-label="anchor" href="#un-programma-deve-importare-un-modulo-di-libreria-prima-di-utilizzarlo-"></a></h2>
 <hr class="half-width"><ul><li>Usare <code>import</code> per caricare un modulo di libreria nella
 memoria di un programma.</li>
-<li>quindi fare riferimento agli elementi del modulo come
+<li>Quindi fare riferimento agli elementi del modulo come
 <code>module_name.thing_name</code>.
 <ul><li>Python usa <code>.</code> per indicare “parte di”.</li>
 </ul></li>
@@ -608,7 +608,7 @@ libreria come prefisso.</li>
 accorciare i programmi.<a class="anchor" aria-label="anchor" href="#creare-un-alias-per-un-modulo-di-libreria-quando-lo-si-importa-per-accorciare-i-programmi-"></a></h2>
 <hr class="half-width"><ul><li>Usare <code>import ... as ...</code> per dare a una libreria un
 breve <em>alias</em> durante l’importazione.</li>
-<li>quindi fare riferimento agli elementi della libreria usando questo
+<li>Quindi fare riferimento agli elementi della libreria usando questo
 nome abbreviato.</li>
 </ul><div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -624,18 +624,18 @@ nome abbreviato.</li>
 </div>
 <ul><li>comunemente usato per le librerie usate di frequente o con nomi
 lunghi.
-<ul><li>Ad esempio, la libreria di plottaggio <code>matplotlib</code> è
-spesso indicata con l’alias <code>mpl</code>.</li>
+<ul><li>Ad esempio, la libreria per grafici <code>matplotlib</code> è spesso
+indicata con l’alias <code>mpl</code>.</li>
 </ul></li>
 <li>Ma può rendere i programmi più difficili da capire, poiché i lettori
 devono imparare gli alias del programma.</li>
-</ul><div id="esplorazione-del-modulo-matematico" class="callout challenge">
+</ul><div id="esplorazione-del-modulo-math" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Sfida</span>
-<div id="esplorazione-del-modulo-matematico" class="callout-inner">
-<h3 class="callout-title">Esplorazione del modulo matematico</h3>
+<div id="esplorazione-del-modulo-math" class="callout-inner">
+<h3 class="callout-title">Esplorazione del modulo math</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li>Quale funzione del modulo <code>math</code> si può usare per
 calcolare una radice quadrata <em>senza</em> usare
@@ -652,7 +652,7 @@ calcolare una radice quadrata <em>senza</em> usare
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li><p>Usando <code>help(math)</code> vediamo che abbiamo
 <code>pow(x,y)</code> in aggiunta a <code>sqrt(x)</code>, quindi
@@ -700,10 +700,10 @@ alternative?</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Il <a href="https://docs.python.org/3/library/random.html" class="external-link">modulo
-random</a> sembra poter essere utile.</p>
+random</a> sembra essere utile.</p>
 <p>La stringa ha 11 caratteri, ognuno dei quali ha un indice posizionale
 da 0 a 10. Si possono usare le funzioni <a href="https://docs.python.org/3/library/random.html#random.randrange" class="external-link"><code>random.randrange</code></a>
 o <a href="https://docs.python.org/3/library/random.html#random.randint" class="external-link"><code>random.randint</code></a>
@@ -726,8 +726,8 @@ selezionare il carattere <code>bases</code> a quell’indice:</p>
 <span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="bu">print</span>(bases[randrange(<span class="bu">len</span>(bases))])</span></code></pre>
 </div>
 <p>Forse avete trovato la funzione <a href="https://docs.python.org/3/library/random.html#random.sample" class="external-link"><code>random.sample</code></a>?
-Consente una digitazione leggermente inferiore, ma potrebbe essere un
-po’ più difficile da capire leggendo:</p>
+Consente di risparmiare di digitare troppo, ma potrebbe essere un po’
+più difficile da capire leggendo:</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -750,14 +750,13 @@ che fa esattamente quello che vogliamo:</p>
 </div>
 </div>
 </div>
-<div id="esempio-di-programmazione-del-puzzle-problema-di-parson" class="callout challenge">
+<div id="jigsaw-puzzle-problema-di-parson" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Sfida</span>
-<div id="esempio-di-programmazione-del-puzzle-problema-di-parson" class="callout-inner">
-<h3 class="callout-title">Esempio di programmazione del puzzle (problema
-di Parson)</h3>
+<div id="jigsaw-puzzle-problema-di-parson" class="callout-inner">
+<h3 class="callout-title">Jigsaw Puzzle (problema di Parson)</h3>
 <div class="callout-content">
 <p>Riorganizzare le seguenti istruzioni in modo da stampare una base di
 DNA casuale e il suo indice nella stringa. Non tutte le istruzioni sono
@@ -783,7 +782,7 @@ intermedie.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -814,7 +813,7 @@ segnala un errore:</p>
 </h3>
 <pre class="error" tabindex="0"><code>NameError: name 'math' is not defined</code></pre>
 </div>
-<p>Cosa ha dimenticato di fare il vostro collega?</p>
+<p>Cosa ha dimenticato di fare?</p>
 </div>
 </div>
 </div>
@@ -825,7 +824,7 @@ segnala un errore:</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>Importazione del modulo matematico (<code>import math</code>)</p>
 </div>
@@ -862,7 +861,7 @@ segnala un errore:</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -881,10 +880,10 @@ segnala un errore:</p>
 </div>
 <p>Dal momento che avete appena scritto il codice e avete familiarità
 con esso, potreste trovare la prima versione più facile da leggere. Ma
-quando si cerca di leggere un enorme pezzo di codice scritto da qualcun
-altro, o quando si torna al proprio enorme pezzo di codice dopo diversi
-mesi, i nomi non abbreviati sono spesso più facili, a meno che non ci
-siano chiare convenzioni di abbreviazione.</p>
+quando si cerca di leggere un molte righe di codice, scritte da qualcun
+altro, o quando si rivede dopo diversi mesi, i nomi non abbreviati sono
+spesso più facili, a meno che non ci siano chiare convenzioni di
+abbreviazione.</p>
 </div>
 </div>
 </div>
@@ -898,7 +897,7 @@ siano chiare convenzioni di abbreviazione.</p>
 <h3 class="callout-title">Ci sono molti modi per importare le
 librerie!</h3>
 <div class="callout-content">
-<p>abbinare le seguenti istruzioni di stampa alle chiamate di libreria
+<p>Abbinare le seguenti istruzioni di stampa alle chiamate di libreria
 appropriate.</p>
 <p>Comandi di stampa:</p>
 <ol style="list-style-type: decimal"><li><code>print("sin(pi/2) =", sin(pi/2))</code></li>
@@ -919,7 +918,7 @@ appropriate.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>Chiamate di libreria 1 e 4. Per fare riferimento direttamente a
 <code>sin</code> e <code>pi</code> senza il nome della libreria come
@@ -928,7 +927,7 @@ prefisso, è necessario usare l’istruzione
 importa specificamente le due funzioni <code>sin</code> e
 <code>pi</code>, la chiamata di libreria 4 importa tutte le funzioni del
 modulo <code>math</code>.</li>
-<li>Chiamata alla biblioteca 3. In questo caso, <code>sin</code> e
+<li>Chiamata alla libreria 3. In questo caso, <code>sin</code> e
 <code>pi</code> sono indicati con il nome abbreviato di libreria
 <code>m</code> invece di <code>math</code>. La chiamata di libreria 3 fa
 esattamente questo usando la sintassi <code>import ... as ...</code>:
@@ -960,8 +959,8 @@ la chiamata di libreria 4 non fornisce questa informazione.</p>
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li>Riempire gli spazi vuoti in modo che il programma sottostante stampi
 <code>90.0</code>.</li>
-<li>Trovate questa versione più facile da leggere rispetto alle
-precedenti?</li>
+<li>Trovate quale version è più facile da leggere rispetto alle
+precedenti.</li>
 <li>Perché i programmatori non dovrebbero usare sempre questa forma di
 <code>import</code>?</li>
 </ol><div class="codewrapper sourceCode" id="cb20">
@@ -981,7 +980,7 @@ precedenti?</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1029,7 +1028,7 @@ errore si tratta?</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution8" class="accordion-collapse collapse" data-bs-parent="#accordionSolution8" aria-labelledby="headingSolution8">
+<div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1061,7 +1060,7 @@ problema.</li>
 <div class="callout-content">
 <ul><li>La maggior parte della potenza di un linguaggio di programmazione è
 nelle sue librerie.</li>
-<li>Un programma deve importare un modulo di libreria per poterlo
+<li>Un programma deve importare un modulo di una libreria per poterlo
 utilizzare.</li>
 <li>Usare <code>help</code> per conoscere il contenuto di un modulo di
 libreria.</li>
@@ -1130,7 +1129,7 @@ i programmi.</li>
   "url": "https://swcarpentry.github.io/python-novice-gapminder/instructor/06-libraries.html",
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/instructor/06-libraries.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2025-03-02",
+  "dateModified": "2025-11-06",
   "datePublished": "2025-11-06"
 }
 
