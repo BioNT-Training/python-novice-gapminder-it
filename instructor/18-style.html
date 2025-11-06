@@ -445,7 +445,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Stile di programmazione</h1>
-        <p>Ultimo aggiornamento il 2025-03-02 |
+        <p>Ultimo aggiornamento il 2025-11-06 |
 
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/18-style.md" class="external-link">Modifica questa pagina <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -489,17 +489,17 @@ giustificare le modifiche.</li>
 </div>
 </div>
 <section><h2 class="section-heading" id="stile-di-codifica">Stile di codifica<a class="anchor" aria-label="anchor" href="#stile-di-codifica"></a></h2>
-<hr class="half-width"><p>Uno stile di codifica coerente aiuta gli altri (compreso il nostro
+<hr class="half-width"><p>Uno stile di codifica coerente aiuta gli altri (compresi noi nel
 futuro) a leggere e capire il codice più facilmente. Il codice viene
 letto molto più spesso di quanto non venga scritto e, come afferma lo <a href="https://www.python.org/dev/peps/pep-0020" class="external-link">Zen of Python</a>, “La
 leggibilità conta”. Python ha proposto uno stile standard attraverso una
 delle sue prime Python Enhancement Proposals (PEP), <a href="https://www.python.org/dev/peps/pep-0008" class="external-link">PEP8</a>.</p>
 <p>Alcuni punti da evidenziare:</p>
-<ul><li>documentare il codice e assicurarsi che siano chiare le ipotesi, gli
+<ul><li>Documentare il codice e assicurarsi che siano chiare le ipotesi, gli
 algoritmi interni, gli input e gli output previsti, ecc</li>
-<li>utilizzare nomi di variabili chiari e semanticamente
+<li>Utilizzare nomi di variabili chiari e semanticamente
 significativi</li>
-<li>usare gli spazi bianchi, <em>non</em> le tabulazioni, per indentare
+<li>Usare gli spazi bianchi, <em>non</em> le tabulazioni, per indentare
 le righe (le tabulazioni possono causare problemi in diversi editor di
 testo, sistemi operativi e sistemi di controllo delle versioni)</li>
 </ul></section><section><h2 class="section-heading" id="seguire-lo-stile-standard-di-python-nel-codice-">Seguire lo stile standard di Python nel codice.<a class="anchor" aria-label="anchor" href="#seguire-lo-stile-standard-di-python-nel-codice-"></a></h2>
@@ -515,7 +515,7 @@ l’applicazione <a href="https://pypi.org/project/pycodestyle/" class="external
 come <a href="https://github.com/psf/black" class="external-link">black code formatter</a>
 possono formattare automaticamente il codice in modo da renderlo
 conforme alla PEP8 e a pycodestyle (esiste anche un formattatore per
-quaderni Jupyter <a href="https://github.com/dnanhkhoa/nb_black" class="external-link">nb_black</a>).</li>
+Jupyter notebooks <a href="https://github.com/dnanhkhoa/nb_black" class="external-link">nb_black</a>).</li>
 <li>Alcuni gruppi e organizzazioni seguono linee guida di stile diverse
 dalla PEP8. Per esempio, la <a href="https://google.github.io/styleguide/pyguide.html" class="external-link">Google style
 guide on Python</a> contiene raccomandazioni leggermente diverse. Google
@@ -556,7 +556,7 @@ fornisce la documentazione è nota anche come <em>docstring</em>.</p>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="kw">def</span> average(values):</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>    <span class="co">"Return average of values, or None if no values are supplied."</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>    <span class="co">"estituisce la media dei valori, oppure None se non vengono forniti valori."</span></span>
 <span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(values) <span class="op">==</span> <span class="dv">0</span>:</span>
 <span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span>
@@ -610,7 +610,7 @@ sintassi o un errore di runtime?</p>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co">"Find maximum edit distance between multiple sequences."</span></span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="co"># This finds the maximum distance between all sequences.</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="co"># Questa parte trova il massimo della distanza tra sequenze</span></span>
 <span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="kw">def</span> overall_max(sequences):</span>
 <span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>    <span class="co">'''Determine overall maximum edit distance.'''</span></span>
@@ -652,8 +652,8 @@ verificate che <code>help</code> la visualizzi correttamente.</p>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="kw">def</span> middle(a, b, c):</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>    <span class="co"># Return the middle value of three.</span></span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>    <span class="co"># Assumes the values can actually be compared.</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>    <span class="co"># Ritorna il valore di mezzo dei tre</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>    <span class="co"># Assume che i valori possono essere comparati</span></span>
 <span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>    values <span class="op">=</span> [a, b, c]</span>
 <span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>    values.sort()</span>
 <span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>    <span class="cf">return</span> values[<span class="dv">1</span>]</span></code></pre>
@@ -668,14 +668,14 @@ verificate che <code>help</code> la visualizzi correttamente.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="kw">def</span> middle(a, b, c):</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>    <span class="co">'''Return the middle value of three.</span></span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="co">    Assumes the values can actually be compared.'''</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>    <span class="co">'''Ritorna il valore di mezzo dei tre.</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="co">    Assume che i valori possono essere comparati.'''</span></span>
 <span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>    values <span class="op">=</span> [a, b, c]</span>
 <span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>    values.sort()</span>
 <span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>    <span class="cf">return</span> values[<span class="dv">1</span>]</span></code></pre>
@@ -693,7 +693,7 @@ verificate che <code>help</code> la visualizzi correttamente.</p>
 <h3 class="callout-title">Pulire il codice</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li>Leggete questo breve programma e cercate di prevedere cosa fa.</li>
-<li>Eseguitelo: quanto è stata accurata la vostra previsione?</li>
+<li>Eseguitelo: quanto è accurata la vostra previsione?</li>
 <li>Riformulare il programma per renderlo più leggibile. Ricordatevi di
 eseguirlo dopo ogni modifica per assicurarvi che il suo comportamento
 non sia cambiato.</li>
@@ -728,7 +728,7 @@ cosa avete fatto di uguale? Cosa avete fatto di diverso e perché?</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Ecco una soluzione.</p>
 <div class="codewrapper sourceCode" id="cb9">
@@ -736,29 +736,26 @@ cosa avete fatto di uguale? Cosa avete fatto di diverso e perché?</li>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="kw">def</span> string_machine(input_string, iterations):</span>
 <span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="co">    Takes input_string and generates a new string with -'s and *'s</span></span>
-<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="co">    corresponding to characters that have identical adjacent characters</span></span>
-<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a><span class="co">    or not, respectively.  Iterates through this procedure with the resultant</span></span>
-<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a><span class="co">    strings for the supplied number of iterations.</span></span>
-<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a>    <span class="bu">print</span>(input_string)</span>
-<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a>    input_string_length <span class="op">=</span> <span class="bu">len</span>(input_string)</span>
-<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a>    old <span class="op">=</span> input_string</span>
-<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(iterations):</span>
-<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a>        new <span class="op">=</span> <span class="st">''</span></span>
-<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a>        <span class="co"># iterate through characters in previous string</span></span>
-<span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(input_string_length):</span>
-<span id="cb9-15"><a href="#cb9-15" tabindex="-1"></a>            left <span class="op">=</span> j<span class="op">-</span><span class="dv">1</span></span>
-<span id="cb9-16"><a href="#cb9-16" tabindex="-1"></a>            right <span class="op">=</span> (j<span class="op">+</span><span class="dv">1</span>) <span class="op">%</span> input_string_length  <span class="co"># ensure right index wraps around</span></span>
-<span id="cb9-17"><a href="#cb9-17" tabindex="-1"></a>            <span class="cf">if</span> old[left] <span class="op">==</span> old[right]:</span>
-<span id="cb9-18"><a href="#cb9-18" tabindex="-1"></a>                new <span class="op">=</span> new <span class="op">+</span> <span class="st">'-'</span></span>
-<span id="cb9-19"><a href="#cb9-19" tabindex="-1"></a>            <span class="cf">else</span>:</span>
-<span id="cb9-20"><a href="#cb9-20" tabindex="-1"></a>                new <span class="op">=</span> new <span class="op">+</span> <span class="st">'*'</span></span>
-<span id="cb9-21"><a href="#cb9-21" tabindex="-1"></a>        <span class="bu">print</span>(new)</span>
-<span id="cb9-22"><a href="#cb9-22" tabindex="-1"></a>        <span class="co"># store new string as old</span></span>
-<span id="cb9-23"><a href="#cb9-23" tabindex="-1"></a>        old <span class="op">=</span> new     </span>
-<span id="cb9-24"><a href="#cb9-24" tabindex="-1"></a></span>
-<span id="cb9-25"><a href="#cb9-25" tabindex="-1"></a>string_machine(<span class="st">'et cetera'</span>, <span class="dv">10</span>)</span></code></pre>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="co">    Riceve una stringa in ingresso (input_string) e crea una nuova stringa formata da trattini (-) e asterischi (*): i trattini indicano caratteri uguali adiacenti, gli asterischi caratteri diversi. La procedura viene ripetuta per il numero di iterazioni indicato.</span></span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>    <span class="bu">print</span>(input_string)</span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>    input_string_length <span class="op">=</span> <span class="bu">len</span>(input_string)</span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a>    old <span class="op">=</span> input_string</span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(iterations):</span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a>        new <span class="op">=</span> <span class="st">''</span></span>
+<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a>        <span class="co"># iterate through characters in previous string</span></span>
+<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(input_string_length):</span>
+<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a>            left <span class="op">=</span> j<span class="op">-</span><span class="dv">1</span></span>
+<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a>            right <span class="op">=</span> (j<span class="op">+</span><span class="dv">1</span>) <span class="op">%</span> input_string_length  <span class="co"># ensure right index wraps around</span></span>
+<span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a>            <span class="cf">if</span> old[left] <span class="op">==</span> old[right]:</span>
+<span id="cb9-15"><a href="#cb9-15" tabindex="-1"></a>                new <span class="op">=</span> new <span class="op">+</span> <span class="st">'-'</span></span>
+<span id="cb9-16"><a href="#cb9-16" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb9-17"><a href="#cb9-17" tabindex="-1"></a>                new <span class="op">=</span> new <span class="op">+</span> <span class="st">'*'</span></span>
+<span id="cb9-18"><a href="#cb9-18" tabindex="-1"></a>        <span class="bu">print</span>(new)</span>
+<span id="cb9-19"><a href="#cb9-19" tabindex="-1"></a>        <span class="co"># store new string as old</span></span>
+<span id="cb9-20"><a href="#cb9-20" tabindex="-1"></a>        old <span class="op">=</span> new     </span>
+<span id="cb9-21"><a href="#cb9-21" tabindex="-1"></a></span>
+<span id="cb9-22"><a href="#cb9-22" tabindex="-1"></a>string_machine(<span class="st">'et cetera'</span>, <span class="dv">10</span>)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -849,7 +846,7 @@ cosa avete fatto di uguale? Cosa avete fatto di diverso e perché?</li>
   "url": "https://swcarpentry.github.io/python-novice-gapminder/instructor/18-style.html",
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/instructor/18-style.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2025-03-02",
+  "dateModified": "2025-11-06",
   "datePublished": "2025-11-06"
 }
 
