@@ -48,7 +48,7 @@ quindi non preoccupatevi se li mischiate.
 ## Un programma deve importare un modulo di libreria prima di utilizzarlo.
 
 - Usare `import` per caricare un modulo di libreria nella memoria di un programma.
-- quindi fare riferimento agli elementi del modulo come `module_name.thing_name`.
+- Quindi fare riferimento agli elementi del modulo come `module_name.thing_name`.
   - Python usa `.` per indicare "parte di".
 - Utilizzo di `math`, uno dei moduli della libreria standard:
 
@@ -122,7 +122,7 @@ cos(pi) is -1.0
 
 - Usare `import ... as ...` per dare a una libreria un breve *alias* durante
   l'importazione.
-- quindi fare riferimento agli elementi della libreria usando questo nome abbreviato.
+- Quindi fare riferimento agli elementi della libreria usando questo nome abbreviato.
 
 ```python
 import math as m
@@ -135,14 +135,14 @@ cos(pi) is -1.0
 ```
 
 - comunemente usato per le librerie usate di frequente o con nomi lunghi.
-  - Ad esempio, la libreria di plottaggio `matplotlib` è spesso indicata con l'alias
+  - Ad esempio, la libreria per grafici `matplotlib` è spesso indicata con l'alias
     `mpl`.
 - Ma può rendere i programmi più difficili da capire, poiché i lettori devono imparare
   gli alias del programma.
 
 ::::::::::::::::::::::::::::::::::::::: challenge
 
-## Esplorazione del modulo matematico
+## Esplorazione del modulo math
 
 1. Quale funzione del modulo `math` si può usare per calcolare una radice quadrata
    *senza* usare `sqrt`?
@@ -156,9 +156,7 @@ cos(pi) is -1.0
    potremmo usare `pow(x, 0.5)` per trovare una radice quadrata.
 
 2. La funzione `sqrt(x)` è probabilmente più leggibile di `pow(x, 0.5)`
-   nell'implementazione delle equazioni. La leggibilità è una pietra miliare della buona
-   programmazione, quindi ha senso fornire una funzione speciale per questo specifico
-   caso comune.
+   nell'implementazione delle equazioni. La leggibilità è una pietra miliare della buona programmazione, quindi ha senso fornire una funzione speciale per questo specifico caso comune.
 
 Inoltre, il design della libreria `math` di Python ha origine nello standard C, che
 include sia `sqrt(x)` che `pow(x,y)`, quindi un po' di storia della programmazione si
@@ -188,7 +186,7 @@ bases = 'ACTTGCTTGAC'
 
 ## Soluzione
 
-Il [modulo random][randommod] sembra poter essere utile.
+Il [modulo random][randommod] sembra essere utile.
 
 La stringa ha 11 caratteri, ognuno dei quali ha un indice posizionale da 0 a 10. Si
 possono usare le funzioni
@@ -213,9 +211,7 @@ print(bases[randrange(len(bases))])
 ```
 
 Forse avete trovato la funzione
-[`random.sample`](https://docs.python.org/3/library/random.html#random.sample)? Consente
-una digitazione leggermente inferiore, ma potrebbe essere un po' più difficile da capire
-leggendo:
+[`random.sample`](https://docs.python.org/3/library/random.html#random.sample)? Consente di risparmiare di digitare troppo, ma potrebbe essere un po' più difficile da capire leggendo:
 
 ```python
 from random import sample
@@ -242,7 +238,7 @@ print(choice(bases))
 
 ::::::::::::::::::::::::::::::::::::::: challenge
 
-## Esempio di programmazione del puzzle (problema di Parson)
+## Jigsaw Puzzle (problema di Parson)
 
 Riorganizzare le seguenti istruzioni in modo da stampare una base di DNA casuale e il
 suo indice nella stringa. Non tutte le istruzioni sono necessarie. Sentitevi liberi di
@@ -284,7 +280,7 @@ Quando un vostro collega digita `help(math)`, Python segnala un errore:
 NameError: name 'math' is not defined
 ```
 
-Cosa ha dimenticato di fare il vostro collega?
+Cosa ha dimenticato di fare?
 
 ::::::::::::::: solution
 
@@ -331,10 +327,7 @@ print(angle)
 ```
 
 Dal momento che avete appena scritto il codice e avete familiarità con esso, potreste
-trovare la prima versione più facile da leggere. Ma quando si cerca di leggere un enorme
-pezzo di codice scritto da qualcun altro, o quando si torna al proprio enorme pezzo di
-codice dopo diversi mesi, i nomi non abbreviati sono spesso più facili, a meno che non
-ci siano chiare convenzioni di abbreviazione.
+trovare la prima versione più facile da leggere. Ma quando si cerca di leggere un molte righe di codice, scritte da qualcun altro, o quando si rivede dopo diversi mesi, i nomi non abbreviati sono spesso più facili, a meno che non ci siano chiare convenzioni di abbreviazione.
 
 
 
@@ -346,7 +339,7 @@ ci siano chiare convenzioni di abbreviazione.
 
 ## Ci sono molti modi per importare le librerie!
 
-abbinare le seguenti istruzioni di stampa alle chiamate di libreria appropriate.
+Abbinare le seguenti istruzioni di stampa alle chiamate di libreria appropriate.
 
 Comandi di stampa:
 
@@ -365,14 +358,10 @@ Chiamate di libreria:
 
 ## Soluzione
 
-1. Chiamate di libreria 1 e 4. Per fare riferimento direttamente a `sin` e `pi` senza il
-   nome della libreria come prefisso, è necessario usare l'istruzione `from ... import
-   ...`. Mentre la chiamata di libreria 1 importa specificamente le due funzioni `sin` e
-   `pi`, la chiamata di libreria 4 importa tutte le funzioni del modulo `math`.
-2. Chiamata alla biblioteca 3. In questo caso, `sin` e `pi` sono indicati con il nome
-   abbreviato di libreria `m` invece di `math`. La chiamata di libreria 3 fa esattamente
-   questo usando la sintassi `import ... as ...`: crea un alias per `math` sotto forma
-   di nome abbreviato `m`.
+1. Chiamate di libreria 1 e 4. Per fare riferimento direttamente a `sin` e `pi` senza il nome della libreria come prefisso, è necessario usare l'istruzione `from ... import
+   ...`. Mentre la chiamata di libreria 1 importa specificamente le due funzioni `sin` e `pi`, la chiamata di libreria 4 importa tutte le funzioni del modulo `math`.
+2. Chiamata alla libreria 3. In questo caso, `sin` e `pi` sono indicati con il nome
+   abbreviato di libreria `m` invece di `math`. La chiamata di libreria 3 fa esattamente questo usando la sintassi `import ... as ...`: crea un alias per `math` sotto forma di nome abbreviato `m`.
 3. Chiamata di libreria 2. Qui `sin` e `pi` sono indicati con il normale nome di
    libreria `math`, quindi è sufficiente la normale chiamata `import ...`.
 
@@ -395,7 +384,7 @@ libreria 4 non fornisce questa informazione.
 ## Importazione di elementi specifici
 
 1. Riempire gli spazi vuoti in modo che il programma sottostante stampi `90.0`.
-2. Trovate questa versione più facile da leggere rispetto alle precedenti?
+2. Trovate quale version è più facile da leggere rispetto alle precedenti.
 3. Perché i programmatori non dovrebbero usare sempre questa forma di `import`?
 
 ```python
@@ -416,9 +405,7 @@ print(angle)
 
 Molto probabilmente questa versione è più facile da leggere, perché è meno densa. La
 ragione principale per non usare questa forma di importazione è quella di evitare
-scontri di nomi. Per esempio, non si importerebbe `degrees` in questo modo se si volesse
-usare anche il nome `degrees` per una propria variabile o funzione. O se si importasse
-anche una funzione chiamata `degrees` da un'altra libreria.
+scontri di nomi. Per esempio, non si importerebbe `degrees` in questo modo se si volesse usare anche il nome `degrees` per una propria variabile o funzione. O se si importasse anche una funzione chiamata `degrees` da un'altra libreria.
 
 
 
@@ -454,8 +441,7 @@ ValueError: math domain error
 
 1. Il logaritmo di `x` è definito solo per `x > 0`, quindi 0 è fuori dal dominio della
    funzione.
-2. Si ottiene un errore del tipo `ValueError`, che indica che la funzione ha ricevuto un
-   valore di argomento inappropriato. Il messaggio aggiuntivo "errore del dominio
+2. Si ottiene un errore del tipo `ValueError`, che indica che la funzione ha ricevuto un valore di argomento inappropriato. Il messaggio aggiuntivo "errore del dominio
    matematico" chiarisce il problema.
 
 :::::::::::::::::::::::::
@@ -472,7 +458,7 @@ ValueError: math domain error
 
 - La maggior parte della potenza di un linguaggio di programmazione è nelle sue
   librerie.
-- Un programma deve importare un modulo di libreria per poterlo utilizzare.
+- Un programma deve importare un modulo di una libreria per poterlo utilizzare.
 - Usare `help` per conoscere il contenuto di un modulo di libreria.
 - Importazione di elementi specifici da una libreria per abbreviare i programmi.
 - Creare un alias per una libreria quando la si importa per abbreviare i programmi.
