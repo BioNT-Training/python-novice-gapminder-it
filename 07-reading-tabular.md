@@ -9,20 +9,20 @@ exercises: 10
 
 - Importare la libreria Pandas.
 - Utilizzare Pandas per caricare un semplice set di dati CSV.
-- Ottenere alcune informazioni di base su un DataFrame Pandas.
+- Ottenere alcune informazioni di base su un Pandas DataFrame.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- Come si leggono i dati tabellari?
+- Come si leggono i dati di una tabella?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Utilizzare la libreria Pandas per eseguire statistiche su dati tabellari.
+## Utilizzare la libreria Pandas per eseguire statistiche su dati di una tabella.
 
 - [Pandas](https://pandas.pydata.org/) è una libreria Python molto utilizzata per le
-  statistiche, in particolare per i dati tabellari.
+  statistiche, in particolare per leggere e manipolare tabelle.
 - Prende in prestito molte caratteristiche dai dataframe di R.
   - Una tabella bidimensionale le cui colonne hanno nomi e potenzialmente tipi di dati
     diversi.
@@ -61,8 +61,7 @@ print(data_oceania)
   osservazioni.
 - Pandas usa la backslash `\` per mostrare le righe avvolte quando l'output è troppo
   ampio per adattarsi allo schermo.
-- L'uso di nomi descrittivi per i dataframe ci aiuta a distinguere tra più dataframe, in
-  modo da evitare di sovrascrivere accidentalmente un dataframe o di leggere da quello
+- L'uso di nomi descrittivi per i dataframe ci aiuta a distinguere tra più dataframe, in modo da evitare di sovrascrivere accidentalmente un dataframe o di leggere da quello
   sbagliato.
 
 ::::::::::::::::::::::::::::::::::::::::: callout
@@ -72,8 +71,7 @@ print(data_oceania)
 Le nostre lezioni memorizzano i loro file di dati in una sottodirectory `data`, motivo
 per cui il percorso del file è `data/gapminder_gdp_oceania.csv`. Se si dimentica di
 includere `data/`, o se lo si include ma la propria copia del file si trova da qualche
-altra parte, si otterrà un [runtime error](04-built-in.md) che termina con una riga come
-questa:
+altra parte, si otterrà un [runtime error](04-built-in.md) che termina con una riga come questa:
 
 ```error
 FileNotFoundError: [Errno 2] No such file or directory: 'data/gapminder_gdp_oceania.csv'
@@ -140,18 +138,17 @@ memory usage: 208.0+ bytes
 
 - Questo è un `DataFrame`
 - Due righe denominate `'Australia'` e `'New Zealand'`
-- Dodici colonne, ciascuna delle quali contiene due valori effettivi in virgola mobile a
-  64 bit.
+- Dodici colonne, ciascuna delle quali contiene due valori effettivi in virgola mobile a 64 bit.
   - Parleremo in seguito dei valori nulli, utilizzati per rappresentare le osservazioni
     mancanti.
 - Utilizza 208 byte di memoria.
 
 ## La variabile `DataFrame.columns` memorizza informazioni sulle colonne del dataframe.
 
-- Si noti che questi sono dati, *non* un metodo. (Non ha parentesi)
+- Nota che questo è un dato,*non* un metodo. (non ha parentesi)
   - Come `math.pi`.
   - Quindi non usare `()` per cercare di chiamarlo.
-- Chiamata *variabile membro*, o semplicemente *membro*.
+- Si chiama *variabile membro*, o semplicemente *membro*.
 
 ```python
 print(data_oceania_country.columns)
@@ -167,8 +164,7 @@ Index(['gdpPercap_1952', 'gdpPercap_1957', 'gdpPercap_1962', 'gdpPercap_1967',
 ## Usare `DataFrame.T` per trasporre un dataframe.
 
 - A volte si desidera trattare le colonne come righe e viceversa.
-- La trasposizione (scritta `.T`) non copia i dati, ma cambia solo la visione del
-  programma.
+- La trasposizione (scritta `.T`) non copia i dati, ma cambia solo la visione della tabella
 - Come `columns`, è una variabile membro.
 
 ```python
@@ -269,8 +265,8 @@ data_americas.describe()
 Dopo aver letto i dati relativi alle Americhe, utilizzate `help(data_americas.head)` e
 `help(data_americas.tail)` per scoprire cosa fanno `DataFrame.head` e `DataFrame.tail`.
 
-1. Quale chiamata di metodo visualizzerà le prime tre righe di questi dati?
-2. Quale chiamata di metodo visualizzerà le ultime tre colonne di questi dati?
+1. Quale metodo visualizzerà le prime tre righe di questi dati?
+2. Quale metodo visualizzerà le ultime tre colonne di questi dati?
    (Suggerimento: potrebbe essere necessario modificare la visualizzazione dei dati)
 
 ::::::::::::::: solution
@@ -279,8 +275,7 @@ Dopo aver letto i dati relativi alle Americhe, utilizzate `help(data_americas.he
 
 1. Possiamo controllare le prime cinque righe di `data_americas` eseguendo
    `data_americas.head()` che ci permette di visualizzare l'inizio del DataFrame. È
-   possibile specificare il numero di righe che si desidera visualizzare specificando il
-   parametro `n` nella chiamata a `data_americas.head()`. Per visualizzare le prime tre
+   possibile specificare il numero di righe che si desidera visualizzare specificando il parametro `n` nella chiamata a `data_americas.head()`. Per visualizzare le prime tre
    righe, eseguire:
 
   ```python
@@ -323,8 +318,7 @@ Dopo aver letto i dati relativi alle Americhe, utilizzate `help(data_americas.he
   americas_flipped = data_americas.T
   ```
 
-Possiamo quindi visualizzare le ultime tre colonne di `americas` visualizzando le ultime
-tre righe di `americas_flipped`:
+Possiamo quindi visualizzare le ultime tre colonne di `americas` visualizzando le ultime tre righe di `americas_flipped`:
 
   ```python
   americas_flipped.tail(n=3)
@@ -413,7 +407,7 @@ data_microbes = pd.read_csv('../field_data/microbes.csv')
 
 Oltre alla funzione `read_csv` per leggere i dati da un file, Pandas fornisce una
 funzione `to_csv` per scrivere i dataframe sui file. Applicando quanto appreso sulla
-lettura dei file, scrivete uno dei vostri dataframe in un file chiamato `processed.csv`.
+lettura dei file, scrivete uno dei vostri dataframe in un file chiamato`processed.csv`.
 È possibile utilizzare `help` per ottenere informazioni su come utilizzare `to_csv`.
 
 ::::::::::::::: solution
@@ -434,10 +428,7 @@ help(data_americas.to_csv)
 help(pd.read_csv)
 ```
 
-Si noti che `help(to_csv)` o `help(pd.to_csv)` danno errore! Ciò è dovuto al fatto che
-`to_csv` non è una funzione globale di Pandas, ma una funzione membro di DataFrames. Ciò
-significa che può essere chiamata solo su un'istanza di un DataFrame, ad esempio
-`data_americas.to_csv` o `data_oceania.to_csv`
+Si noti che `help(to_csv)` o `help(pd.to_csv)` generano un errore! Ciò è dovuto al fatto che `to_csv` non è una funzione globale di Pandas, ma una funzione membro di DataFrames. Ciò significa che può essere chiamata solo su un'istanza di un DataFrame, ad esempio `data_americas.to_csv` o `data_oceania.to_csv`
 
 
 
@@ -447,7 +438,7 @@ significa che può essere chiamata solo su un'istanza di un DataFrame, ad esempi
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Utilizzare la libreria Pandas per ottenere statistiche di base da dati tabellari.
+- Utilizzare la libreria Pandas per ottenere statistiche di base da tabelle.
 - Utilizzare `index_col` per specificare che i valori di una colonna devono essere
   utilizzati come intestazioni di riga.
 - Usare `DataFrame.info` per saperne di più su un dataframe.
