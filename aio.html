@@ -531,7 +531,7 @@
         
 <section id="aio-01-run-quit"><p>Content from <a href="01-run-quit.html">Esecuzione e chiusura</a></p>
 <hr>
-<p>Ultimo aggiornamento il 2025-03-02 |
+<p>Ultimo aggiornamento il 2025-11-06 |
 
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/01-run-quit.md" class="external-link">Modifica questa pagina <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -555,90 +555,84 @@
 <div class="inner bordered">
 <h3 class="card-title">Obiettivi</h3>
 <ul>
-<li>Avviare il server JupyterLab.</li>
+<li>Avviare JupyterLab.</li>
 <li>Creare un nuovo script Python.</li>
-<li>Creare un quaderno Jupyter.</li>
-<li>Arresto del server JupyterLab.</li>
-<li>Comprendere la differenza tra uno script Python e un quaderno
-Jupyter.</li>
-<li>Creare celle Markdown in un blocco note.</li>
-<li>Creare ed eseguire celle Python in un blocco note.</li>
+<li>Creare un Jupyter notebook.</li>
+<li>Arrestare il server di JupyterLab.</li>
+<li>Comprendere la differenza tra uno script Python e un Jupyter
+notebook.</li>
+<li>Creare celle Markdown in un notebook.</li>
+<li>Creare ed eseguire celle Python in un notebook.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<p>Per eseguire Python, per il resto di questo workshop useremo <a href="https://jupyter.org/" class="external-link">Jupyter Notebooks</a> tramite <a href="https://jupyterlab.readthedocs.io/en/stable/" class="external-link">JupyterLab</a>. I
-taccuini Jupyter sono molto diffusi nel campo della scienza dei dati e
-della visualizzazione e rappresentano una comoda esperienza comune per
-l’esecuzione di codice Python in modo interattivo, dove è possibile
-visualizzare e condividere facilmente i risultati del codice Python.</p>
-<p>Esistono altri modi per modificare, gestire ed eseguire il codice.
-Gli sviluppatori di software spesso usano un ambiente di sviluppo
-integrato (IDE) come <a href="https://www.jetbrains.com/pycharm/" class="external-link">PyCharm</a> o <a href="https://code.visualstudio.com/" class="external-link">Visual Studio Code</a>, o editor
-di testo come Vim o Emacs, per creare e modificare i loro programmi
-Python. Dopo aver modificato e salvato i programmi Python, è possibile
-eseguirli all’interno dell’IDE stesso o direttamente sulla riga di
-comando. I taccuini Jupyter, invece, ci permettono di eseguire e
-visualizzare i risultati del nostro codice Python immediatamente
-all’interno del taccuino.</p>
-<p>JupyterLab ha molte altre funzioni utili:</p>
+<p>Per eseguire Python, per il resto di questo workshop useremo i <a href="https://jupyter.org/" class="external-link">Jupyter Notebooks</a> tramite <a href="https://jupyterlab.readthedocs.io/en/stable/" class="external-link">JupyterLab</a>. I
+notebook Jupyter sono molto diffusi nella scienza dei dati e nella
+visualizzazione e rappresentano una comoda soluzione per eseguire codice
+Python in modo interattivo, in cui è possibile visualizzare e
+condividere facilmente i risultati del proprio codice. Esistono altri
+modi per modificare, gestire ed eseguire il codice. Gli sviluppatori di
+software spesso usano un ambiente di sviluppo integrato (IDE) come <a href="https://www.jetbrains.com/pycharm/" class="external-link">PyCharm</a> o <a href="https://code.visualstudio.com/" class="external-link">Visual Studio Code</a>, oppure
+editor di testo come Vim o Emacs, per creare e modificare i loro
+programmi Python. Dopo aver modificato e salvato i programmi, è
+possibile eseguirli all’interno dell’IDE stesso o direttamente dalla
+riga di comando. I notebook Jupyter, invece, consentono di eseguire e
+visualizzare immediatamente i risultati del codice all’interno del
+notebook.</p>
+<p>JupyterLab ha diverse funzioni utili:</p>
 <ul>
 <li>È possibile digitare, modificare, copiare e incollare facilmente
 blocchi di codice.</li>
-<li>La scheda completa consente di accedere facilmente ai nomi delle
-cose che si stanno usando e di saperne di più.</li>
+<li>L’autocompletamento consente di accedere rapidamente a nomi di
+oggetti/metodi e di scoprirne di più.</li>
 <li>Permette di annotare il codice con collegamenti, testo di dimensioni
-diverse, punti elenco, ecc. per renderlo più accessibile a voi e ai
+diverse, elenchi puntati ecc., per renderlo più accessibile a voi e ai
 vostri collaboratori.</li>
-<li>Permette di visualizzare le figure accanto al codice che le produce
+<li>Consente di visualizzare le figure accanto al codice che le produce,
 per raccontare una storia completa dell’analisi.</li>
 </ul>
-<p>Ogni blocco note contiene una o più celle che contengono codice,
+<p>Ogni notebook contiene una o più celle che possono contenere codice,
 testo o immagini.</p>
 <section><h2 class="section-heading" id="iniziare-con-jupyterlab">Iniziare con JupyterLab<a class="anchor" aria-label="anchor" href="#iniziare-con-jupyterlab"></a>
 </h2>
 <hr class="half-width">
-<p>JupyterLab è un server di applicazioni con un’interfaccia utente web
-di <a href="https://jupyter.org/" class="external-link">Project Jupyter</a> che consente di
-lavorare con documenti e attività come quaderni Jupyter, editor di
-testo, terminali e persino componenti personalizzati in modo flessibile,
-integrato ed estensibile. JupyterLab richiede un browser ragionevolmente
-aggiornato (idealmente una versione corrente di Chrome, Safari o
-Firefox); le versioni di Internet Explorer 9 e inferiori non sono
-<em>supportate</em>.</p>
+<p>JupyterLab è un server di applicazioni con interfaccia web del <a href="https://jupyter.org/" class="external-link">Project Jupyter</a>he consente di lavorare
+con documenti e attività (notebook Jupyter, editor di testo, terminali e
+componenti personalizzati) in modo flessibile, integrato ed estensibile.
+JupyterLab richiede un browser ragionevolmente aggiornato (idealmente
+una versione corrente di Chrome, Safari o Firefox); Internet Explorer 9
+e precedenti non sono <em>supportati</em>.</p>
 <p>JupyterLab è incluso nella distribuzione Anaconda Python. Se non
-avete ancora installato la distribuzione Anaconda Python, consultate <a href="index.html#setup">le istruzioni di installazione</a> per le istruzioni
-di installazione.</p>
-<p>In questa lezione eseguiremo JupyterLab localmente sulle nostre
-macchine, quindi non sarà necessaria una connessione a Internet oltre
-alla connessione iniziale per scaricare e installare Anaconda e
-JupyterLab</p>
+avete ancora installato Anaconda, consultate <a href="index.html#setup">le
+istruzioni di installazione</a> per le istruzioni di installazione.</p>
+<p>questa lezione eseguiremo JupyterLab in locale sui nostri computer,
+quindi non sarà necessaria una connessione a Internet oltre a quella
+iniziale per scaricare e installare Anaconda e JupyterLab.</p>
 <ul>
-<li>Avviare il server JupyterLab sulla propria macchina</li>
-<li>Usate un browser web per aprire uno speciale URL localhost che si
-connette al vostro server JupyterLab</li>
+<li>Avviare il server JupyterLab sul proprio computer.</li>
+<li>Usare un browser per aprire uno speciale URL localhost che si
+connette al server JupyterLab.</li>
 <li>Il server JupyterLab esegue il lavoro e il browser web visualizza il
-risultato</li>
+risultato.</li>
 <li>Digitare il codice nel browser e vedere i risultati dopo che il
-server JupyterLab ha terminato l’esecuzione del codice</li>
+server JupyterLab ha terminato l’esecuzione del codice.</li>
 </ul>
 <div id="jupyterlab-e-i-taccuini-jupyter" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Richiamo</span>
 <div id="jupyterlab-e-i-taccuini-jupyter" class="callout-inner">
 <h3 class="callout-title">JupyterLab? E i taccuini Jupyter?</h3>
 <div class="callout-content">
 <p>JupyterLab è la <a href="https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html#overview" class="external-link">prossima
-tappa dell’evoluzione del Jupyter Notebook</a>. Se avete già avuto
-esperienze di lavoro con i taccuini Jupyter, allora avrete una buona
-idea di cosa aspettarvi da JupyterLab.</p>
-<p>Gli utenti esperti dei taccuini Jupyter interessati a una discussione
-più dettagliata delle somiglianze e delle differenze tra le interfacce
-utente di JupyterLab e dei taccuini Jupyter possono trovare maggiori
-informazioni nella <a href="https://jupyterlab.readthedocs.io/en/stable/user/interface.html" class="external-link">documentazione
+tappa dell’evoluzione del Jupyter Notebook</a>. Se avete già lavorato
+con i notebook Jupyter, sapete cosa aspettarvi da JupyterLab.</p>
+<p>GGli utenti esperti interessati a un confronto più dettagliato tra le
+interfacce di JupyterLab e dei notebook Jupyter possono consultare la <a href="https://jupyterlab.readthedocs.io/en/stable/user/interface.html" class="external-link">documentazione
 dell’interfaccia utente di JupyterLab</a>.</p>
 </div>
 </div>
@@ -647,24 +641,21 @@ dell’interfaccia utente di JupyterLab</a>.</p>
 </h2>
 <hr class="half-width">
 <p>È possibile avviare il server JupyterLab dalla riga di comando o
-tramite un’applicazione chiamata <code>Anaconda Navigator</code>.
-Anaconda Navigator è incluso nella distribuzione Anaconda Python.</p>
+tramite un’applicazione chiamata Anaconda Navigator (inclusa nella
+distribuzione Anaconda Python).</p>
 <div class="section level3">
 <h3 id="macos---riga-di-comando">macOS - Riga di comando<a class="anchor" aria-label="anchor" href="#macos---riga-di-comando"></a>
 </h3>
 <p>Per avviare il server JupyterLab è necessario accedere alla riga di
-comando tramite il Terminale. Esistono due modi per aprire il Terminale
-su Mac.</p>
+comando tramite Terminale. Due modi per aprirlo su Mac:</p>
 <ol style="list-style-type: decimal">
-<li>Nella cartella Applicazioni, aprire Utilità e fare doppio clic su
-Terminale</li>
-<li>Premere <kbd>Comando</kbd> + <kbd>barra spaziatrice</kbd> per
-lanciare Spotlight. Digitare <code>Terminal</code> e poi fare doppio
-clic sul risultato della ricerca o premere <kbd>Invio</kbd>
-</li>
+<li>Nella cartella Applicazioni, aprire Utility e fare doppio clic su
+Terminale.</li>
+<li>Premere <kbd>Comando</kbd> + <kbd>barra spaziatrice</kbd> pper
+aprire Spotlight, digitare Terminal e premere <kbd>Invio</kbd> o fare
+doppio clic sul risultato.</li>
 </ol>
-<p>Dopo aver lanciato il Terminale, digitate il comando per lanciare il
-server JupyterLab.</p>
+<p>Dopo aver avviato Terminale, eseguite:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -674,12 +665,10 @@ server JupyterLab.</p>
 <div class="section level3">
 <h3 id="utenti-windows---riga-di-comando">Utenti Windows - Riga di comando<a class="anchor" aria-label="anchor" href="#utenti-windows---riga-di-comando"></a>
 </h3>
-<p>Per avviare il server JupyterLab è necessario accedere al prompt di
-Anaconda.</p>
+<p>Per avviare il server JupyterLab è necessario accedere all’Anaconda
+Prompt.</p>
 <p>Premere <kbd>Tasto logo di Windows</kbd> e cercare
-<code>Anaconda Prompt</code>, fare clic sul risultato o premere
-invio.</p>
-<p>Dopo aver lanciato il prompt di Anaconda, digitate il comando:</p>
+<code>Anaconda Prompt</code>, e aprirlo. Poi eseguire:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -687,19 +676,16 @@ invio.</p>
 </div>
 </div>
 <div class="section level3">
-<h3 id="navigatore-anaconda">Navigatore Anaconda<a class="anchor" aria-label="anchor" href="#navigatore-anaconda"></a>
+<h3 id="anaconda-navigator">Anaconda Navigator<a class="anchor" aria-label="anchor" href="#anaconda-navigator"></a>
 </h3>
-<p>Per avviare un server JupyterLab da Anaconda Navigator è necessario
-innanzitutto <a href="https://docs.anaconda.com/free/navigator/getting-started/#navigator-starting-navigator" class="external-link">avviare
+<p>Per avviare JupyterLab da Anaconda Navigator occorre prima <a href="https://docs.anaconda.com/free/navigator/getting-started/#navigator-starting-navigator" class="external-link">avviare
 Anaconda Navigator (cliccare per istruzioni dettagliate su macOS,
-Windows e Linux)</a>. È possibile cercare Anaconda Navigator tramite
-Spotlight su macOS (<kbd>Command</kbd> + <kbd>barra spaziatrice</kbd>),
-la funzione di ricerca di Windows (<kbd>Tasto Logo di Windows</kbd>) o
-aprendo una shell di terminale ed eseguendo l’eseguibile
-<code>anaconda-navigator</code> dalla riga di comando.</p>
-<p>Dopo aver lanciato Anaconda Navigator, fate clic sul pulsante
-<code>Launch</code> sotto JupyterLab. Potrebbe essere necessario
-scorrere verso il basso per trovarlo.</p>
+Windows e Linux)</a>. È possibile cercarlo con Spotlight su macOS
+(<kbd>Command</kbd> + <kbd>barra spaziatrice</kbd>), con la ricerca di
+Windows (tasto logo), oppure aprendo un terminale ed eseguendo
+<code>anaconda-navigator</code>.</p>
+<p>Dopo l’avvio di Anaconda Navigator, fare clic su Launch sotto
+JupyterLab (potrebbe essere necessario scorrere).</p>
 <p>Ecco una schermata di una pagina di Anaconda Navigator simile a
 quella che dovrebbe aprirsi su macOS o Windows.</p>
 <p align="center">
@@ -713,24 +699,20 @@ dopo aver avviato il server JupyterLab su macOS o Windows.</p>
 </section><section><h2 class="section-heading" id="linterfaccia-di-jupyterlab">L’interfaccia di JupyterLab<a class="anchor" aria-label="anchor" href="#linterfaccia-di-jupyterlab"></a>
 </h2>
 <hr class="half-width">
-<p>JupyterLab ha molte caratteristiche che si trovano negli ambienti di
-sviluppo integrati (IDE) tradizionali, ma si concentra sulla fornitura
-di blocchi di costruzione flessibili per il calcolo interattivo ed
+<p>JupyterLab ha molte caratteristiche tipiche degli IDE tradizionali,
+ma è focalizzato su blocchi flessibili per il calcolo interattivo ed
 esplorativo.</p>
 <p>L’interfaccia di <a href="https://jupyterlab.readthedocs.io/en/stable/user/interface.html" class="external-link">JupyterLab</a>
-è composta dalla barra dei menu, da una barra laterale sinistra
-pieghevole e dall’area di lavoro principale che contiene schede di
-documenti e attività.</p>
+omprende la Barra dei menu, una barra laterale sinistra comprimibile e
+l’area di lavoro principale con le schede di documenti e attività.</p>
 <div class="section level3">
 <h3 id="barra-dei-menu">Barra dei menu<a class="anchor" aria-label="anchor" href="#barra-dei-menu"></a>
 </h3>
-<p>La barra dei menu nella parte superiore di JupyterLab contiene i menu
-di primo livello che espongono le varie azioni disponibili in JupyterLab
-e le relative scorciatoie da tastiera (se applicabili). I seguenti menu
-sono inclusi per impostazione predefinita.</p>
+<p>La barra dei menu, in alto, espone azioni e scorciatoie. I menu
+predefiniti includono:</p>
 <ul>
 <li>
-<strong>File:</strong> Azioni relative a file e directory come
+<strong>File:</strong> operazioni su file e directory come
 <em>Nuovo</em>, <em>Apri</em>, <em>Chiudi</em>, <em>Salva</em>, ecc. Il
 menu <em>File</em> comprende anche l’azione <em>Shut Down</em>
 utilizzata per spegnere il server JupyterLab.</li>
@@ -743,8 +725,8 @@ documenti e altre attività come <em>Undo</em>, <em>Cut</em>,
 JupyterLab.</li>
 <li>
 <strong>Esegui:</strong> Azioni per l’esecuzione di codice in
-diverse attività come i blocchi note e le console di codice (discusse
-più avanti).</li>
+diverse attività come i notebooks e le console di codice (discusse più
+avanti).</li>
 <li>
 <strong>Kernel:</strong> Azioni per la gestione dei kernel. I kernel
 in Jupyter saranno spiegati in dettaglio più avanti.</li>
@@ -765,21 +747,21 @@ kernel.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Richiamo</span>
 <div id="kernel" class="callout-inner">
 <h3 class="callout-title">Kernel</h3>
 <div class="callout-content">
-<p>I [docs] di JupyterLab (<a href="https://jupyterlab.readthedocs.io/en/stable/user/documents_kernels.html" class="external-link uri">https://jupyterlab.readthedocs.io/en/stable/user/documents_kernels.html</a>)
-definiscono i kernel come “processi separati avviati dal server che
-eseguono il codice in diversi linguaggi e ambienti di programmazione”
-Quando apriamo un Quaderno Jupyter, viene avviato un kernel - un
-processo - che eseguirà il codice. In questa lezione utilizzeremo il
-kernel Jupyter ipython che ci permette di eseguire codice Python 3 in
-modo interattivo.</p>
-<p>L’uso di altri [kernel per altri linguaggi di programmazione] di
-Jupyter (<a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels" class="external-link uri">https://github.com/jupyter/jupyter/wiki/Jupyter-kernels</a>)
-ci permetterebbe di scrivere ed eseguire codice in altri linguaggi di
-programmazione nella stessa interfaccia di JupyterLab, come R, Java,
-Julia, Ruby, JavaScript, Fortran, ecc.</p>
+<p>La <a href="https://jupyterlab.readthedocs.io/en/stable/user/documents_kernels.html" class="external-link">documentazione</a>
+di JupyterLab definisce i kernel come «processi separati avviati dal
+server che eseguono il codice in diversi linguaggi ed ambienti». Aprire
+un notebook avvia un kernel (un processo) che eseguirà il codice. In
+questa lezione useremo il kernel IPython per eseguire interattivamente
+codice Python 3.</p>
+<p>L’uso di altri <a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels" class="external-link">kernel
+per altri linguaggi di programmazione</a> di Jupyter ci permetterebbe di
+scrivere ed eseguire codice in altri linguaggi di programmazione nella
+stessa interfaccia di JupyterLab, come R, Java, Julia, Ruby, JavaScript,
+Fortran, ecc.</p>
 </div>
 </div>
 </div>
@@ -815,7 +797,7 @@ dell’area di lavoro principale predefinita.</p>
 menu “File” e “Modifica” e apparirà.</p>
 <p align="center">
 <img alt="JupyterLab Main Work Area" src="fig/0_jupyterlab_main_work_area.png" width="750" class="figure"></p>
-<p>trascinare una scheda al centro di un pannello di schede per spostare
+<p>Trascinate una scheda al centro di un pannello di schede per spostare
 la scheda nel pannello. Suddividere un pannello di schede trascinando
 una scheda a sinistra, a destra, in alto o in basso del pannello. L’area
 di lavoro ha una sola attività corrente. La scheda dell’attività
@@ -827,18 +809,18 @@ impostazione predefinita).</p>
 <hr class="half-width">
 <ul>
 <li>Per iniziare a scrivere un nuovo programma Python, fate clic
-sull’icona File di testo sotto l’intestazione <em>Altro</em> nella
-scheda Launcher dell’area di lavoro principale.
+sull’icona <em>Text File</em> sotto l’intestazione <em>Other</em> nel
+Launcher dell’area di lavoro principale.
 <ul>
 <li>È anche possibile creare un nuovo file di testo semplice
-selezionando <em>Nuovo -&gt; File di testo</em> dal menu <em>File</em>
-nella barra dei menu.</li>
+selezionando <em>New -&gt; Text File</em> dal menu <em>File</em> nella
+barra dei menu.</li>
 </ul>
 </li>
 <li>Per convertire questo file di testo in un programma Python,
-selezionate l’azione <em>Salva file con nome</em> dal menu <em>File</em>
-nella barra dei menu e date al nuovo file di testo un nome che termini
-con l’estensione <code>.py</code>.
+selezionate l’azione <em>Save File As</em> dal menu <em>File</em> nella
+barra dei menu e date al nuovo file di testo un nome che termini con
+l’estensione <code>.py</code>.
 <ul>
 <li>L’estensione <code>.py</code> fa capire a tutti (compreso il sistema
 operativo) che questo file di testo è un programma Python.</li>
@@ -848,19 +830,19 @@ operativo) che questo file di testo è un programma Python.</li>
 </ul></section><section><h2 class="section-heading" id="creazione-di-un-quaderno-jupyter">Creazione di un quaderno Jupyter<a class="anchor" aria-label="anchor" href="#creazione-di-un-quaderno-jupyter"></a>
 </h2>
 <hr class="half-width">
-<p>Per aprire un nuovo blocco note fare clic sull’icona Python 3 sotto
-l’intestazione <em>Notebook</em> nella scheda Launcher dell’area di
-lavoro principale. È anche possibile creare un nuovo blocco note
-selezionando <em>Nuovo -&gt; Blocco note</em> dal menu <em>File</em>
-nella barra dei menu.</p>
-<p>Note aggiuntive sui quaderni Jupyter.</p>
+<p>Per aprire un nuovo notebook fare clic sull’icona Python 3 sotto
+l’intestazione <em>Notebook</em> nel Launcher dell’area di lavoro
+principale. È anche possibile creare un nuovo blocco note selezionando
+<em>New -&gt; Notebook</em> dal menu <em>File</em> nella barra dei
+menu.</p>
+<p>Note aggiuntive sui Jupyter notebook.</p>
 <ul>
-<li>I file del blocco note hanno l’estensione <code>.ipynb</code> per
+<li>I file del notebook hanno l’estensione <code>.ipynb</code> per
 distinguerli dai programmi Python in testo semplice.</li>
-<li>I blocchi note possono essere esportati come script Python che
-possono essere eseguiti dalla riga di comando.</li>
+<li>I notebook possono essere esportati come script Python che possono
+essere eseguiti dalla riga di comando.</li>
 </ul>
-<p>Di seguito è riportata una schermata di un notebook Jupyter in
+<p>Di seguito è riportata una schermata di un Jupyter notebook in
 esecuzione all’interno di JupyterLab. Se siete interessati a maggiori
 dettagli, consultate la <a href="https://jupyterlab.readthedocs.io/en/stable/user/notebook.html" class="external-link">documentazione
 ufficiale del notebook</a>.</p>
@@ -870,12 +852,12 @@ ufficiale del notebook</a>.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Richiamo</span>
 <div id="come-è-memorizzato" class="callout-inner">
 <h3 class="callout-title">Come è memorizzato</h3>
 <div class="callout-content">
 <ul>
-<li>Il file del blocco note è memorizzato in un formato chiamato
-JSON.</li>
+<li>Il file del notebook è memorizzato in un formato chiamato JSON.</li>
 <li>Proprio come una pagina web, ciò che viene salvato è diverso da ciò
 che si vede nel browser.</li>
 <li>Ma questo formato consente a Jupyter di combinare codice sorgente,
@@ -888,8 +870,10 @@ testo e immagini in un unico file.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="disporre-i-documenti-in-pannelli-di-schede" class="callout-inner">
-<h3 class="callout-title">Disporre i documenti in pannelli di schede</h3>
+<h3 class="callout-title">Disporre i documenti in pannelli di
+schede</h3>
 <div class="callout-content">
 <p>Nell’area di lavoro principale di JupyterLab è possibile organizzare
 i documenti in pannelli di schede. Ecco un esempio tratto dalla <a href="https://jupyterlab.readthedocs.io/en/stable/" class="external-link">documentazione
@@ -897,12 +881,11 @@ ufficiale</a>.</p>
 <p align="center">
 <img alt="Multi-panel JupyterLab" src="fig/0_multipanel_jupyterlab_screenshot.png" width="750" class="figure"></p>
 <p>Per prima cosa, create un file di testo, una console Python e una
-finestra di terminale e disponeteli in tre pannelli nell’area di lavoro
-principale. Successivamente, create un blocco note, una finestra di
-terminale e un file di testo e disponeteli in tre pannelli nell’area di
-lavoro principale. Infine, create la vostra combinazione di pannelli e
-schede. Quale combinazione di pannelli e schede ritenete più utile per
-il vostro flusso di lavoro?</p>
+finestra di terminale e disponeteli in tre pannelli. Poi create un
+notebook, una finestra di terminale e un file di testo e disponeteli in
+tre pannelli. Infine, create la vostra combinazione di pannelli e
+schede. Quale combinazione ritenete più utile per il vostro flusso di
+lavoro?</p>
 </div>
 </div>
 </div>
@@ -913,13 +896,11 @@ il vostro flusso di lavoro?</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<p>Dopo aver creato le schede necessarie, è possibile trascinare una
-delle schede al centro di un pannello per spostare la scheda nel
-pannello; quindi è possibile suddividere un pannello di schede
-trascinando una scheda a sinistra, a destra, in alto o in basso del
-pannello.</p>
+<p>Dopo aver creato le schede necessarie, trascinate una scheda al
+centro di un pannello per spostarla; quindi suddividete un pannello
+trascinando una scheda a sinistra, a destra, in alto o in basso.</p>
 </div>
 </div>
 </div>
@@ -928,6 +909,7 @@ pannello.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Richiamo</span>
 <div id="codice-vs.-testo" class="callout-inner">
 <h3 class="callout-title">Codice vs. Testo</h3>
 <div class="callout-content">
@@ -935,22 +917,22 @@ pannello.</p>
 celle. Spesso usiamo il termine “codice” per indicare “il codice
 sorgente di un software scritto in un linguaggio come Python”. Una
 “cella di codice” in un blocco note è una cella che contiene software;
-una “cella di testo” è una cella che contiene normale prosa scritta per
+una “cella di testo” è una cella che contiene normale testo scritta per
 gli esseri umani.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="il-blocco-note-ha-le-modalità-comando-e-modifica-">Il blocco note ha le modalità Comando e Modifica.<a class="anchor" aria-label="anchor" href="#il-blocco-note-ha-le-modalit%C3%A0-comando-e-modifica-"></a>
+</section><section><h2 class="section-heading" id="il-notebook-ha-le-modalità-comando-e-modifica-">Il notebook ha le modalità Comando e Modifica.<a class="anchor" aria-label="anchor" href="#il-notebook-ha-le-modalit%C3%A0-comando-e-modifica-"></a>
 </h2>
 <hr class="half-width">
 <ul>
-<li>Se si preme alternativamente <kbd>Esc</kbd> e <kbd>Ritorno</kbd>, il
-bordo esterno della cella di codice cambia da grigio a blu.</li>
+<li>Premendo alternatamente <kbd>Esc</kbd> e <kbd>Ritorno</kbd>, iil
+bordo della cella cambia (grigio ↔︎ blu).</li>
 <li>Queste sono le modalità <strong>Comando</strong> (grigio) e
 <strong>Modifica</strong> (blu) del blocco note.</li>
-<li>La modalità Comando consente di modificare le funzioni a livello di
-blocco note, mentre la modalità Modifica modifica il contenuto delle
-celle.</li>
+<li>La modalità comando (bordo grigio) consente di modificare le
+funzioni a livello di blocco note, mentre la modalità Modifica modifica
+il contenuto delle celle (bordo blu).</li>
 <li>In modalità Comando (esc/grigio),
 <ul>
 <li>Il tasto <kbd>b</kbd> crea una nuova cella sotto la cella
@@ -968,14 +950,13 @@ sono molte scorciatoie da tastiera per velocizzare le operazioni.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="comando-vs.-modifica" class="callout-inner">
 <h3 class="callout-title">Comando Vs. Modifica</h3>
 <div class="callout-content">
-<p>Nella pagina del taccuino Jupyter siete attualmente in modalità
-Comando o Modifica?<br>
-Passare da una modalità all’altra. Usare le scorciatoie per generare una
-nuova cella. Usare le scorciatoie per eliminare una cella. Usare le
-scorciatoie per annullare l’ultima operazione eseguita sulla cella.</p>
+<p>Nella pagina del notebook siete in modalità Comando o Modifica?
+Passate da una modalità all’altra. Usate le scorciatoie per creare una
+nuova cella, eliminarla e annullare l’ultima operazione.</p>
 </div>
 </div>
 </div>
@@ -986,7 +967,7 @@ scorciatoie per annullare l’ultima operazione eseguita sulla cella.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>La modalità Comando ha un bordo grigio e la modalità Modifica ha un
 bordo blu. Usate <kbd>Esc</kbd> e <kbd>Retro</kbd> per passare da una
@@ -1025,11 +1006,10 @@ della tastiera sono uno accanto all’altro.</li>
 stampata.<a class="anchor" aria-label="anchor" href="#il-blocco-note-trasformer%C3%A0-markdown-in-una-documentazione-ben-stampata-"></a>
 </h3>
 <ul>
-<li>I notebook possono anche rendere <a href="https://en.wikipedia.org/wiki/Markdown" class="external-link">Markdown</a>.
+<li>I notebook possono renderizzare file <a href="https://en.wikipedia.org/wiki/Markdown" class="external-link">Markdown</a>.
 <ul>
-<li>Un semplice formato di testo semplice per scrivere elenchi,
-collegamenti e altri elementi che potrebbero essere inseriti in una
-pagina Web.</li>
+<li>Un semplice formato di testo per scrivere elenchi, collegamenti e
+altri elementi che potrebbero essere inseriti in una pagina Web.</li>
 <li>Equivalentemente, un sottoinsieme di HTML che assomiglia a quello
 che si invia in una e-mail vecchio stile.</li>
 </ul>
@@ -1048,8 +1028,7 @@ modalità Comando (<kbd>Esc</kbd>/grigio) e premendo il tasto
 <div class="section level3">
 <h3 id="markdown-fa-la-maggior-parte-di-ciò-che-fa-lhtml-">Markdown fa la maggior parte di ciò che fa l’HTML.<a class="anchor" aria-label="anchor" href="#markdown-fa-la-maggior-parte-di-ci%C3%B2-che-fa-lhtml-"></a>
 </h3>
-<p>Tabella: Mostra una sintassi di markdown e il suo output
-renderizzato.</p>
+<p>Tabella di esempio: sintassi Markdown e output renderizzato.</p>
 <table class="table">
 <colgroup>
 <col width="44%">
@@ -1190,13 +1169,13 @@ Or use [named links][data-carp].
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="creare-elenchi-in-markdown" class="callout-inner">
 <h3 class="callout-title">Creare elenchi in Markdown</h3>
 <div class="callout-content">
-<p>Creare un elenco annidato in una cella di Markdown in un blocco note
-che assomiglia a questo:</p>
+<p>Create un elenco annidato in una cella Markdown che assomigli a:</p>
 <ol style="list-style-type: decimal">
-<li>ottenere finanziamenti.</li>
+<li>Ottenere finanziamenti.</li>
 <li>Fare il lavoro.</li>
 </ol>
 <ul>
@@ -1218,18 +1197,18 @@ che assomiglia a questo:</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Questa sfida integra sia l’elenco numerato che l’elenco puntato. Si
 noti che l’elenco puntato è rientrato di 2 spazi in modo da essere in
 linea con gli elementi dell’elenco numerato.</p>
-<pre><code>1.  Get funding.
-2.  Do work.
-    *   Design experiment.
-    *   Collect data.
-    *   Analyze.
-3.  Write up.
-4.  Publish.</code></pre>
+<pre><code>1.  Ottenere finanziamenti.
+2.  Fare il lavoro.
+    *   Esperimento di progettazione.
+    *   Raccogliere i dati.
+    *   Analizzare.
+3.  Scrivere.
+4.  Pubblica.</code></pre>
 </div>
 </div>
 </div>
@@ -1238,6 +1217,7 @@ linea con gli elementi dell’elenco numerato.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="più-matematica" class="callout-inner">
 <h3 class="callout-title">Più matematica</h3>
 <div class="callout-content">
@@ -1260,7 +1240,7 @@ quando viene eseguita questa cella?</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>Python restituisce l’output dell’ultimo calcolo.</p>
 <div class="codewrapper sourceCode" id="cb12">
@@ -1276,8 +1256,10 @@ quando viene eseguita questa cella?</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="cambia-una-cella-esistente-da-codice-a-markdown" class="callout-inner">
-<h3 class="callout-title">Cambia una cella esistente da Codice a Markdown</h3>
+<h3 class="callout-title">Cambia una cella esistente da Codice a
+Markdown</h3>
 <div class="callout-content">
 <p>Cosa succede se si scrive Python in una cella di codice e poi si
 passa a una cella di Markdown? Ad esempio, inserite quanto segue in una
@@ -1303,7 +1285,7 @@ come potrebbe essere utile?</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <p>Il codice Python viene trattato come testo Markdown. Le righe
 appaiono come se facessero parte di un unico paragrafo contiguo. Questo
@@ -1322,11 +1304,12 @@ celle nei quaderni che vengono utilizzati per più scopi.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="equazioni" class="callout-inner">
 <h3 class="callout-title">Equazioni</h3>
 <div class="callout-content">
-<p>il Markdown standard (come quello che stiamo usando per queste note)
-non rende le equazioni, ma il blocco note sì. Creare una nuova cella
+<p>Il Markdown standard (come quello che stiamo usando per queste note)
+nnon renderizza le equazioni, ma il notebook sì. Creare una nuova cella
 Markdown e inserire quanto segue:</p>
 <pre><code>$\sum_{i=1}^{N} 2^{-i} \approx 1$</code></pre>
 <p>(probabilmente è più facile copiare e incollare). Cosa mostra? Cosa
@@ -1342,10 +1325,10 @@ pensate che facciano il trattino basso, <code>_</code>, il circonflesso,
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
-<p>Il blocco note mostra l’equazione come verrebbe resa dalla sintassi
-di equazione LaTeX. Il segno del dollaro, <code>$</code>, è usato per
+<p>Il notebook mostra l’equazione come verrebbe renderizzata con
+sintassi LaTeX. Il segno del dollaro, <code>$</code>, è usato per
 indicare a Markdown che il testo intermedio è un’equazione LaTeX. Se non
 si ha familiarità con LaTeX, il trattino basso, <code>_</code>, è usato
 per i pedici e il circonflesso, <code>^</code>, per gli apici. Una
@@ -1364,10 +1347,10 @@ comandi LaTeX per i simboli “somma su” e “approssima”.</p>
 </h2>
 <hr class="half-width">
 <ul>
-<li>dalla barra dei menu selezionare il menu “File” e poi scegliere
-“Shut Down” in fondo al menu a discesa. Verrà richiesto di confermare la
-volontà di chiudere il server di JupyterLab (non dimenticate di salvare
-il vostro lavoro!). Fare clic su “Shut Down” per chiudere il server
+<li>Dalla barra dei menu selezionare il menu “File” e poi scegliere
+“Shut Down” in fondo al menu a discesa. Verrà richiesto di confermare
+l’arresto del server JupyterLab(non dimenticate di salvare il vostro
+lavoro!). Fare clic su “Shut Down” per chiudere il server
 JupyterLab.</li>
 <li>Per riavviare il server JupyterLab è necessario eseguire nuovamente
 il seguente comando da una shell.</li>
@@ -1377,6 +1360,7 @@ il seguente comando da una shell.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
+<span class="callout-header">Discussione</span>
 <div id="chiusura-di-jupyterlab-1" class="callout-inner">
 <h3 class="callout-title">Chiusura di JupyterLab</h3>
 <div class="callout-content">
@@ -1388,17 +1372,16 @@ il seguente comando da una shell.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Punti Chiave</span>
 <div class="callout-inner">
-<h3 class="callout-title">Punti Chiave</h3>
 <div class="callout-content">
 <ul>
 <li>Gli script Python sono file di testo semplice.</li>
 <li>Usare il Jupyter Notebook per modificare ed eseguire Python.</li>
-<li>Il blocco note ha le modalità Comando e Modifica.</li>
-<li>Utilizzare la tastiera e il mouse per selezionare e modificare le
-celle.</li>
-<li>Il blocco note trasformerà Markdown in documentazione stampata.</li>
-<li>Markdown fa la maggior parte di ciò che fa l’HTML.</li>
+<li>Il notebook ha le modalità Comando e Modifica.</li>
+<li>Usare tastiera e mouse per selezionare e modificare le celle.</li>
+<li>Il notebook renderizza Markdown in documentazione.</li>
+<li>Markdown copre gran parte delle funzionalità di HTML.</li>
 </ul>
 </div>
 </div>
@@ -1538,8 +1521,10 @@ informativa.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Richiamo</span>
 <div id="le-variabili-persistono-tra-una-cella-e-laltra" class="callout-inner">
-<h3 class="callout-title">Le variabili persistono tra una cella e l’altra</h3>
+<h3 class="callout-title">Le variabili persistono tra una cella e
+l’altra</h3>
 <div class="callout-content">
 <p>Siate consapevoli che in un quaderno Jupyter è importante
 l’<em>ordine</em> di esecuzione delle celle, non l’ordine in cui
@@ -1701,6 +1686,7 @@ capire cosa fa il programma.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="scambio-di-valori" class="callout-inner">
 <h3 class="callout-title">Scambio di valori</h3>
 <div class="callout-content">
@@ -1750,6 +1736,7 @@ comune.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="previsione-dei-valori" class="callout-inner">
 <h3 class="callout-title">Previsione dei valori</h3>
 <div class="callout-content">
@@ -1799,6 +1786,7 @@ mantiene il suo valore di stringa <code>'left'</code>.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="sfida" class="callout-inner">
 <h3 class="callout-title">Sfida</h3>
 <div class="callout-content">
@@ -1855,6 +1843,7 @@ stringa.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="scelta-di-un-nome" class="callout-inner">
 <h3 class="callout-title">Scelta di un nome</h3>
 <div class="callout-content">
@@ -1890,6 +1879,7 @@ in Python che tratteremo più avanti).</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="pratica-di-affettatura" class="callout-inner">
 <h3 class="callout-title">Pratica di affettatura</h3>
 <div class="callout-content">
@@ -1925,6 +1915,7 @@ in Python che tratteremo più avanti).</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="concetti-di-affettatura" class="callout-inner">
 <h3 class="callout-title">Concetti di affettatura</h3>
 <div class="callout-content">
@@ -1998,8 +1989,8 @@ stesso risultato di <code>species_name[:]</code>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Punti Chiave</span>
 <div class="callout-inner">
-<h3 class="callout-title">Punti Chiave</h3>
 <div class="callout-content">
 <ul>
 <li>Utilizzare le variabili per memorizzare i valori.</li>
@@ -2313,6 +2304,7 @@ il suo valore non cambia automaticamente quando cambia
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="frazioni" class="callout-inner">
 <h3 class="callout-title">Frazioni</h3>
 <div class="callout-content">
@@ -2327,7 +2319,7 @@ il suo valore non cambia automaticamente quando cambia
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>è un numero in virgola mobile (spesso abbreviato in “float”). È
 possibile scoprirlo utilizzando la funzione integrata
@@ -2350,6 +2342,7 @@ possibile scoprirlo utilizzando la funzione integrata
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="conversione-automatica-di-tipo" class="callout-inner">
 <h3 class="callout-title">Conversione automatica di tipo</h3>
 <div class="callout-content">
@@ -2364,7 +2357,7 @@ possibile scoprirlo utilizzando la funzione integrata
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>è un float: i numeri interi vengono automaticamente convertiti in
 float se necessario.</p>
@@ -2387,6 +2380,7 @@ float se necessario.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="scegliere-un-tipo" class="callout-inner">
 <h3 class="callout-title">Scegliere un tipo</h3>
 <div class="callout-content">
@@ -2413,7 +2407,7 @@ variabile in virgola mobile piuttosto che con un numero intero?</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Le risposte alle domande sono:</p>
 <ol style="list-style-type: decimal">
@@ -2438,6 +2432,7 @@ parte frazionaria.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="tipi-di-divisione" class="callout-inner">
 <h3 class="callout-title">Tipi di divisione</h3>
 <div class="callout-content">
@@ -2474,7 +2469,7 @@ volta.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>Vogliamo il numero minimo di sondaggi che raggiunge tutti una volta,
 che è il valore arrotondato per eccesso di
@@ -2505,6 +2500,7 @@ caso in cui <code>num_subjects</code> sia uniformemente divisibile per
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="stringhe-a-numeri" class="callout-inner">
 <h3 class="callout-title">Stringhe a numeri</h3>
 <div class="callout-content">
@@ -2559,7 +2555,7 @@ programma?</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <p>Cosa ci si aspetta che faccia questo programma? Non sarebbe così
 irragionevole aspettarsi che il comando <code>int</code> di Python 3
@@ -2601,6 +2597,7 @@ convertirli esplicitamente nel codice.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="aritmetica-con-tipi-diversi" class="callout-inner">
 <h3 class="callout-title">Aritmetica con tipi diversi</h3>
 <div class="callout-content">
@@ -2632,7 +2629,7 @@ giusta.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <p>Risposta: 1 e 4</p>
 </div>
@@ -2643,6 +2640,7 @@ giusta.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="numeri-complessi" class="callout-inner">
 <h3 class="callout-title">Numeri complessi</h3>
 <div class="callout-content">
@@ -2680,7 +2678,7 @@ punti</em> come <code>val.real</code> e <code>val.imag</code>.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>I trattamenti matematici standard di solito usano <code>i</code> per
@@ -2704,8 +2702,8 @@ tal caso, dal valore che gli è stato assegnato.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Punti Chiave</span>
 <div class="callout-inner">
-<h3 class="callout-title">Punti Chiave</h3>
 <div class="callout-content">
 <ul>
 <li>Ogni valore ha un tipo.</li>
@@ -3099,6 +3097,7 @@ errori di runtime tracciando l’esecuzione del programma.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="che-cosa-succede-quando" class="callout-inner">
 <h3 class="callout-title">Che cosa succede quando</h3>
 <div class="callout-content">
@@ -3144,6 +3143,7 @@ quando viene chiamata ogni funzione, ecc.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="individuare-la-differenza" class="callout-inner">
 <h3 class="callout-title">Individuare la differenza</h3>
 <div class="callout-content">
@@ -3227,6 +3227,7 @@ TypeError: '&gt;' not supported between instances of 'str' and 'int'</code></pre
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="perché-no" class="callout-inner">
 <h3 class="callout-title">Perché no?</h3>
 <div class="callout-content">
@@ -3258,6 +3259,7 @@ errore di runtime.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="ultimo-carattere-di-una-stringa" class="callout-inner">
 <h3 class="callout-title">Ultimo carattere di una stringa</h3>
 <div class="callout-content">
@@ -3286,6 +3288,7 @@ modo più semplice per farlo in un episodio successivo)</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Richiamo</span>
 <div id="esplora-la-documentazione-di-python" class="callout-inner">
 <h3 class="callout-title">Esplora la documentazione di Python!</h3>
 <div class="callout-content">
@@ -3304,8 +3307,8 @@ utili.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Punti Chiave</span>
 <div class="callout-inner">
-<h3 class="callout-title">Punti Chiave</h3>
 <div class="callout-content">
 <ul>
 <li>Usare i commenti per aggiungere documentazione ai programmi.</li>
@@ -3411,6 +3414,7 @@ Python).</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Richiamo</span>
 <div id="librerie-e-moduli" class="callout-inner">
 <h3 class="callout-title">Librerie e moduli</h3>
 <div class="callout-content">
@@ -3557,6 +3561,7 @@ devono imparare gli alias del programma.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="esplorazione-del-modulo-matematico" class="callout-inner">
 <h3 class="callout-title">Esplorazione del modulo matematico</h3>
 <div class="callout-content">
@@ -3602,6 +3607,7 @@ ritrova nei nomi delle funzioni di Python.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="individuazione-del-modulo-giusto" class="callout-inner">
 <h3 class="callout-title">Individuazione del modulo giusto</h3>
 <div class="callout-content">
@@ -3682,8 +3688,10 @@ che fa esattamente quello che vogliamo:</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="esempio-di-programmazione-del-puzzle-problema-di-parson" class="callout-inner">
-<h3 class="callout-title">Esempio di programmazione del puzzle (problema di Parson)</h3>
+<h3 class="callout-title">Esempio di programmazione del puzzle (problema
+di Parson)</h3>
 <div class="callout-content">
 <p>Riorganizzare le seguenti istruzioni in modo da stampare una base di
 DNA casuale e il suo indice nella stringa. Non tutte le istruzioni sono
@@ -3729,6 +3737,7 @@ intermedie.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="quando-è-disponibile-laiuto" class="callout-inner">
 <h3 class="callout-title">Quando è disponibile l’aiuto?</h3>
 <div class="callout-content">
@@ -3761,6 +3770,7 @@ segnala un errore:</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="importazione-con-gli-alias" class="callout-inner">
 <h3 class="callout-title">Importazione con gli alias</h3>
 <div class="callout-content">
@@ -3819,8 +3829,10 @@ siano chiare convenzioni di abbreviazione.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="ci-sono-molti-modi-per-importare-le-librerie" class="callout-inner">
-<h3 class="callout-title">Ci sono molti modi per importare le librerie!</h3>
+<h3 class="callout-title">Ci sono molti modi per importare le
+librerie!</h3>
 <div class="callout-content">
 <p>abbinare le seguenti istruzioni di stampa alle chiamate di libreria
 appropriate.</p>
@@ -3884,6 +3896,7 @@ la chiamata di libreria 4 non fornisce questa informazione.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="importazione-di-elementi-specifici" class="callout-inner">
 <h3 class="callout-title">Importazione di elementi specifici</h3>
 <div class="callout-content">
@@ -3936,6 +3949,7 @@ un’altra libreria.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="lettura-dei-messaggi-di-errore" class="callout-inner">
 <h3 class="callout-title">Lettura dei messaggi di errore</h3>
 <div class="callout-content">
@@ -3990,8 +4004,8 @@ problema.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Punti Chiave</span>
 <div class="callout-inner">
-<h3 class="callout-title">Punti Chiave</h3>
 <div class="callout-content">
 <ul>
 <li>La maggior parte della potenza di un linguaggio di programmazione è
@@ -4110,6 +4124,7 @@ dataframe o di leggere da quello sbagliato.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Richiamo</span>
 <div id="file-non-trovato" class="callout-inner">
 <h3 class="callout-title">File non trovato</h3>
 <div class="callout-content">
@@ -4321,6 +4336,7 @@ ce ne sono migliaia.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="lettura-di-altri-dati" class="callout-inner">
 <h3 class="callout-title">Lettura di altri dati</h3>
 <div class="callout-content">
@@ -4361,6 +4377,7 @@ statistiche di riepilogo possono essere visualizzate con il metodo
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="ispezione-dei-dati" class="callout-inner">
 <h3 class="callout-title">Ispezione dei dati</h3>
 <div class="callout-content">
@@ -4495,6 +4512,7 @@ sola riga di codice “concatenando” i comandi:</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="lettura-dei-file-in-altre-directory" class="callout-inner">
 <h3 class="callout-title">Lettura dei file in altre directory</h3>
 <div class="callout-content">
@@ -4545,6 +4563,7 @@ seguente:</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="scrittura-dei-dati" class="callout-inner">
 <h3 class="callout-title">Scrittura dei dati</h3>
 <div class="callout-content">
@@ -4595,8 +4614,8 @@ esempio <code>data_americas.to_csv</code> o
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Punti Chiave</span>
 <div class="callout-inner">
-<h3 class="callout-title">Punti Chiave</h3>
 <div class="callout-content">
 <ul>
 <li>Utilizzare la libreria Pandas per ottenere statistiche di base da
@@ -5014,6 +5033,7 @@ esame utilizzando metodi concatenati:</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="selezione-di-valori-individuali" class="callout-inner">
 <h3 class="callout-title">Selezione di valori individuali</h3>
 <div class="callout-content">
@@ -5036,7 +5056,7 @@ nel 2007.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Soluzione </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>La selezione può essere effettuata utilizzando le etichette sia per
 la riga (“Serbia”) sia per la colonna (“gdpPercap_2007”):</p>
@@ -5059,6 +5079,7 @@ la riga (“Serbia”) sia per la colonna (“gdpPercap_2007”):</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="estensione-dellaffettatura" class="callout-inner">
 <h3 class="callout-title">Estensione dell’affettatura</h3>
 <div class="callout-content">
@@ -5081,7 +5102,7 @@ nelle fette numeriche e nelle fette denominate in Pandas?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Soluzione </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>No, non producono lo stesso output! L’output della prima istruzione
 è:</p>
@@ -5117,6 +5138,7 @@ fornito, mentre una slice denominata, ‘gdpPercap\1952’:‘gdpPercap\1962’,
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="ricostruzione-dei-dati" class="callout-inner">
 <h3 class="callout-title">Ricostruzione dei dati</h3>
 <div class="callout-content">
@@ -5139,7 +5161,7 @@ fornito, mentre una slice denominata, ‘gdpPercap\1952’:‘gdpPercap\1962’,
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Soluzione </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Esaminiamo questo pezzo di codice riga per riga.</p>
 <div class="codewrapper sourceCode" id="cb32">
@@ -5200,6 +5222,7 @@ nome del file. Si noti che il file verrà scritto nella directory da cui
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="selezione-degli-indici" class="callout-inner">
 <h3 class="callout-title">Selezione degli indici</h3>
 <div class="callout-content">
@@ -5221,7 +5244,7 @@ questi metodi?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Soluzione </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>Per ogni colonna in <code>data</code>, <code>idxmin</code> restituirà
 il valore dell’indice corrispondente al minimo di ogni colonna;
@@ -5238,6 +5261,7 @@ minimo/massimo effettivo.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="esercitarsi-con-la-selezione" class="callout-inner">
 <h3 class="callout-title">Esercitarsi con la selezione</h3>
 <div class="callout-content">
@@ -5260,7 +5284,7 @@ capite di quel Paese nel 1952.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Soluzione </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <p>1:</p>
 <div class="codewrapper sourceCode" id="cb38">
@@ -5298,6 +5322,7 @@ seguito vengono aggiunte nuove colonne al file CSV.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="molti-modi-di-accesso" class="callout-inner">
 <h3 class="callout-title">Molti modi di accesso</h3>
 <div class="callout-content">
@@ -5324,7 +5349,7 @@ DataFrame:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution6" aria-expanded="false" aria-controls="collapseSolution6">
   <h4 class="accordion-header" id="headingSolution6"> Soluzione </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <p>1. Accedere a una singola colonna:</p>
 <div class="codewrapper sourceCode" id="cb42">
@@ -5468,6 +5493,7 @@ DataFrame:</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="esplorazione-dei-metodi-disponibili-utilizzando-la-funzione-dir" class="callout-inner">
 <h3 class="callout-title">Esplorazione dei metodi disponibili
 utilizzando la funzione <code>dir()</code>
@@ -5514,7 +5540,7 @@ cui sono disponibili le informazioni.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution7" aria-expanded="false" aria-controls="collapseSolution7">
   <h4 class="accordion-header" id="headingSolution7"> Soluzione </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
 <div class="accordion-body">
 <p>Tra le tante scelte, <code>dir()</code> elenca la funzione
 <code>median()</code> come una possibilità. Quindi,</p>
@@ -5531,6 +5557,7 @@ cui sono disponibili le informazioni.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
+<span class="callout-header">Discussione</span>
 <div id="interpretazione" class="callout-inner">
 <h3 class="callout-title">Interpretazione</h3>
 <div class="callout-content">
@@ -5545,8 +5572,8 @@ ventesimo secolo?</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Punti Chiave</span>
 <div class="callout-inner">
-<h3 class="callout-title">Punti Chiave</h3>
 <div class="callout-content">
 <ul>
 <li>Usare <code>DataFrame.iloc[..., ...]</code> per selezionare i valori
@@ -5639,6 +5666,7 @@ dei dati di input.’}</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Richiamo</span>
 <div id="visualizza-tutte-le-figure-aperte" class="callout-inner">
 <h3 class="callout-title">Visualizza tutte le figure aperte</h3>
 <div class="callout-content">
@@ -5774,6 +5802,7 @@ formattato del PIL per l’Australia’}</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Richiamo</span>
 <div id="aggiunta-di-una-legenda" class="callout-inner">
 <h3 class="callout-title">Aggiunta di una legenda</h3>
 <div class="callout-content">
@@ -5826,6 +5855,7 @@ Australia e Nuova Zelanda</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="minimi-e-massimi" class="callout-inner">
 <h3 class="callout-title">Minimi e massimi</h3>
 <div class="callout-content">
@@ -5851,7 +5881,7 @@ tracciare il PIL pro capite massimo nel tempo per l’Europa.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5871,6 +5901,7 @@ tracciare il PIL pro capite massimo nel tempo per l’Europa.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="correlazioni" class="callout-inner">
 <h3 class="callout-title">Correlazioni</h3>
 <div class="callout-content">
@@ -5888,7 +5919,7 @@ esiste)?</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5907,6 +5938,7 @@ salgano e non scendano insieme.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="correlazioni" class="callout-inner">
 <h3 class="callout-title">Correlazioni<em> (continued)</em>
 </h3>
@@ -5931,7 +5963,7 @@ quella del minimo. Osservate gli indici di massimo e di massimo:</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <figure><img src="fig/9_correlations_solution2.png" alt="Correlazioni Soluzione 2" class="figure mx-auto d-block"></figure><p>Sembra che la variabilità di questo valore sia dovuta a un forte calo
 dopo il 1972. Forse è in gioco la geopolitica? Data la predominanza dei
@@ -5947,6 +5979,7 @@ marcate.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="altre-correlazioni" class="callout-inner">
 <h3 class="callout-title">Altre correlazioni</h3>
 <div class="callout-content">
@@ -5972,7 +6005,7 @@ argomento di <code>plot</code>.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <figure><img src="fig/9_more_correlations_solution.svg" alt="Soluzione per più correlazioni" class="figure mx-auto d-block"></figure><p>Un buon punto di partenza è la documentazione della funzione plot -
 help(data_all.plot).</p>
@@ -5990,6 +6023,7 @@ dimensione dei punti tracciati.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Richiamo</span>
 <div id="salvataggio-del-grafico-in-un-file" class="callout-inner">
 <h3 class="callout-title">Salvataggio del grafico in un file</h3>
 <div class="callout-content">
@@ -6032,6 +6066,7 @@ salvare la figura su file.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Richiamo</span>
 <div id="rendere-accessibili-i-grafici" class="callout-inner">
 <h3 class="callout-title">Rendere accessibili i grafici</h3>
 <div class="callout-content">
@@ -6065,8 +6100,8 @@ l’aspetto dei grafici per le persone affette da daltonismo.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Punti Chiave</span>
 <div class="callout-inner">
-<h3 class="callout-title">Punti Chiave</h3>
 <div class="callout-content">
 <ul>
 <li>
@@ -6396,6 +6431,7 @@ potrebbe essere calcolato in base ai dati.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="riempire-gli-spazi-vuoti" class="callout-inner">
 <h3 class="callout-title">Riempire gli spazi vuoti</h3>
 <div class="callout-content">
@@ -6428,7 +6464,7 @@ second time: [3, 5]</code></pre>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6449,6 +6485,7 @@ second time: [3, 5]</code></pre>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="quanto-è-grande-una-fetta" class="callout-inner">
 <h3 class="callout-title">Quanto è grande una fetta?</h3>
 <div class="callout-content">
@@ -6465,7 +6502,7 @@ non negativi, quanto è lunga la lista
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>L’elenco <code>values[start:stop]</code> ha fino a
 <code>stop - start</code> elementi. Per esempio,
@@ -6482,6 +6519,7 @@ otterremo comunque una lista, ma sarà più corta del previsto.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="da-stringhe-a-elenchi-e-viceversa" class="callout-inner">
 <h3 class="callout-title">Da stringhe a elenchi e viceversa</h3>
 <div class="callout-content">
@@ -6512,7 +6550,7 @@ list to string: gold</code></pre>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>
@@ -6534,6 +6572,7 @@ tra gli elementi è la stringa che fornisce questo metodo.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="lavorare-con-la-fine" class="callout-inner">
 <h3 class="callout-title">Lavorare con la fine</h3>
 <div class="callout-content">
@@ -6565,7 +6604,7 @@ combinare l’affettatura e l’indicizzazione negativa)</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>Il programma stampa <code>m</code>.</p>
 <ol style="list-style-type: decimal">
@@ -6587,6 +6626,7 @@ dell’elenco.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="passaggio-attraverso-un-elenco" class="callout-inner">
 <h3 class="callout-title">Passaggio attraverso un elenco</h3>
 <div class="callout-content">
@@ -6614,7 +6654,7 @@ insieme?</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <p>il programma stampa</p>
 <div class="codewrapper sourceCode" id="cb27">
@@ -6641,6 +6681,7 @@ elemento).</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="limiti-di-fetta" class="callout-inner">
 <h3 class="callout-title">Limiti di fetta</h3>
 <div class="callout-content">
@@ -6662,7 +6703,7 @@ elemento).</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6680,6 +6721,7 @@ stringa vuota, perché la fetta va “fuori dai limiti” della stringa.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="ordinamento-e-ordinamento" class="callout-inner">
 <h3 class="callout-title">Ordinamento e ordinamento</h3>
 <div class="callout-content">
@@ -6712,7 +6754,7 @@ differenza tra <code>sorted(letters)</code> e
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
 <div class="accordion-body">
 <p>Il programma A stampa</p>
 <div class="codewrapper">
@@ -6739,6 +6781,7 @@ posto e non restituisce nulla.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="copiare-o-no" class="callout-inner">
 <h3 class="callout-title">Copiare (o no)</h3>
 <div class="callout-content">
@@ -6772,7 +6815,7 @@ differenza tra <code>new = old</code> e <code>new = old[:]</code>.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
+<div id="collapseSolution8" class="accordion-collapse collapse" data-bs-parent="#accordionSolution8" aria-labelledby="headingSolution8">
 <div class="accordion-body">
 <p>Il programma A stampa</p>
 <div class="codewrapper">
@@ -6801,8 +6844,8 @@ diversi.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Punti Chiave</span>
 <div class="callout-inner">
-<h3 class="callout-title">Punti Chiave</h3>
 <div class="callout-content">
 <ul>
 <li>Un elenco memorizza molti valori in un’unica struttura.</li>
@@ -7086,6 +7129,7 @@ corrente.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="classificazione-degli-errori" class="callout-inner">
 <h3 class="callout-title">Classificazione degli errori</h3>
 <div class="callout-content">
@@ -7115,6 +7159,7 @@ errore.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="tracciamento-dellesecuzione" class="callout-inner">
 <h3 class="callout-title">Tracciamento dell’esecuzione</h3>
 <div class="callout-content">
@@ -7184,6 +7229,7 @@ variabili dopo l’esecuzione di ogni riga.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="inversione-di-una-stringa" class="callout-inner">
 <h3 class="callout-title">Inversione di una stringa</h3>
 <div class="callout-content">
@@ -7227,6 +7273,7 @@ variabili dopo l’esecuzione di ogni riga.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="pratica-di-accumulazione" class="callout-inner">
 <h3 class="callout-title">Pratica di Accumulazione</h3>
 <div class="callout-content">
@@ -7269,6 +7316,7 @@ produrre il risultato indicato.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="pratica-di-accumulazione" class="callout-inner">
 <h3 class="callout-title">Pratica di Accumulazione<em>
 (continued)</em>
@@ -7311,6 +7359,7 @@ produrre il risultato indicato.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="pratica-di-accumulazione" class="callout-inner">
 <h3 class="callout-title">Pratica di Accumulazione<em>
 (continued)</em>
@@ -7355,6 +7404,7 @@ produrre il risultato indicato.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="pratica-di-accumulazione" class="callout-inner">
 <h3 class="callout-title">Pratica di Accumulazione<em>
 (continued)</em>
@@ -7393,6 +7443,7 @@ metodo stringa per formattare correttamente l’acronimo.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="somma-cumulativa" class="callout-inner">
 <h3 class="callout-title">Somma cumulativa</h3>
 <div class="callout-content">
@@ -7441,8 +7492,10 @@ risultato dovrebbe essere <code>[1, 3, 5, 10]</code>.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="errori-di-identificazione-del-nome-della-variabile" class="callout-inner">
-<h3 class="callout-title">Errori di identificazione del nome della variabile</h3>
+<h3 class="callout-title">Errori di identificazione del nome della
+variabile</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal">
 <li>Leggete il codice qui sotto e cercate di identificare gli errori
@@ -7507,8 +7560,10 @@ stringa vuota.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="identificazione-degli-errori-degli-elementi" class="callout-inner">
-<h3 class="callout-title">Identificazione degli errori degli elementi</h3>
+<h3 class="callout-title">Identificazione degli errori degli
+elementi</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal">
 <li>Leggete il codice qui sotto e cercate di identificare gli errori
@@ -7551,8 +7606,8 @@ elemento della lista è <code>3</code>.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Punti Chiave</span>
 <div class="callout-inner">
-<h3 class="callout-title">Punti Chiave</h3>
 <div class="callout-content">
 <ul>
 <li>Un ciclo <em>for</em> esegue i comandi una volta per ogni valore di
@@ -7886,6 +7941,7 @@ iterazione del ciclo.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Richiamo</span>
 <div id="relazioni-composte-con-and-or-e-parentesi" class="callout-inner">
 <h3 class="callout-title">Relazioni composte con <code>and</code>,
 <code>or</code> e parentesi</h3>
@@ -7937,6 +7993,7 @@ si intende veramente.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="tracciamento-dellesecuzione" class="callout-inner">
 <h3 class="callout-title">Tracciamento dell’esecuzione</h3>
 <div class="callout-content">
@@ -7961,7 +8018,7 @@ si intende veramente.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -7976,6 +8033,7 @@ si intende veramente.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="valori-di-taglio" class="callout-inner">
 <h3 class="callout-title">Valori di taglio</h3>
 <div class="callout-content">
@@ -8009,7 +8067,7 @@ negativi e uno dove i valori dell’elenco originale erano positivi.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -8031,6 +8089,7 @@ negativi e uno dove i valori dell’elenco originale erano positivi.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="elaborazione-di-piccoli-file" class="callout-inner">
 <h3 class="callout-title">Elaborazione di piccoli file</h3>
 <div class="callout-content">
@@ -8056,7 +8115,7 @@ di 50 record.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -8076,6 +8135,7 @@ di 50 record.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="inizializzazione" class="callout-inner">
 <h3 class="callout-title">Inizializzazione</h3>
 <div class="callout-content">
@@ -8107,7 +8167,7 @@ trovare l’intervallo dei dati?</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -8165,8 +8225,8 @@ migliore:</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Punti Chiave</span>
 <div class="callout-inner">
-<h3 class="callout-title">Punti Chiave</h3>
 <div class="callout-content">
 <ul>
 <li>Utilizzare le istruzioni <code>if</code> per controllare se un
@@ -8347,6 +8407,7 @@ correttezza.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="determinazione-delle-corrispondenze" class="callout-inner">
 <h3 class="callout-title">Determinazione delle corrispondenze</h3>
 <div class="callout-content">
@@ -8378,6 +8439,7 @@ correttezza.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="dimensione-minima-del-file" class="callout-inner">
 <h3 class="callout-title">Dimensione minima del file</h3>
 <div class="callout-content">
@@ -8434,6 +8496,7 @@ Quali altre stringhe speciali riconosce la funzione <a href="https://docs.python
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="confronto-dei-dati" class="callout-inner">
 <h3 class="callout-title">Confronto dei dati</h3>
 <div class="callout-content">
@@ -8500,6 +8563,7 @@ o dire a pandas di ignorarle.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Richiamo</span>
 <div id="trattare-i-percorsi-dei-file" class="callout-inner">
 <h3 class="callout-title">Trattare i percorsi dei file</h3>
 <div class="callout-content">
@@ -8536,8 +8600,8 @@ metodi disponibili sull’oggetto <code>Path</code> con la funzione
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Punti Chiave</span>
 <div class="callout-inner">
-<h3 class="callout-title">Punti Chiave</h3>
 <div class="callout-content">
 <ul>
 <li>Usare un ciclo <code>for</code> per elaborare i file dati da un
@@ -8802,6 +8866,7 @@ result of call is: None</code></pre>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="identificare-gli-errori-di-sintassi" class="callout-inner">
 <h3 class="callout-title">Identificare gli errori di sintassi</h3>
 <div class="callout-content">
@@ -8832,7 +8897,7 @@ errori.</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -8850,6 +8915,7 @@ errori.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="definizione-e-utilizzo" class="callout-inner">
 <h3 class="callout-title">Definizione e utilizzo</h3>
 <div class="callout-content">
@@ -8872,7 +8938,7 @@ errori.</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -8903,6 +8969,7 @@ pressure is 22.5</code></pre>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="ordine-delle-operazioni" class="callout-inner">
 <h3 class="callout-title">Ordine delle operazioni</h3>
 <div class="callout-content">
@@ -8948,7 +9015,7 @@ result of call is: None</code></pre>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><p>Il problema dell’esempio è che la funzione
@@ -8975,6 +9042,7 @@ seconda chiamata di stampa per stampare il contenuto della variabile
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="incapsulamento" class="callout-inner">
 <h3 class="callout-title">Incapsulamento</h3>
 <div class="callout-content">
@@ -9000,7 +9068,7 @@ dall’argomento e restituisca il valore minimo in quei dati.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -9019,6 +9087,7 @@ dall’argomento e restituisca il valore minimo in quei dati.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="trovare-il-primo" class="callout-inner">
 <h3 class="callout-title">Trovare il primo</h3>
 <div class="callout-content">
@@ -9044,7 +9113,7 @@ contiene numeri negativi?</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -9075,6 +9144,7 @@ tutti valori positivi, essa restituisce <code>None</code>:</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="chiamato-per-nome" class="callout-inner">
 <h3 class="callout-title">Chiamato per nome</h3>
 <div class="callout-content">
@@ -9109,7 +9179,7 @@ con nome</em>, in questo modo:</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><code>2003/2/1</code></li>
@@ -9132,6 +9202,7 @@ utilizzando argomenti con nome l’ordine non ha importanza.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="incapsulamento-di-un-blocco-sestampa" class="callout-inner">
 <h3 class="callout-title">Incapsulamento di un blocco Se/Stampa</h3>
 <div class="callout-content">
@@ -9200,7 +9271,7 @@ essere <code>25 too light, probably spoiled</code>.</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb34">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -9230,6 +9301,7 @@ essere <code>25 too light, probably spoiled</code>.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="analisi-dei-dati-incapsulati" class="callout-inner">
 <h3 class="callout-title">Analisi dei dati incapsulati</h3>
 <div class="callout-content">
@@ -9283,7 +9355,7 @@ corrispondono al decennio, invece di enumerarle nel codice)</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution8" class="accordion-collapse collapse" aria-labelledby="headingSolution8" data-bs-parent="#accordionSolution8">
+<div id="collapseSolution8" class="accordion-collapse collapse" data-bs-parent="#accordionSolution8" aria-labelledby="headingSolution8">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Il PIL medio del Giappone negli anni riportati per gli anni ’80 è
@@ -9347,6 +9419,7 @@ un ciclo su di essi:</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="simulazione-di-un-sistema-dinamico" class="callout-inner">
 <h3 class="callout-title">Simulazione di un sistema dinamico</h3>
 <div class="callout-content">
@@ -9395,7 +9468,7 @@ stazionario?</p></li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution9" class="accordion-collapse collapse" aria-labelledby="headingSolution9" data-bs-parent="#accordionSolution9">
+<div id="collapseSolution9" class="accordion-collapse collapse" data-bs-parent="#accordionSolution9" aria-labelledby="headingSolution9">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>
 </li></ol>
@@ -9449,8 +9522,10 @@ stazionario?</p></li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Richiamo</span>
 <div id="utilizzo-di-funzioni-con-condizionali-in-pandas" class="callout-inner">
-<h3 class="callout-title">Utilizzo di funzioni con condizionali in Pandas</h3>
+<h3 class="callout-title">Utilizzo di funzioni con condizionali in
+Pandas</h3>
 <div class="callout-content">
 <p>Le funzioni contengono spesso dei condizionali. Ecco un breve esempio
 che indica in quale quartile si trova l’argomento in base ai valori
@@ -9507,8 +9582,8 @@ ogni riga del dataframe.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Punti Chiave</span>
 <div class="callout-inner">
-<h3 class="callout-title">Punti Chiave</h3>
 <div class="callout-content">
 <ul>
 <li>scomporre i programmi in funzioni per facilitarne la
@@ -9627,6 +9702,7 @@ NameError: name 'temperature' is not defined</code></pre>
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
+<span class="callout-header">Discussione</span>
 <div id="uso-delle-variabili-locali-e-globali" class="callout-inner">
 <h3 class="callout-title">Uso delle variabili locali e globali</h3>
 <div class="callout-content">
@@ -9651,6 +9727,7 @@ loro esistenza)</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="lettura-dei-messaggi-di-errore" class="callout-inner">
 <h3 class="callout-title">Lettura dei messaggi di errore</h3>
 <div class="callout-content">
@@ -9697,7 +9774,7 @@ KeyError: 'Friday'</code></pre>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Tre livelli.</li>
@@ -9719,8 +9796,8 @@ e su altre eccezioni integrate, consultare i [Python docs] (<a href="https://doc
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Punti Chiave</span>
 <div class="callout-inner">
-<h3 class="callout-title">Punti Chiave</h3>
 <div class="callout-content">
 <ul>
 <li>L’ambito di una variabile è la parte del programma che può “vedere”
@@ -9868,6 +9945,7 @@ average(values)
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Richiamo</span>
 <div id="stringhe-multilinea" class="callout-inner">
 <h3 class="callout-title">Stringhe multilinea</h3>
 <div class="callout-content">
@@ -9889,6 +9967,7 @@ doppie) e terminano con tre caratteri corrispondenti.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
+<span class="callout-header">Discussione</span>
 <div id="cosa-verrà-mostrato" class="callout-inner">
 <h3 class="callout-title">Cosa verrà mostrato?</h3>
 <div class="callout-content">
@@ -9923,6 +10002,7 @@ sintassi o un errore di runtime?</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="documento-questo" class="callout-inner">
 <h3 class="callout-title">Documento questo</h3>
 <div class="callout-content">
@@ -9957,7 +10037,7 @@ verificate che <code>help</code> la visualizzi correttamente.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -9977,6 +10057,7 @@ verificate che <code>help</code> la visualizzi correttamente.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Sfida</span>
 <div id="pulire-il-codice" class="callout-inner">
 <h3 class="callout-title">Pulire il codice</h3>
 <div class="callout-content">
@@ -10018,7 +10099,7 @@ cosa avete fatto di uguale? Cosa avete fatto di diverso e perché?</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Ecco una soluzione.</p>
 <div class="codewrapper sourceCode" id="cb9">
@@ -10073,8 +10154,8 @@ cosa avete fatto di uguale? Cosa avete fatto di diverso e perché?</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Punti Chiave</span>
 <div class="callout-inner">
-<h3 class="callout-title">Punti Chiave</h3>
 <div class="callout-content">
 <ul>
 <li>Seguire lo stile standard di Python nel codice.</li>
@@ -10147,8 +10228,8 @@ e <a href="https://stackoverflow.com/questions/tagged/pandas?tab=Votes" class="e
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Punti Chiave</span>
 <div class="callout-inner">
-<h3 class="callout-title">Punti Chiave</h3>
 <div class="callout-content">
 <ul>
 <li>Python supporta una comunità ampia e diversificata nel mondo
@@ -10195,8 +10276,8 @@ accademico e industriale.</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Punti Chiave</span>
 <div class="callout-inner">
-<h3 class="callout-title">Punti Chiave</h3>
 <div class="callout-content">
 <ul>
 <li>Cerchiamo costantemente di migliorare questo corso.</li>
@@ -10228,7 +10309,7 @@ accademico e industriale.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template concesso in licenza sotto <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> da <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Realizzato con <a href="https://github.com/carpentries/sandpaper/tree/0.16.12" class="external-link">sandpaper (0.16.12)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a> e <a href="https://github.com/carpentries/varnish/tree/1.0.6" class="external-link">varnish (1.0.6)</a></p>
+        <p>Realizzato con <a href="https://github.com/carpentries/sandpaper/tree/0.17.1" class="external-link">sandpaper (0.17.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a> e <a href="https://github.com/carpentries/varnish/tree/1.0.7" class="external-link">varnish (1.0.7)</a></p>
 			</div>
 		</footer>
 </div> <!-- / div.container -->
@@ -10251,8 +10332,8 @@ accademico e industriale.</li>
   "url": "https://swcarpentry.github.io/python-novice-gapminder/aio.html",
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/aio.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2025-08-04",
-  "datePublished": "2025-08-04"
+  "dateModified": "2025-11-06",
+  "datePublished": "2025-11-06"
 }
 
   </script><script>
