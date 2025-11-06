@@ -286,7 +286,7 @@ libreria di grafici scientifici più utilizzata in Python.</li>
 <li><a href="#i-dati-possono-essere-tracciati-anche-chiamando-direttamente-la-funzione-matplotlib-plot.">I dati possono essere tracciati anche chiamando direttamente la
 funzione <code>matplotlib</code> <code>plot</code>.</a></li>
 <li><a href="#ottenere-i-dati-sullaustralia-dal-dataframe">Ottenere i dati sull’Australia dal dataframe</a></li>
-<li><a href="#pu%C3%B2-tracciare-molti-insiemi-di-dati-insieme.">Può tracciare molti insiemi di dati insieme.</a></li>
+<li><a href="#pu%C3%B2-tracciare-molti-insiemi-di-dati-contemporaneamente.">Può tracciare molti insiemi di dati contemporaneamente.</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -450,7 +450,7 @@ funzione <code>matplotlib</code> <code>plot</code>.</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Tracciare</h1>
-        <p>Ultimo aggiornamento il 2025-03-02 |
+        <p>Ultimo aggiornamento il 2025-11-06 |
 
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/09-plotting.md" class="external-link">Modifica questa pagina <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -494,13 +494,13 @@ di dati.</li>
 libreria di grafici scientifici più utilizzata in Python.<a class="anchor" aria-label="anchor" href="#matplotlib-%C3%A8-la-libreria-di-grafici-scientifici-pi%C3%B9-utilizzata-in-python-"></a></h2>
 <hr class="half-width"><ul><li>Comunemente si usa una sottolibreria chiamata <a href="https://matplotlib.org/stable/tutorials/introductory/pyplot.html" class="external-link"><code>matplotlib.pyplot</code></a>.</li>
 <li>Per impostazione predefinita, Jupyter Notebook esegue il rendering
-dei grafici in linea.</li>
+dei grafici.</li>
 </ul><div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre>
 </div>
-<ul><li>I grafici semplici sono (abbastanza) semplici da creare.</li>
+<ul><li>I grafici semplici si creano (abbastanza) facilmente</li>
 </ul><div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -527,10 +527,10 @@ dei dati di input.’}</p>
 <div class="callout-content">
 <p>Nel nostro esempio di Jupyter Notebook, l’esecuzione della cella
 dovrebbe generare la figura direttamente sotto il codice. La figura è
-anche inclusa nel documento del blocco note per una visualizzazione
-futura. Tuttavia, altri ambienti Python, come una sessione Python
-interattiva avviata da un terminale o uno script Python eseguito dalla
-riga di comando, richiedono un comando aggiuntivo per visualizzare la
+anche inclusa nel documento del notebook per una visualizzazione futura.
+Tuttavia, altri ambienti Python, come una sessione Python interattiva
+avviata da un terminale o uno script Python eseguito dalla riga di
+comando, richiedono un comando aggiuntivo per visualizzare la
 figura.</p>
 <p>Indica a <code>matplotlib</code> di mostrare una figura:</p>
 <div class="codewrapper sourceCode" id="cb3">
@@ -561,15 +561,15 @@ per convertire la serie di valori stringa
 <span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_oceania.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span>
 <span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="co"># Extract year from last 4 characters of each column name</span></span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="co"># The current column names are structured as 'gdpPercap_(year)', </span></span>
-<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a><span class="co"># so we want to keep the (year) part only for clarity when plotting GDP vs. years</span></span>
-<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a><span class="co"># To do this we use replace(), which removes from the string the characters stated in the argument</span></span>
-<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a><span class="co"># This method works on strings, so we use replace() from Pandas Series.str vectorized string functions</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="co"># Estrae l’anno dagli ultimi 4 caratteri di ciascun nome di colonna.</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="co"># I nomi delle colonne attuali sono nella forma 'gdpPercap_(anno)',</span></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a><span class="co"># quindi vogliamo mantenere solo la parte (anno) per rendere più chiaro il grafico PIL vs anni.</span></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a><span class="co"># Usiamo il metodo replace(), che rimuove dalla stringa i caratteri specificati come argomento.</span></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a><span class="co"># Questo metodo agisce su stringhe, quindi utilizziamo replace() attraverso le funzioni vettorializzate per stringhe di Pandas (Series.str).</span></span>
 <span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a></span>
 <span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a>years <span class="op">=</span> data.columns.<span class="bu">str</span>.replace(<span class="st">'gdpPercap_'</span>, <span class="st">''</span>)</span>
 <span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a><span class="co"># Convert year values to integers, saving results back to dataframe</span></span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a><span class="co"># Converte i valori degli anni in interi e salva i risultati di nuovo nel DataFrame.</span></span>
 <span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a></span>
 <span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a>data.columns <span class="op">=</span> years.astype(<span class="bu">int</span>)</span>
 <span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a></span>
@@ -588,8 +588,8 @@ esegue il grafico con le righe come asse X.</li>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>plt.ylabel(<span class="st">'GDP per capita'</span>)</span></code></pre>
 </div>
 <figure><img src="../fig/9_gdp_australia_nz.svg" alt="Grafico del PIL per Australia e Nuova Zelanda" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="sono-disponibili-molti-stili-di-grafico-">Sono disponibili molti stili di grafico.<a class="anchor" aria-label="anchor" href="#sono-disponibili-molti-stili-di-grafico-"></a></h2>
-<hr class="half-width"><ul><li>Ad esempio, per creare un grafico a barre utilizzando uno stile più
-sofisticato.</li>
+<hr class="half-width"><ul><li>Ad esempio, si può creare un grafico a barre utilizzando uno stile
+più sofisticato.</li>
 </ul><div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -617,19 +617,19 @@ blu, <code>g--</code> è una linea verde tratteggiata.</li>
 </div>
 <p><img src="../fig/9_gdp_australia_formatted.svg" class="figure">{alt=‘Grafico
 formattato del PIL per l’Australia’}</p>
-</section><section><h2 class="section-heading" id="può-tracciare-molti-insiemi-di-dati-insieme-">Può tracciare molti insiemi di dati insieme.<a class="anchor" aria-label="anchor" href="#pu%C3%B2-tracciare-molti-insiemi-di-dati-insieme-"></a></h2>
+</section><section><h2 class="section-heading" id="può-tracciare-molti-insiemi-di-dati-contemporaneamente-">Può tracciare molti insiemi di dati contemporaneamente.<a class="anchor" aria-label="anchor" href="#pu%C3%B2-tracciare-molti-insiemi-di-dati-contemporaneamente-"></a></h2>
 <hr class="half-width"><div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="co"># Select two countries' worth of data.</span></span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="co"># Selezionare i dati relativi a due Paesi</span></span>
 <span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>gdp_australia <span class="op">=</span> data.loc[<span class="st">'Australia'</span>]</span>
 <span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>gdp_nz <span class="op">=</span> data.loc[<span class="st">'New Zealand'</span>]</span>
 <span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="co"># Plot with differently-colored markers.</span></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="co"># Graficali con due diversi colori.</span></span>
 <span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>plt.plot(years, gdp_australia, <span class="st">'b-'</span>, label<span class="op">=</span><span class="st">'Australia'</span>)</span>
 <span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>plt.plot(years, gdp_nz, <span class="st">'g-'</span>, label<span class="op">=</span><span class="st">'New Zealand'</span>)</span>
 <span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a></span>
-<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a><span class="co"># Create legend.</span></span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a><span class="co"># Creare una legenda.</span></span>
 <span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'upper left'</span>)</span>
 <span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a>plt.xlabel(<span class="st">'Year'</span>)</span>
 <span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a>plt.ylabel(<span class="st">'GDP per capita ($)'</span>)</span></code></pre>
@@ -659,7 +659,7 @@ auspicabile avere una legenda che descriva i dati.</p>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>plt.legend()</span></code></pre>
 </div>
 <p>Per impostazione predefinita, matplotlib tenta di posizionare la
-legenda in una posizione adeguata. Se si preferisce specificare una
+legenda in una posizione centrale. Se si preferisce specificare una
 posizione, è possibile farlo con l’argomento <code>loc=</code>, ad
 esempio per posizionare la legenda nell’angolo superiore sinistro del
 grafico, specificare <code>loc='upper left'</code></p>
@@ -902,7 +902,7 @@ salvare la figura su file.</p>
 <p>Ogni volta che si generano grafici da inserire in un documento o in
 una presentazione, ci sono alcune cose da fare per assicurarsi che tutti
 possano capire i grafici.</p>
-<ul><li>Assicuratevi sempre che il testo sia abbastanza grande da essere
+<ul><li>Assicuratevi sempre che il testo sia abbastanza visibile da essere
 letto. Usate il parametro <code>fontsize</code> in <code>xlabel</code>,
 <code>ylabel</code>, <code>title</code> e <code>legend</code> e <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.tick_params.html" class="external-link"><code>tick_params</code>
 con <code>labelsize</code></a> per aumentare la dimensione del testo dei
@@ -933,12 +933,12 @@ l’aspetto dei grafici per le persone affette da daltonismo.</li>
 <ul><li>
 <a href="https://matplotlib.org/" class="external-link"><code>matplotlib</code></a> è la
 libreria di grafici scientifici più utilizzata in Python.</li>
-<li>Traccia i dati direttamente da un dataframe Pandas.</li>
-<li>Selezionare e trasformare i dati, quindi tracciarli.</li>
+<li>Grafica i dati direttamente da un dataframe Pandas.</li>
+<li>Selezionare e trasformare i dati, quindi graficarli.</li>
 <li>Sono disponibili molti stili di grafico: per ulteriori opzioni,
 consultare la <a href="https://python-graph-gallery.com/matplotlib/" class="external-link">Python Graph
 Gallery</a>.</li>
-<li>Può tracciare molti insiemi di dati insieme.</li>
+<li>Si possono graficare molti insiemi di dati insieme.</li>
 </ul></div>
 </div>
 </div>
@@ -1000,7 +1000,7 @@ Gallery</a>.</li>
   "url": "https://swcarpentry.github.io/python-novice-gapminder/instructor/09-plotting.html",
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/instructor/09-plotting.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2025-03-02",
+  "dateModified": "2025-11-06",
   "datePublished": "2025-11-06"
 }
 
