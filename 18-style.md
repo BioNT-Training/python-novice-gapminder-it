@@ -8,8 +8,7 @@ exercises: 15
 ::::::::::::::::::::::::::::::::::::::: objectives
 
 - Fornire valide giustificazioni per le regole di base dello stile di codifica.
-- Riformulare i programmi di una pagina per renderli più leggibili e giustificare le
-  modifiche.
+- Riformulare i programmi di una pagina per renderli più leggibili e giustificare le modifiche.
 - Utilizzare gli standard di codifica della comunità Python (PEP-8).
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -24,51 +23,28 @@ exercises: 15
 
 ## Stile di codifica
 
-Uno stile di codifica coerente aiuta gli altri (compreso il nostro futuro) a leggere e
-capire il codice più facilmente. Il codice viene letto molto più spesso di quanto non
-venga scritto e, come afferma lo [Zen of
-Python](https://www.python.org/dev/peps/pep-0020), "La leggibilità conta". Python ha
-proposto uno stile standard attraverso una delle sue prime Python Enhancement Proposals
-(PEP), [PEP8](https://www.python.org/dev/peps/pep-0008).
+Uno stile di codifica coerente aiuta gli altri (compresi noi nel futuro) a leggere e capire il codice più facilmente. Il codice viene letto molto più spesso di quanto non venga scritto e, come afferma lo [Zen of
+Python](https://www.python.org/dev/peps/pep-0020), "La leggibilità conta". Python ha proposto uno stile standard attraverso una delle sue prime Python Enhancement Proposals (PEP), [PEP8](https://www.python.org/dev/peps/pep-0008).
 
 Alcuni punti da evidenziare:
 
-- documentare il codice e assicurarsi che siano chiare le ipotesi, gli algoritmi
+- Documentare il codice e assicurarsi che siano chiare le ipotesi, gli algoritmi
   interni, gli input e gli output previsti, ecc
-- utilizzare nomi di variabili chiari e semanticamente significativi
-- usare gli spazi bianchi, *non* le tabulazioni, per indentare le righe (le tabulazioni
-  possono causare problemi in diversi editor di testo, sistemi operativi e sistemi di
-  controllo delle versioni)
+- Utilizzare nomi di variabili chiari e semanticamente significativi
+- Usare gli spazi bianchi, *non* le tabulazioni, per indentare le righe (le tabulazioni possono causare problemi in diversi editor di testo, sistemi operativi e sistemi di controllo delle versioni)
 
 ## Seguire lo stile standard di Python nel codice.
 
-- [PEP8](https://www.python.org/dev/peps/pep-0008): una guida allo stile di Python che
-  tratta argomenti come il nome delle variabili, l'indentazione del codice, la struttura
-  delle dichiarazioni `import`, ecc. L'adesione al PEP8 facilita la lettura e la
-  comprensione del codice da parte degli altri sviluppatori Python, che possono così
-  capire come dovrebbero essere i loro contributi.
+- [PEP8](https://www.python.org/dev/peps/pep-0008): una guida allo stile di Python che tratta argomenti come il nome delle variabili, l'indentazione del codice, la struttura delle dichiarazioni `import`, ecc. L'adesione al PEP8 facilita la lettura e la comprensione del codice da parte degli altri sviluppatori Python, che possono così capire come dovrebbero essere i loro contributi.
 - Per verificare la conformità del codice alla PEP8, si può usare l'applicazione
   [pycodestyle](https://pypi.org/project/pycodestyle/) e strumenti come [black code
-  formatter](https://github.com/psf/black) possono formattare automaticamente il codice
-  in modo da renderlo conforme alla PEP8 e a pycodestyle (esiste anche un formattatore
-  per quaderni Jupyter [nb\_black](https://github.com/dnanhkhoa/nb_black)).
-- Alcuni gruppi e organizzazioni seguono linee guida di stile diverse dalla PEP8. Per
-  esempio, la [Google style guide on
-  Python](https://google.github.io/styleguide/pyguide.html) contiene raccomandazioni
-  leggermente diverse. Google ha scritto un'applicazione che può aiutare a formattare il
-  codice secondo il suo stile o quello della PEP8, chiamata
-  [yapf](https://github.com/google/yapf/).
-- Per quanto riguarda lo stile di codifica, la chiave è la *coerenza*. Scegliete uno
-  stile per il vostro progetto, che sia PEP8, lo stile di Google o qualcos'altro, e fate
-  del vostro meglio per assicurarvi che voi e tutti gli altri con cui collaborate lo
-  rispettiate. La coerenza all'interno di un progetto ha spesso un impatto maggiore
-  rispetto al particolare stile utilizzato. Uno stile coerente renderà il vostro
-  software più facile da leggere e da capire per gli altri e per il vostro futuro.
+  formatter](https://github.com/psf/black) possono formattare automaticamente il codice in modo da renderlo conforme alla PEP8 e a pycodestyle (esiste anche un formattatore per Jupyter notebooks [nb\_black](https://github.com/dnanhkhoa/nb_black)).
+- Alcuni gruppi e organizzazioni seguono linee guida di stile diverse dalla PEP8. Per esempio, la [Google style guide on Python](https://google.github.io/styleguide/pyguide.html) contiene raccomandazioni leggermente diverse. Google ha scritto un'applicazione che può aiutare a formattare il codice secondo il suo stile o quello della PEP8, chiamata [yapf](https://github.com/google/yapf/).
+- Per quanto riguarda lo stile di codifica, la chiave è la *coerenza*. Scegliete uno stile per il vostro progetto, che sia PEP8, lo stile di Google o qualcos'altro, e fate del vostro meglio per assicurarvi che voi e tutti gli altri con cui collaborate lo rispettiate. La coerenza all'interno di un progetto ha spesso un impatto maggiore rispetto al particolare stile utilizzato. Uno stile coerente renderà il vostro software più facile da leggere e da capire per gli altri e per il vostro futuro.
 
 ## Usare le asserzioni per controllare gli errori interni.
 
-Le asserzioni sono un metodo semplice ma potente per assicurarsi che il contesto in cui
-il codice viene eseguito sia quello previsto.
+Le asserzioni sono un metodo semplice ma potente per assicurarsi che il contesto in cui il codice viene eseguito sia quello previsto.
 
 ```python
 def calc_bulk_density(mass, volume):
@@ -78,21 +54,16 @@ def calc_bulk_density(mass, volume):
 ```
 
 Se l'asserzione è `False`, l'interprete Python solleva un'eccezione di runtime
-`AssertionError`. Il codice sorgente dell'espressione fallita viene visualizzato come
-parte del messaggio di errore. Per ignorare le asserzioni nel codice, eseguire
-l'interprete con lo switch '-O' (optimize). Le asserzioni devono contenere solo semplici
-controlli e non devono mai modificare lo stato del programma. Ad esempio, un'asserzione
-non dovrebbe mai contenere un'assegnazione.
+`AssertionError`. Il codice sorgente dell'espressione fallita viene visualizzato come parte del messaggio di errore. Per ignorare le asserzioni nel codice, eseguire
+l'interprete con lo switch '-O' (optimize). Le asserzioni devono contenere solo semplici controlli e non devono mai modificare lo stato del programma. Ad esempio, un'asserzione non dovrebbe mai contenere un'assegnazione.
 
 ## Usare i docstring per fornire un aiuto integrato.
 
-Se la prima cosa in una funzione è una stringa di caratteri non assegnata direttamente a
-una variabile, Python la allega alla funzione, accessibile tramite la funzione di aiuto
-integrata. Questa stringa che fornisce la documentazione è nota anche come *docstring*.
+Se la prima cosa in una funzione è una stringa di caratteri non assegnata direttamente a una variabile, Python la allega alla funzione, accessibile tramite la funzione di aiuto integrata. Questa stringa che fornisce la documentazione è nota anche come *docstring*.
 
 ```python
 def average(values):
-    "Return average of values, or None if no values are supplied."
+    "estituisce la media dei valori, oppure None se non vengono forniti valori."
 
     if len(values) == 0:
         return None
@@ -112,9 +83,7 @@ average(values)
 
 ## Stringhe multilinea
 
-Spesso si usano stringhe *multilinee* per la documentazione. Queste iniziano e finiscono
-con tre caratteri di virgolette (singole o doppie) e terminano con tre caratteri
-corrispondenti.
+Spesso si usano stringhe *multilinee* per la documentazione. Queste iniziano e finiscono con tre caratteri di virgolette (singole o doppie) e terminano con tre caratteri corrispondenti.
 
 ```python
 """This string spans
@@ -130,12 +99,11 @@ Blank lines are allowed."""
 ## Cosa verrà mostrato?
 
 Evidenziate le righe del codice sottostante che saranno disponibili come guida in linea.
-Ci sono righe che dovrebbero essere rese disponibili, ma non lo saranno? Alcune linee
-produrranno un errore di sintassi o un errore di runtime?
+Ci sono righe che dovrebbero essere rese disponibili, ma non lo saranno? Alcune linee produrranno un errore di sintassi o un errore di runtime?
 
 ```python
 "Find maximum edit distance between multiple sequences."
-# This finds the maximum distance between all sequences.
+# Questa parte trova il massimo della distanza tra sequenze
 
 def overall_max(sequences):
     '''Determine overall maximum edit distance.'''
@@ -158,22 +126,16 @@ def overall_max(sequences):
 
 ## Documento questo
 
-Usate i commenti per descrivere e aiutare gli altri a capire sezioni o singole linee di
-codice potenzialmente poco intuitive. Sono particolarmente utili a chiunque abbia
-bisogno di capire e modificare il codice in futuro, compreso voi stessi.
+Usate i commenti per descrivere e aiutare gli altri a capire sezioni o singole linee di codice potenzialmente poco intuitive. Sono particolarmente utili a chiunque abbia bisogno di capire e modificare il codice in futuro, compreso voi stessi.
 
-Usate i docstring per documentare gli input accettabili e gli output attesi di un metodo
-o di una classe, il suo scopo, le assunzioni e il comportamento previsto. I docstring
-vengono visualizzati quando un utente invoca il metodo incorporato `help` sul metodo o
-sulla classe.
+Usate i docstring per documentare gli input accettabili e gli output attesi di un metodo o di una classe, il suo scopo, le assunzioni e il comportamento previsto. I docstring vengono visualizzati quando un utente invoca il metodo incorporato `help` sul metodo o sulla classe.
 
-Trasformate il commento della funzione seguente in una docstring e verificate che `help`
-la visualizzi correttamente.
+Trasformate il commento della funzione seguente in una docstring e verificate che `help` la visualizzi correttamente.
 
 ```python
 def middle(a, b, c):
-    # Return the middle value of three.
-    # Assumes the values can actually be compared.
+    # Ritorna il valore di mezzo dei tre
+    # Assume che i valori possono essere comparati
     values = [a, b, c]
     values.sort()
     return values[1]
@@ -185,8 +147,8 @@ def middle(a, b, c):
 
 ```python
 def middle(a, b, c):
-    '''Return the middle value of three.
-    Assumes the values can actually be compared.'''
+    '''Ritorna il valore di mezzo dei tre.
+    Assume che i valori possono essere comparati.'''
     values = [a, b, c]
     values.sort()
     return values[1]
@@ -201,11 +163,9 @@ def middle(a, b, c):
 ## Pulire il codice
 
 1. Leggete questo breve programma e cercate di prevedere cosa fa.
-2. Eseguitelo: quanto è stata accurata la vostra previsione?
-3. Riformulare il programma per renderlo più leggibile. Ricordatevi di eseguirlo dopo
-   ogni modifica per assicurarvi che il suo comportamento non sia cambiato.
-4. Confrontate la vostra riscrittura con quella del vostro vicino. Che cosa avete fatto
-   di uguale? Cosa avete fatto di diverso e perché?
+2. Eseguitelo: quanto è accurata la vostra previsione?
+3. Riformulare il programma per renderlo più leggibile. Ricordatevi di eseguirlo dopo ogni modifica per assicurarvi che il suo comportamento non sia cambiato.
+4. Confrontate la vostra riscrittura con quella del vostro vicino. Che cosa avete fatto di uguale? Cosa avete fatto di diverso e perché?
 
 ```python
 n = 10
@@ -234,10 +194,7 @@ Ecco una soluzione.
 ```python
 def string_machine(input_string, iterations):
     """
-    Takes input_string and generates a new string with -'s and *'s
-    corresponding to characters that have identical adjacent characters
-    or not, respectively.  Iterates through this procedure with the resultant
-    strings for the supplied number of iterations.
+    Riceve una stringa in ingresso (input_string) e crea una nuova stringa formata da trattini (-) e asterischi (*): i trattini indicano caratteri uguali adiacenti, gli asterischi caratteri diversi. La procedura viene ripetuta per il numero di iterazioni indicato.
     """
     print(input_string)
     input_string_length = len(input_string)
