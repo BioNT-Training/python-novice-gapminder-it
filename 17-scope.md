@@ -24,8 +24,7 @@ exercises: 10
 ## L'ambito di una variabile è la parte del programma che può "vedere" quella variabile.
 
 - Ci sono solo tanti nomi sensati per le variabili.
-- Le persone che usano le funzioni non dovrebbero preoccuparsi dei nomi delle variabili
-  usati dall'autore della funzione.
+- Le persone che usano le funzioni non dovrebbero preoccuparsi dei nomi delle variabili usati dall'autore della funzione.
 - Chi scrive funzioni non dovrebbe preoccuparsi di quali nomi di variabili usa il
   chiamante della funzione.
 - La parte di un programma in cui una variabile è visibile è chiamata il suo *scope*.
@@ -125,10 +124,7 @@ KeyError: 'Friday'
 2. `errors_02.py`
 3. `print_message`
 4. Riga 11
-5. `KeyError`. Questi errori si verificano quando si cerca di cercare una chiave che non
-   esiste (di solito in una struttura di dati come un dizionario). Per maggiori
-   informazioni su `KeyError` e su altre eccezioni integrate, consultare i [Python docs]
-   (https://docs.python.org/3/library/exceptions.html#KeyError).
+5. `KeyError`. Questi errori si verificano quando si cerca di cercare una chiave che non esiste (di solito in una struttura di dati come un dizionario). Per maggiori informazioni su `KeyError` e su altre eccezioni integrate, consultare i [Python docs](https://docs.python.org/3/library/exceptions.html#KeyError).
 6. `KeyError: 'Friday'`
 
 :::::::::::::::::::::::::
