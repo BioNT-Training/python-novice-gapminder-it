@@ -23,13 +23,10 @@ exercises: 15
 
 ## Nota sui DataFrames/Series di Pandas
 
-Un [DataFrame][pandas-dataframe] è un insieme di [Series][pandas-series]; il DataFrame è
-il modo in cui Pandas rappresenta una tabella e Series è la struttura dati che Pandas
+Un [DataFrame][pandas-dataframe] è un insieme di [Series][pandas-series]; il DataFrame è il modo in cui Pandas rappresenta una tabella e Series è la struttura dati che Pandas
 usa per rappresentare una colonna.
 
-Pandas è costruito sulla base della libreria [Numpy][numpy], il che in pratica significa
-che la maggior parte dei metodi definiti per gli array Numpy si applicano alle
-serie/dataframe di Pandas.
+Pandas è costruito sulla base della libreria [Numpy][numpy], il che in pratica significa che la maggior parte dei metodi definiti per gli array Numpy si applicano alle serie/dataframe di Pandas.
 
 Ciò che rende Pandas così interessante è la potente interfaccia per accedere ai singoli
 record della tabella, la corretta gestione dei valori mancanti e le operazioni di
@@ -37,16 +34,13 @@ database relazionale tra DataFrames.
 
 ## Selezione di valori
 
-Per accedere a un valore nella posizione `[i,j]` di un DataFrame, abbiamo due opzioni, a
-seconda del significato di `i` in uso. Ricordiamo che un DataFrame fornisce un *indice*
-per identificare le righe della tabella; una riga, quindi, ha una *posizione*
+Per accedere a un valore nella posizione `[i,j]` di un DataFrame, abbiamo due opzioni, a seconda del significato di `i` in uso. Ricordiamo che un DataFrame fornisce un *indice* per identificare le righe della tabella; una riga, quindi, ha una *posizione*
 all'interno della tabella e una *etichetta*, che identifica in modo univoco la sua
 *entrata* nel DataFrame.
 
 ## Usare `DataFrame.iloc[..., ...]` per selezionare i valori in base alla loro posizione (di ingresso)
 
-- Può specificare la posizione tramite un indice numerico, analogamente alla versione 2D
-  della selezione dei caratteri nelle stringhe.
+- Può specificare la posizione tramite un indice numerico, analogamente alla versione 2D della selezione dei caratteri nelle stringhe.
 
 ```python
 import pandas as pd
@@ -94,7 +88,7 @@ gdpPercap_2007    5937.029526
 Name: Albania, dtype: float64
 ```
 
-- Otterrebbe lo stesso risultato stampando `data.loc["Albania"]` (senza un secondo
+- Si otterrebbe lo stesso risultato stampando `data.loc["Albania"]` (senza un secondo
   indice).
 
 ```python
@@ -114,8 +108,7 @@ Name: gdpPercap_1952, dtype: float64
 ```
 
 - Si otterrebbe lo stesso risultato stampando `data["gdpPercap_1952"]`
-- Si ottiene lo stesso risultato anche stampando `data.gdpPercap_1952` (non consigliato,
-  perché facilmente confondibile con la notazione `.` per i metodi)
+- Lo stesso risultato si otterrebbe anche stampando `data.gdpPercap_1952` (non consigliato,perché facilmente confondibile con la notazione `.` per i metodi)
 
 ## Seleziona più colonne o righe usando `DataFrame.loc` e una slice con nome.
 
@@ -133,16 +126,13 @@ Norway         13450.401510    16361.876470    18965.055510
 Poland          5338.752143     6557.152776     8006.506993
 ```
 
-Nel codice sopra riportato, scopriamo che **l'affettatura con `loc` è inclusiva ad
-entrambe le estremità**, a differenza dell'affettatura con `iloc`**, in cui
-l'affettatura indica tutto fino all'indice finale escluso.
+Nel codice riportato sopra, scopriamo che **l’operazione di slicing con loc è inclusiva a entrambe le estremit**à, a differenza di quella con iloc, in cui vengono selezionati tutti gli elementi fino all’indice finale escluso.
 
-## Il risultato dell'affettatura può essere usato in altre operazioni.
+## Il risultato dello slicing può essere usato in altre operazioni.
 
-- Di solito non si stampa solo una fetta.
-- Tutti gli operatori statistici che lavorano su interi dataframe funzionano allo stesso
-  modo sulle fette.
-- Ad esempio, calcolare il massimo di una fetta.
+- Di solito non si stampa solo una slice.
+- Tutti gli operatori statistici che lavorano su interi DataFrame funzionano allo stesso modo anche sulle slice.
+- Ad esempio, possiamo calcolare il valore massimo di una slice.
 
 ```python
 print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].max())
@@ -172,11 +162,11 @@ dtype: float64
 - Restituisce un dataframe di forma simile di `True` e `False`.
 
 ```python
-# Use a subset of data to keep output readable.
+# Usiamo solo una parte dei dati per ottenere un risultato leggibile.
 subset = data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972']
 print('Subset of data:\n', subset)
 
-# Which values were greater than 10000 ?
+# Quali valori sono maggiori di 10000 ?
 print('\nWhere are values large?\n', subset > 10000)
 ```
 
@@ -200,10 +190,9 @@ Norway                True           True           True
 Poland               False          False          False
 ```
 
-## Seleziona valori o NaN usando una maschera booleana.
+## Selezionare valori o celle vuote (NaN) tramite una maschera booleana.
 
-- Un riquadro pieno di booleani viene talvolta chiamato *maschera* per il modo in cui
-  può essere utilizzato.
+- Un insieme di valori booleani disposto in una tabella viene talvolta chiamato *maschera (mask)*, per via del modo in cui può essere utilizzato.
 
 ```python
 mask = subset > 10000
@@ -220,8 +209,8 @@ Norway          13450.40151     16361.87647     18965.05551
 Poland                  NaN             NaN             NaN
 ```
 
-- Ottiene il valore quando la maschera è vera e NaN (Not a Number) quando è falsa.
-- Utile perché i NaN vengono ignorati da operazioni come max, min, media, ecc.
+- Restituisce il valore quando la maschera è True e NaN (Not a Number) quando è False.
+- Questo è utile perché i valori NaN vengono ignorati da operazioni come max, min, media, ecc.
 
 ```python
 print(subset[subset > 10000].describe())
@@ -239,11 +228,11 @@ min      12790.849560    10022.401310    12269.273780
 max      13450.401510    16361.876470    18965.055510
 ```
 
-## Raggruppa per: dividere-applicare-combinare
+## Raggruppa per: split-apply-combine
 
 ::::::::::::::::::::::::::::::::::::: instructor
 
-Gli studenti hanno spesso difficoltà in questo caso, molti non lavorano con i dati e i
+Gli studenti hanno spesso difficoltà in questo caso, molti non lavorano con i dati e
 concetti finanziari e quindi trovano i concetti dell'esempio difficili da comprendere.
 Il problema più grande, tuttavia, è la linea che genera il wealth_score: questo
 passaggio deve essere spiegato a fondo:
@@ -256,12 +245,10 @@ passaggio deve essere spiegato a fondo:
 I metodi di vettorizzazione e le operazioni di raggruppamento di Pandas sono
 caratteristiche che offrono agli utenti molta flessibilità nell'analisi dei dati.
 
-Per esempio, supponiamo di voler avere una visione più chiara di come i paesi europei si
-dividono in base al loro PIL.
+Per esempio, supponiamo di voler avere una visione più chiara di come i paesi europei si dividono in base al loro PIL.
 
 1. Possiamo dare un'occhiata dividendo i paesi in due gruppi durante gli anni presi in
-   esame, quelli che hanno presentato un PIL *più alto* della media europea e quelli con
-   un PIL *più basso*.
+   esame, quelli che hanno presentato un PIL *più alto* della media europea e quelli con un PIL *più basso*.
 2. Stimiamo quindi un *punteggio di ricchezza* basato sui valori storici (dal 1962 al
    2007), dove teniamo conto di quante volte un paese ha partecipato ai gruppi di PIL
    *più bassi* o *più alti*
@@ -307,7 +294,7 @@ United Kingdom            1.000000
 dtype: float64
 ```
 
-Infine, per ogni gruppo nella tabella `wealth_score`, sommiamo il suo contributo
+Infine, per ogni gruppo nella tabella `wealth_score`, sommiamo il contributo
 (finanziario) per tutti gli anni presi in esame utilizzando metodi concatenati:
 
 ```python
@@ -387,7 +374,7 @@ print(data_europe.loc['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
 
 ## Soluzione
 
-No, non producono lo stesso output! L'output della prima istruzione è:
+No, non producono lo stesso output! L'output della prima è:
 
 ```output
         gdpPercap_1952  gdpPercap_1957
@@ -406,8 +393,7 @@ Austria     6137.076492     8842.598030    10750.721110
 Belgium     8343.105127     9714.960623    10991.206760
 ```
 
-È evidente che la seconda istruzione produce una colonna e una riga in più rispetto alla
-prima.  
+È evidente che la seconda istruzione produce una colonna e una riga in più rispetto alla prima.  
 Quale conclusione possiamo trarre? Vediamo che una slice numerica, 0:2, *omette*
 l'indice finale (cioè l'indice 2) nell'intervallo fornito, mentre una slice denominata,
 'gdpPercap\1952':'gdpPercap\1962', *include* l'elemento finale.
@@ -443,9 +429,7 @@ Esaminiamo questo pezzo di codice riga per riga.
 first = pd.read_csv('data/gapminder_all.csv', index_col='country')
 ```
 
-Questa riga carica il dataset contenente i dati sul PIL di tutti i paesi in un dataframe
-chiamato `first`. Il parametro `index_col='country'` seleziona quale colonna utilizzare
-come etichetta di riga nel dataframe.
+Questa riga carica il dataset contenente i dati sul PIL di tutti i paesi in un dataframe chiamato `first`. Il parametro `index_col='country'` seleziona quale colonna utilizzare come etichetta di riga nel dataframe.
 
 ```python
 second = first[first['continent'] == 'Americas']
@@ -454,8 +438,7 @@ second = first[first['continent'] == 'Americas']
 Questa riga effettua una selezione: vengono estratte solo le righe di `first` per le
 quali la colonna 'continente' corrisponde a 'Americhe'. Si noti come l'espressione
 booleana all'interno delle parentesi, `first['continent'] == 'Americas'`, venga
-utilizzata per selezionare solo le righe in cui l'espressione è vera. Provate a stampare
-questa espressione! È possibile stampare anche i singoli elementi Vero/Falso?
+utilizzata per selezionare solo le righe in cui l'espressione è vera. Provate a stampare questa espressione! È possibile stampare anche i singoli elementi Vero/Falso?
 (suggerimento: prima assegnate l'espressione a una variabile)
 
 ```python
@@ -471,8 +454,7 @@ fourth = third.drop('continent', axis = 1)
 ```
 
 Anche in questo caso applichiamo la funzione drop, ma in questo caso non eliminiamo una
-riga ma un'intera colonna. Per farlo, è necessario specificare anche il parametro `axis`
-(vogliamo eliminare la seconda colonna che ha indice 1).
+riga ma un'intera colonna. Per farlo, è necessario specificare anche il parametro `axis` (vogliamo eliminare la seconda colonna che ha indice 1).
 
 ```python
 fourth.to_csv('result.csv')
@@ -554,9 +536,7 @@ data.loc['Denmark',:]
 data.loc[:,'gdpPercap_1985':]
 ```
 
-Pandas è abbastanza intelligente da riconoscere il numero alla fine dell'etichetta della
-colonna e non dà errore, anche se non esiste alcuna colonna denominata `gdpPercap_1985`.
-Questo è utile se in seguito vengono aggiunte nuove colonne al file CSV.
+Pandas è abbastanza intelligente da riconoscere il numero alla fine dell'etichetta della colonna e non dà errore, anche se non esiste alcuna colonna denominata `gdpPercap_1985`. Questo è utile se in seguito vengono aggiunte nuove colonne al file CSV.
 
 4:
 
@@ -756,8 +736,7 @@ Questo comando restituisce:
 'zfill']
 ```
 
-È possibile utilizzare `help()` o <kbd>Shift</kbd>\+<kbd>Tab</kbd> per ottenere maggiori
-informazioni sulle funzioni di questi metodi.
+È possibile utilizzare `help()` o <kbd>Shift</kbd>\+<kbd>Tab</kbd> per ottenere maggiori informazioni sulle funzioni di questi metodi.
 
 Si supponga che Pandas sia stato importato e che i dati del PIL di Gapminder per
 l'Europa siano stati caricati come `data`. Quindi, utilizzare `dir()` per trovare la
@@ -798,8 +777,7 @@ https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.html
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Usare `DataFrame.iloc[..., ...]` per selezionare i valori in base alla posizione degli
-  interi.
+- Usare `DataFrame.iloc[..., ...]` per selezionare i valori in base alla posizione degli interi.
 - Usare `:` da solo per indicare tutte le colonne o tutte le righe.
 - Selezionare più colonne o righe utilizzando `DataFrame.loc` e una slice denominata.
 - Il risultato dell'affettatura può essere utilizzato in altre operazioni.
