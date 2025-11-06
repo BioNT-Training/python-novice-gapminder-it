@@ -26,10 +26,10 @@ exercises: 10
 
 - Nomi di variabili
 
-  - può **solo** contenere lettere, cifre e il trattino basso `_` (tipicamente usato per
+  - Possono **solo** contenere lettere, cifre e il trattino basso `_` (tipicamente usato per
     separare le parole in nomi di variabili lunghi)
-  - non può iniziare con una cifra
-  - sono **sensibili alle maiuscole** (età, Age e AGE sono tre variabili diverse)
+  - Non possono iniziare con una cifra
+  - Sono **sensibili alle maiuscole** (age, Age e AGE sono tre variabili diverse)
 
 - Anche il nome deve essere significativo, in modo che l'utente o un altro programmatore
   sappia di cosa si tratta
@@ -97,8 +97,7 @@ NameError: name 'last_name' is not defined
 
 Siate consapevoli che in un quaderno Jupyter è importante l'*ordine* di esecuzione delle
 celle, non l'ordine in cui appaiono. Python ricorda *tutto* il codice eseguito in
-precedenza, comprese le variabili definite, indipendentemente dall'ordine nel blocco
-note. Pertanto, se si definiscono variabili più in basso nel blocco note e poi si
+precedenza, comprese le variabili definite, indipendentemente dall'ordine nel notebook. Pertanto, se si definiscono variabili più in basso nel notebook e poi si
 (ri)eseguono celle più in alto, quelle definite più in basso saranno ancora presenti. Ad
 esempio, si creino due celle con il seguente contenuto, in quest'ordine:
 
@@ -144,8 +143,7 @@ Age in three years: 45
   quella posizione.
 
 ![Una riga di codice Python, print(nome_atomo[0]), dimostra che usando l'indice zero si
-ottiene solo la lettera iniziale, in questo caso 'h' per
-l'elio.](fig/2_indexing.svg){alt="Spiegare l'indicizzazione stampando sottoinsiemi della
+ottiene solo la lettera iniziale, in questo caso 'h' per helium.](fig/2_indexing.svg){alt="Spiegare l'indicizzazione stampando sottoinsiemi della
 stringa"}
 
 ```python
@@ -305,7 +303,7 @@ tramite `a[1]`?
 I numeri non sono stringhe o sequenze e Python solleva un errore se si cerca di eseguire
 un'operazione di indice su un numero. Nella [prossima lezione sui tipi e sulla
 conversione dei tipi] (03-types-conversion.md) impareremo di più sui tipi e su come
-convertire i diversi tipi. Se si desidera l'ennesima cifra di un numero, è possibile
+convertirli Se si desidera l'ennesima cifra di un numero, è possibile
 convertirla in una stringa utilizzando la funzione incorporata `str` e quindi eseguire
 un'operazione di indice su tale stringa.
 
@@ -346,7 +344,7 @@ a quale codice preferireste ereditare da qualcuno che sta per lasciare il labora
 
 ## Soluzione
 
-`minutes` è meglio perché `min` potrebbe significare qualcosa come "minimo" (e in realtà
+`minutes` è la scelta migliore perché `min` potrebbe significare qualcosa come "minimo" (e in realtà
 è una funzione integrata in Python che tratteremo più avanti).
 
 
