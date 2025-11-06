@@ -8,7 +8,7 @@ exercises: 10
 ::::::::::::::::::::::::::::::::::::::: objectives
 
 - Essere in grado di leggere e scrivere espressioni di globbing che corrispondono a
-  insiemi di file.
+insiemi di file.
 - Usare glob per creare elenchi di file.
 - Scrivere cicli for per eseguire operazioni sui file dati i loro nomi in un elenco.
 
@@ -16,7 +16,7 @@ exercises: 10
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- Come si possono elaborare molti set di dati con un solo comando?
+- Come si possono elaborare molti insiemi di dati con un solo comando?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -55,18 +55,15 @@ dtype: float64
 
 ## Usare [`glob.glob`](https://docs.python.org/3/library/glob.html#glob.glob) per trovare insiemi di file i cui nomi corrispondono a uno schema.
 
-- In Unix, il termine "globbing" significa "corrispondenza di un insieme di file con uno
-  schema".
+- In Unix, il termine "globbing" significa "corrispondenza di un insieme di file con uno schema".
 - Gli schemi più comuni sono:
   - `*` che significa "corrisponde a zero o più caratteri"
   - `?` che significa "corrisponde esattamente a un carattere"
 - La libreria standard di Python contiene il modulo
-  [`glob`](https://docs.python.org/3/library/glob.html) per fornire funzionalità di
-  pattern matching
-- Il modulo [`glob`](https://docs.python.org/3/library/glob.html) contiene una funzione,
-  chiamata anche `glob`, per la ricerca di pattern di file
-- Ad esempio, `glob.glob('*.txt')` corrisponde a tutti i file nella directory corrente i
-  cui nomi terminano con `.txt`.
+  [`glob`](https://docs.python.org/3/library/glob.html) er fornire funzionalità di
+corrispondenza rispetto a uno schema.
+- Il modulo [`glob`](https://docs.python.org/3/library/glob.html) contiene una funzione, chiamata anche `glob`, per la ricerca di file tramite schema.
+- Ad esempio, `glob.glob('*.txt')` corrisponde a tutti i file nella directory corrente i cui nomi terminano con `.txt`.
 - Il risultato è un elenco (eventualmente vuoto) di stringhe di caratteri.
 
 ```python
@@ -91,7 +88,7 @@ all PDB files: []
 ## Usare `glob` e `for` per elaborare gruppi di file.
 
 - Aiuta molto se i file sono nominati e memorizzati in modo sistematico e coerente, in
-  modo che semplici modelli trovino i dati giusti.
+modo che semplici schemi trovino i dati giusti.
 
 ```python
 for filename in glob.glob('data/gapminder_*.csv'):
@@ -108,10 +105,10 @@ data/gapminder_gdp_europe.csv 973.5331948
 data/gapminder_gdp_oceania.csv 10039.59564
 ```
 
-- Questo include tutti i dati, così come i dati per regione.
+- Questo include tutti i dati, compresi i dati per regione.
 - Utilizzare uno schema più specifico negli esercizi per escludere l'intero set di dati.
-- Ma si noti che il minimo dell'intero insieme di dati è anche il minimo di uno degli
-  insiemi di dati, il che è un bel controllo di correttezza.
+- Si noti che il minimo dell'intero insieme di dati è anche il minimo di uno degli
+insiemi di dati: un utile controllo di correttezza.
 
 ::::::::::::::::::::::::::::::::::::::: challenge
 
@@ -152,8 +149,7 @@ for filename in glob.glob('data/*.csv'):
 print('smallest file has', fewest, 'records')
 ```
 
-Si noti che il metodo [`DataFrame.shape()`][shape-method] restituisce una tupla con il
-numero di righe e colonne del data frame.
+Si noti che l’attributo [`DataFrame.shape()`][shape-method] restituisce una tupla con il numero di righe e colonne del data frame.
 
 ::::::::::::::: solution
 
@@ -169,7 +165,7 @@ for filename in glob.glob('data/*.csv'):
 print('smallest file has', fewest, 'records')
 ```
 
-Si potrebbe aver scelto di inizializzare la variabile `fewest` con un numero maggiore
+Si potrebbe aver scelto di inizializzare la variabile fewest con un numero maggiore
 dei numeri con cui si ha a che fare, ma questo potrebbe portare a problemi se si
 riutilizza il codice con numeri più grandi. Python consente di utilizzare l'infinito
 positivo, che funzionerà indipendentemente dalla grandezza dei numeri. Quali altre
@@ -185,49 +181,56 @@ stringhe speciali riconosce la funzione [`float`][float-function]?
 
 ## Confronto dei dati
 
-Scrivere un programma che legga i set di dati regionali e tracci il PIL medio pro capite
-di ogni regione nel tempo in un unico grafico. Pandas solleva un errore se incontra
-colonne non numeriche nel calcolo di un dataframe, quindi potrebbe essere necessario
-filtrare tali colonne o dire a pandas di ignorarle.
+Scrivere un programma che legga i set di dati regionali e tracci il PIL medio pro capite di ogni regione nel tempo in un unico grafico. Pandas solleva un errore se incontra colonne non numeriche nel calcolo di un dataframe, quindi potrebbe essere necessario filtrare tali colonne o dire a pandas di ignorarle.
 
 
 ::::::::::::::: solution
 
 ## Soluzione
 
-Questa soluzione costruisce un'utile legenda usando il metodo [stringa
-`split`][split-method] per estrarre il `region` dal percorso
+Questa soluzione costruisce un'utile legenda usando il metodo di [stringa
+`split`][split-method] pper estrarre  `region` dal percorso
 'data/gapminder\_gdp\_a\specific\_region.csv'.
 
 ```python
-import glob
+mport glob
 import pandas as pd
 import matplotlib.pyplot as plt
-fig, ax = plt.subplots(1,1)
+
+fig, ax = plt.subplots(1, 1)
+
 for filename in glob.glob('data/gapminder_gdp*.csv'):
     dataframe = pd.read_csv(filename)
-    # extract <region> from the filename, expected to be in the format 'data/gapminder_gdp_<region>.csv'.
-    # we will split the string using the split method and `_` as our separator,
-    # retrieve the last string in the list that split returns (`<region>.csv`), 
-    # and then remove the `.csv` extension from that string.
-    # NOTE: the pathlib module covered in the next callout also offers
-    # convenient abstractions for working with filesystem paths and could solve this as well:
+    # Estrai la <regione> dal nome del file, che si trova nel formato
+    # 'data/gapminder_gdp_<regione>.csv'.
+    # Divideremo la stringa usando il metodo split con '_' come separatore,
+    # prenderemo l’ultima parte della lista restituita (che sarà '<regione>.csv')
+    # e poi rimuoveremo l’estensione '.csv' da quella stringa.
+    # NOTA: il modulo pathlib, presentato nel prossimo riquadro, offre
+    # anche astrazioni pratiche per lavorare con i percorsi dei file e
+    # può risolvere questo problema nello stesso modo:
     # from pathlib import Path
     # region = Path(filename).stem.split('_')[-1]
     region = filename.split('_')[-1][:-4]
-    # extract the years from the columns of the dataframe 
+
+    # Estrai gli anni dai nomi delle colonne del dataframe
     headings = dataframe.columns[1:]
     years = headings.str.split('_').str.get(1)
-    # pandas raises errors when it encounters non-numeric columns in a dataframe computation
-    # but we can tell pandas to ignore them with the `numeric_only` parameter
+
+    # Pandas genera un errore quando incontra colonne non numeriche
+    # durante le operazioni su un dataframe, ma possiamo dirgli di ignorarle
+    # con il parametro `numeric_only=True`
     dataframe.mean(numeric_only=True).plot(ax=ax, label=region)
-    # NOTE: another way of doing this selects just the columns with gdp in their name using the filter method
+
+    # NOTA: un altro modo per ottenere lo stesso risultato consiste nel
+    # selezionare solo le colonne che contengono "gdp" nel nome, usando il metodo filter:
     # dataframe.filter(like="gdp").mean().plot(ax=ax, label=region)
-# set the title and labels
-ax.set_title('GDP Per Capita for Regions Over Time')
+
+# Imposta il titolo e le etichette del grafico
+ax.set_title('PIL pro capite per regione nel tempo')
 ax.set_xticks(range(len(years)))
 ax.set_xticklabels(years)
-ax.set_xlabel('Year')
+ax.set_xlabel('Anno')
 plt.tight_layout()
 plt.legend()
 plt.show()
@@ -241,10 +244,7 @@ plt.show()
 
 ## Trattare i percorsi dei file
 
-Il modulo [`pathlib`][pathlib-module] fornisce utili astrazioni per la manipolazione di
-file e percorsi, come la restituzione del nome di un file senza l'estensione. Questo è
-molto utile quando si esegue il looping di file e directory. Nell'esempio seguente,
-creiamo un oggetto `Path` e ne ispezioniamo gli attributi.
+Il modulo [`pathlib`][pathlib-module] fornisce pratiche astrazioni per la gestione di file e percorsi, come ad esempio l’ottenimento del nome di un file senza estensione. Questo risulta particolarmente utile quando si eseguono cicli su file e directory. Nell’esempio seguente creiamo un oggetto `Path` e ne ispezioniamo alcuni attributi.
 
 ```python
 from pathlib import Path
