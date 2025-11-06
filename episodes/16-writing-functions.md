@@ -7,10 +7,8 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Spiegare e identificare la differenza tra definizione di funzione e chiamata di
-  funzione.
-- Scrivete una funzione che prende un piccolo numero fisso di argomenti e produce un
-  unico risultato.
+- Spiegare e identificare la differenza tra definizione di funzione e chiamata di funzione.
+- Scrivere una funzione che prenda un piccolo numero fisso di argomenti e produca un unico risultato.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -22,26 +20,25 @@ exercises: 15
 
 ## Scomporre i programmi in funzioni per renderli più comprensibili.
 
-- Gli esseri umani possono tenere nella memoria di lavoro solo pochi elementi alla
-  volta.
-- Comprendere idee più grandi/più complicate comprendendo e combinando pezzi.
+- Gli esseri umani possono tenere nella memoria di lavoro solo pochi elementi alla volta.
+- Comprendiamo idee più grandi/più complesse combinando pezzi.
   - Componenti di una macchina.
   - Lemmi per la dimostrazione di teoremi.
-- Le funzioni hanno lo stesso scopo nei programmi.
-  - *Incapsula* la complessità in modo da poterla trattare come un'unica "cosa".
-- consente anche il *riutilizzo*.
+- Le funzioni hanno lo stesso scopo nei programmi:
+  - *Incapsulare* a complessità in modo da poterla trattare come un’unica "cosa".
+- Consentono anche il *riutilizzo*.
   - Scrivere una volta, usare molte volte.
 
 ## Definire una funzione usando `def` con un nome, dei parametri e un blocco di codice.
 
 - Iniziare la definizione di una nuova funzione con `def`.
-- Seguito dal nome della funzione.
+- Seguire con il nome della funzione.
   - Deve rispettare le stesse regole dei nomi delle variabili.
-- Allora *parametri* tra parentesi.
-  - parentesi vuote se la funzione non riceve input.
+- Poi i *parametri* tra parentesi.
+  - Parentesi vuote se la funzione non riceve input.
   - Ne parleremo in dettaglio tra poco.
 - Poi i due punti.
-- Poi un blocco di codice rientrato.
+- nfine un blocco di codice rientrato.
 
 ```python
 def print_greeting():
@@ -50,11 +47,11 @@ def print_greeting():
     print('Right?')
 ```
 
-## Definire una funzione non la fa funzionare.
+## Definire una funzione non la fa eseguire.
 
-- Definire una funzione non la fa funzionare.
+- Definire una funzione non la fa eseguire.
   - Come assegnare un valore a una variabile.
-- Deve chiamare la funzione per eseguire il codice che contiene.
+- Si deve chiamare la funzione per eseguire il codice che contiene.
 
 ```python
 print_greeting()
@@ -86,10 +83,7 @@ print_date(1871, 3, 19)
 1871/3/19
 ```
 
-Oppure, possiamo dare un nome agli argomenti quando chiamiamo la funzione, il che ci
-permette di specificarli in qualsiasi ordine e aggiunge chiarezza al sito di chiamata;
-altrimenti, mentre si legge il codice, si potrebbe dimenticare se il secondo argomento è
-il mese o il giorno, ad esempio.
+Oppure, possiamo dare un nome agli argomenti quando chiamiamo la funzione, il che ci permette di specificarli in qualsiasi ordine e aggiunge chiarezza al sito di chiamata; altrimenti, mentre si legge il codice, si potrebbe dimenticare se il secondo argomento è il mese o il giorno, ad esempio.
 
 ```python
 print_date(month=3, day=19, year=1871)
@@ -99,16 +93,15 @@ print_date(month=3, day=19, year=1871)
 1871/3/19
 ```
 
-- Via [Twitter](https://twitter.com/minisciencegirl/status/693486088963272705): `()`
-  contiene gli ingredienti della funzione mentre il corpo contiene la ricetta.
+- Via [Twitter](https://twitter.com/minisciencegirl/status/693486088963272705): `()` contiene gli ingredienti della funzione mentre il corpo contiene la ricetta.
 
 ## Le funzioni possono restituire un risultato al loro chiamante usando `return`.
 
 - Usare `return ...` per restituire un valore al chiamante.
 - Può verificarsi in qualsiasi punto della funzione.
-- Ma le funzioni sono più facili da capire se si presenta `return`:
+- Ma le funzioni sono più facili da capire se si usa `return`:
   - All'inizio per gestire casi speciali.
-  - Alla fine, con un risultato finale.
+  - Alla fine, con il risultato finale.
 
 ```python
 def average(values):
@@ -201,10 +194,7 @@ print('calling', report, 22.5)
 calling <function report at 0x7fd128ff1bf8> 22.5
 ```
 
-Una chiamata di funzione ha sempre bisogno di parentesi, altrimenti si ottiene
-l'indirizzo di memoria dell'oggetto funzione. Quindi, se volessimo chiamare la funzione
-denominata report e assegnarle il valore 22,5, potremmo chiamare la funzione nel modo
-seguente
+Una chiamata di funzione ha sempre bisogno delle parentesi, altrimenti si ottiene il riferimento all’oggetto funzione. Se volessimo chiamare la funzione report passando il valore 22,5, potremmo scrivere:
 
 ```python
 print("calling")
@@ -234,8 +224,7 @@ pressure is 22.5
      print(time_string)
   ```
 
-2. Dopo aver risolto il problema di cui sopra, spiegare perché eseguire questo esempio
-   di codice:
+2. Dopo aver risolto il problema di cui sopra, spiegate perché eseguire questo esempio:
 
   ```python
   result = print_time(11, 37, 59)
@@ -249,24 +238,17 @@ dà questo risultato:
   result of call is: None
   ```
 
-3. Perché il risultato della chiamata è `None`?
+3. Perché il risultato è `None`?
 
 ::::::::::::::: solution
 
 ## Soluzione
 
-1. Il problema dell'esempio è che la funzione `print_time()` viene definita *dopo* che
-   la funzione è stata chiamata. Python non sa come risolvere il nome `print_time`,
-   poiché non è ancora stato definito, e solleverà un `NameError`, ad esempio
-   `NameError: name 'print_time' is not defined`
+1. Il problema dell'esempio è che la funzione `print_time()` viene definita *dopo* che la funzione è stata chiamata. Python non sa come risolvere il nome `print_time`, poiché non è ancora stato definito, e solleverà un `NameError`, ad esempio NameError: name 'print_time' is not defined`
 
-2. La prima riga di output `11:37:59` è stampata dalla prima riga di codice, `result =
-   print_time(11, 37, 59)` che lega il valore restituito dall'invocazione `print_time`
-   alla variabile `result`. La seconda riga proviene dalla seconda chiamata di stampa
-   per stampare il contenuto della variabile `result`.
+2. La prima riga di output `11:37:59` è stampata dalla prima riga di codice, `result = print_time(11, 37, 59)` che lega il valore restituito dall'invocazione `print_time` alla variabile `result`. La seconda riga proviene dalla seconda chiamata di stampa per stampare il contenuto della variabile `result`.
 
-3. `print_time()` non restituisce esplicitamente `return` un valore, quindi restituisce
-   automaticamente `None`.
+3. `print_time()` non restituisce esplicitamente `return` un valore, quindi restituisce automaticamente `None`.
 
 :::::::::::::::::::::::::
 
@@ -276,9 +258,7 @@ dà questo risultato:
 
 ## Incapsulamento
 
-Compilate gli spazi vuoti per creare una funzione che prenda come argomento un singolo
-nome di file, carichi i dati nel file denominato dall'argomento e restituisca il valore
-minimo in quei dati.
+Compilate gli spazi vuoti per creare una funzione che prenda come argomento un singolo nome di file, carichi i dati nel file indicato e restituisca il valore minimo in quei dati.
 
 ```python
 import pandas as pd
@@ -308,9 +288,7 @@ def min_in_data(filename):
 
 ## Trovare il primo
 
-Riempite gli spazi vuoti per creare una funzione che prenda come argomento un elenco di
-numeri e restituisca il primo valore negativo dell'elenco. Cosa fa la funzione se
-l'elenco è vuoto? E se l'elenco non contiene numeri negativi?
+Riempite gli spazi vuoti per creare una funzione che prenda come argomento un elenco di numeri e restituisca il primo valore negativo dell’elenco. Cosa fa la funzione se l’elenco è vuoto? E se l’elenco non contiene numeri negativi?
 
 ```python
 def first_negative(values):
@@ -358,8 +336,7 @@ def print_date(year, month, day):
     print(joined)
 ```
 
-Abbiamo visto che possiamo chiamare la funzione usando *argomenti con nome*, in questo
-modo:
+Abbiamo visto che possiamo chiamare la funzione usando *argomenti con nome*, in questo modo:
 
 ```python
 print_date(day=1, month=2, year=2003)
@@ -374,15 +351,10 @@ print_date(day=1, month=2, year=2003)
 ## Soluzione
 
 1. `2003/2/1`
-2. Abbiamo visto esempi di utilizzo di *argomenti con nome* quando si lavora con la
-   libreria pandas. Per esempio, quando si legge un set di dati usando `data =
-   pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')`, l'ultimo
+2. Abbiamo visto esempi di utilizzo di *argomenti con nome* quando lavoravamo con la libreria pandas. Per esempio, quando si legge un set di dati usando `data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')`, l'ultimo
    argomento `index_col` è un argomento con nome.
 3. L'uso di argomenti con nome può rendere il codice più leggibile, poiché dalla
-   chiamata di funzione si può vedere quale nome hanno i diversi argomenti all'interno
-   della funzione. Inoltre, può ridurre le possibilità di passare gli argomenti
-   nell'ordine sbagliato, poiché utilizzando argomenti con nome l'ordine non ha
-   importanza.
+   chiamata di funzione si può vedere quale nome hanno i diversi argomenti all'interno della funzione. Inoltre, può ridurre le possibilità di passare gli argomenti nell'ordine sbagliato, poiché utilizzando argomenti con nome l'ordine non ha importanza.
 
 :::::::::::::::::::::::::
 
@@ -390,23 +362,20 @@ print_date(day=1, month=2, year=2003)
 
 ::::::::::::::::::::::::::::::::::::::: challenge
 
-## Incapsulamento di un blocco Se/Stampa
-
-Il codice seguente viene eseguito su una stampante di etichette per uova di gallina. Una
-bilancia digitale comunicherà al computer la massa di un uovo di gallina (in grammi) e
-il computer stamperà un'etichetta.
+## Incapsulamento di un blocco If/Stampa
+Il codice seguente viene eseguito su una stampante di etichette per uova di gallina. Una bilancia digitale comunica al computer la massa di un uovo (in grammi) e il computer stampa un’etichetta.
 
 ```python
 import random
 for i in range(10):
 
-    # simulating the mass of a chicken egg
-    # the (random) mass will be 70 +/- 20 grams
+     # simulazione della massa di un uovo di gallina
+    # la massa (casuale) sarà di 70 ± 20 grammi
     mass = 70 + 20.0 * (2.0 * random.random() - 1.0)
 
     print(mass)
 
-    # egg sizing machinery prints a label
+    # il sistema di classificazione stampa un'etichetta
     if mass >= 85:
         print("jumbo")
     elif mass >= 70:
@@ -426,8 +395,8 @@ Rivedendo il programma per utilizzare la funzione si otterrebbe questo:
 import random
 for i in range(10):
 
-    # simulating the mass of a chicken egg
-    # the (random) mass will be 70 +/- 20 grams
+     # simulazione della massa di un uovo di gallina
+    # la massa (casuale) sarà di 70 ± 20 grammi
     mass = 70 + 20.0 * (2.0 * random.random() - 1.0)
 
     print(mass, get_egg_label(mass))
@@ -438,10 +407,7 @@ for i in range(10):
    programma rivisto sopra. Si noti che il valore di ritorno della funzione
    `get_egg_label()` sarà importante. L'esempio di output del programma precedente
    sarebbe `71.23 large`.
-2. Un uovo sporco potrebbe avere una massa superiore a 90 grammi e un uovo rovinato o
-   rotto probabilmente avrà una massa inferiore a 50 grammi. Modificare la funzione
-   `get_egg_label()` per tenere conto di queste condizioni di errore. Un esempio di
-   output potrebbe essere `25 too light, probably spoiled`.
+2. Un uovo sporco potrebbe avere una massa superiore a 90 grammi e un uovo rovinato o rotto probabilmente avrà una massa inferiore a 50 grammi. Modificare la funzione `get_egg_label()` per tenere conto di queste condizioni di errore. Un esempio di output potrebbe essere `25 too light, probably spoiled`.
 
 ::::::::::::::: solution
 
@@ -449,7 +415,7 @@ for i in range(10):
 
 ```python
 def get_egg_label(mass):
-    # egg sizing machinery prints a label
+    # Il sistema di classificazione delle uova stampa un’etichetta.
     egg_label = "Unlabelled"
     if mass >= 90:
         egg_label = "warning: egg might be dirty"
@@ -503,10 +469,7 @@ japan = data_asia.loc['Japan']
       return avg
   ```
 
-3. Come generalizzereste questa funzione se non sapeste in anticipo quali anni specifici
-   sono presenti come colonne nei dati? Per esempio, se avessimo anche i dati degli anni
-   che terminano con 1 e 9 per ogni decennio? (Suggerimento: utilizzate le colonne per
-   filtrare quelle che corrispondono al decennio, invece di enumerarle nel codice)
+3. Come generalizzereste questa funzione se non sapeste in anticipo quali anni specifici sono presenti come colonne nei dati? Per esempio, se avessimo anche i dati degli anni che terminano con 1 e 9 per ogni decennio? (Suggerimento: utilizzate le colonne per filtrare quelle che corrispondono al decennio, invece di enumerarle nel codice)
 
 ::::::::::::::: solution
 
@@ -531,8 +494,7 @@ japan = data_asia.loc['Japan']
       return avg
   ```
 
-3. Per ottenere la media degli anni in questione, è necessario eseguire un ciclo su di
-   essi:
+3. Per ottenere la media degli anni in questione, è necessario eseguire un ciclo su di essi:
 
   ```python
   def avg_gdp_in_decade(country, continent, year):
@@ -566,33 +528,17 @@ avg_gdp_in_decade('Japan','asia',1983)
 
 ## Simulazione di un sistema dinamico
 
-In matematica, un [sistema dinamico](https://en.wikipedia.org/wiki/Dynamical_system) è
-un sistema in cui una funzione descrive la dipendenza temporale di un punto in uno
-spazio geometrico. Un esempio canonico di sistema dinamico è la [mappa
-logistica](https://en.wikipedia.org/wiki/Logistic_map), un modello di crescita che
-calcola una nuova densità di popolazione (tra 0 e 1) in base alla densità attuale. Nel
-modello, il tempo assume valori discreti 0, 1, 2, ...
+In matematica, un [sistema dinamico](https://en.wikipedia.org/wiki/Dynamical_system) è un sistema in cui una funzione descrive la dipendenza temporale di un punto in uno spazio geometrico. Un esempio canonico di sistema dinamico è la [mappa logistica](https://en.wikipedia.org/wiki/Logistic_map), un modello di crescita che calcola una nuova densità di popolazione (tra 0 e 1) in base alla densità attuale. Nel modello, il tempo assume valori discreti 0, 1, 2, ...
 
 1. Definire una funzione chiamata `logistic_map` che prende due input: `x`, che
-   rappresenta la popolazione attuale (al tempo `t`), e un parametro `r = 1`. Questa
-   funzione deve restituire un valore che rappresenta lo stato del sistema (popolazione)
-   al tempo `t + 1`, utilizzando la funzione di mappatura:
+   rappresenta la popolazione attuale (al tempo `t`), e un parametro `r = 1`. Questa funzione deve restituire un valore che rappresenta lo stato del sistema (popolazione) al tempo `t + 1`, utilizzando la funzione di mappatura:
 
 `f(t+1) = r * f(t) * [1 - f(t)]`
 
-2. Utilizzando un ciclo `for` o `while`, iterare la funzione `logistic_map` definita
-   nella parte 1, partendo da una popolazione iniziale di 0,5, per un periodo di tempo
-   `t_final = 10`. Memorizzate i risultati intermedi in una lista, in modo da
-   accumulare, al termine del ciclo, una sequenza di valori che rappresentano lo stato
-   della mappa logistica al tempo `t = [0,1,...,t_final]` (11 valori in totale).
-   Stampate questo elenco per vedere l'evoluzione della popolazione.
+2. Utilizzando un ciclo `for` o `while`, iterare la funzione `logistic_map` definita nella parte 1, partendo da una popolazione iniziale di 0,5, per un periodo di tempo `t_final = 10`. Memorizzate i risultati intermedi in una lista, in modo da accumulare, al termine del ciclo, una sequenza di valori che rappresentano lo stato della mappa logistica al tempo `t = [0,1,...,t_final]` (11 valori in totale).
+Stampate questo elenco per vedere l'evoluzione della popolazione.
 
-3. Incapsulate la logica del vostro ciclo in una funzione chiamata `iterate` che prende
-   la popolazione iniziale come primo input, il parametro `t_final` come secondo input e
-   il parametro `r` come terzo input. La funzione deve restituire un elenco di valori
-   che rappresentano lo stato della mappa logistica al tempo `t = [0,1,...,t_final]`.
-   Eseguire la funzione per i periodi `t_final = 100` e `1000` e stampare alcuni dei
-   valori. La popolazione sta tendendo verso uno stato stazionario?
+3. Incapsulate la logica del vostro ciclo in una funzione chiamata `iterate` che prende la popolazione iniziale come primo input, il parametro `t_final` come secondo input e il parametro `r` come terzo input. La funzione deve restituire un elenco di valori che rappresentano lo stato della mappa logistica al tempo `t = [0,1,...,t_final]`. Eseguire la funzione per i periodi `t_final = 100` e `1000` e stampare alcuni dei valori. La popolazione sta tendendo verso uno stato stazionario?
 
 ::::::::::::::: solution
 
@@ -647,25 +593,24 @@ La popolazione sembra avvicinarsi allo zero.
 ## Utilizzo di funzioni con condizionali in Pandas
 
 Le funzioni contengono spesso dei condizionali. Ecco un breve esempio che indica in
-quale quartile si trova l'argomento in base ai valori codificati a mano per i punti di
-taglio del quartile.
+quale quartile si trova l'argomento in base ai valori codificati a mano per i punti di taglio del quartile.
 
 ```python
 def calculate_life_quartile(exp):
     if exp < 58.41:
-        # This observation is in the first quartile
+        # Questo si trova nel primo quartile
         return 1
     elif exp >= 58.41 and exp < 67.05:
-        # This observation is in the second quartile
+        # Questo si trova nel secondo quartile
        return 2
     elif exp >= 67.05 and exp < 71.70:
-        # This observation is in the third quartile
+        # Questo si trova nel terzo quartile
        return 3
     elif exp >= 71.70:
-        # This observation is in the fourth quartile
+        # Questo si trova nel quartp quartile
        return 4
     else:
-        # This observation has bad data
+        # Questo deriva da brutti dati
        return None
 
 calculate_life_quartile(62.5)
@@ -675,29 +620,23 @@ calculate_life_quartile(62.5)
 2
 ```
 
-Questa funzione verrebbe tipicamente utilizzata all'interno di un ciclo `for`, ma Pandas
-ha un modo diverso e più efficiente per fare la stessa cosa, ovvero *applicare* una
-funzione a un dataframe o a una parte di esso. Ecco un esempio, utilizzando la
-definizione precedente.
+Questa funzione verrebbe tipicamente utilizzata all'interno di un ciclo `for`, ma Pandas ha un modo diverso e più efficiente per fare la stessa cosa, ovvero *applicare* una funzione a un dataframe o a una parte di esso. Ecco un esempio, utilizzando la definizione precedente.
 
 ```python
 data = pd.read_csv('data/gapminder_all.csv')
 data['life_qrtl'] = data['lifeExp_1952'].apply(calculate_life_quartile)
 ```
 
-C'è molto in questa seconda riga, quindi esaminiamola pezzo per pezzo. Sul lato destro
-di `=` iniziamo con `data['lifeExp']`, che è la colonna del dataframe chiamata `data`
-etichettata `lifExp`. Utilizziamo la `apply()` per fare ciò che dice, applicare la
-`calculate_life_quartile` al valore di questa colonna per ogni riga del dataframe.
+C'è molto in questa seconda riga, quindi esaminiamola pezzo per pezzo. Sul lato destro di `=` iniziamo con `data['lifeExp']`, che è la colonna del dataframe chiamata `data`etichettata `lifExp`. Utilizziamo la `apply()` per fare ciò che dice, applicare la `calculate_life_quartile` al valore di questa colonna per ogni riga del dataframe.
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- scomporre i programmi in funzioni per facilitarne la comprensione.
+- Scomporre i programmi in funzioni per facilitarne la comprensione.
 - Definire una funzione usando `def` con un nome, dei parametri e un blocco di codice.
-- Definire una funzione non la fa funzionare.
+- Definire una funzione non la esegue.
 - Gli argomenti di una chiamata di funzione sono abbinati ai suoi parametri definiti.
 - Le funzioni possono restituire un risultato al chiamante usando `return`.
 
