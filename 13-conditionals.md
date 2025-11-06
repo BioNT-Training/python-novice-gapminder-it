@@ -42,9 +42,9 @@ if mass > 3.0:
 3.54 is large
 ```
 
-## Le condizioni sono spesso utilizzate all'interno dei cicli.
+## I condizionali sono spesso utilizzati all'interno dei cicli.
 
-- Non ha molto senso usare una condizione quando si conosce il valore (come sopra).
+- Non ha molto senso usare un condizionale quando si conosce il valore (come sopra).
 - Ma è utile quando abbiamo una collezione da elaborare.
 
 ```python
@@ -59,11 +59,10 @@ for m in masses:
 9.22 is large
 ```
 
-## Usare `else` per eseguire un blocco di codice quando una condizione `if` è *non* vera.
+## Usare `else` per eseguire un blocco di codice quando l’istruzione condizionale `if` *non* è vera.
 
-- `else` può essere usato dopo un `if`.
-- Permette di specificare un'alternativa da eseguire quando il ramo `if` non viene
-  preso.
+- `else` si usa dopo un blocco `if`.
+- Permette di specificare un’alternativa da eseguire quando il blocco `if` non viene eseguito (cioè quando la condizione è falsa).
 
 ```python
 masses = [3.54, 2.07, 9.22, 1.86, 1.71]
@@ -85,10 +84,9 @@ for m in masses:
 ## Usare `elif` per specificare test aggiuntivi.
 
 - Si possono fornire diverse scelte alternative, ognuna con il proprio test.
-- Usate `elif` (abbreviazione di "else if") e una condizione per specificare queste
-  condizioni.
-- Sempre associato a un `if`.
-- Deve precedere il `else` (che è il "catch all").
+- Si usa `elif` (abbreviazione di "else if") seguito da una condizione per specificare queste alternative.
+- È sempre associato a un `if`.
+- Deve precedere l’eventuale `else` (che funge da "caso di default").
 
 ```python
 masses = [3.54, 2.07, 9.22, 1.86, 1.71]
@@ -111,8 +109,7 @@ for m in masses:
 
 ## Le condizioni sono testate una volta, in ordine.
 
-- Python passa attraverso i rami della condizione in ordine, testando ciascuno di essi a
-  turno.
+- Python esamina i rami delle condizioni in ordine, testando ciascuno di essi a turno
 - L'ordine è importante.
 
 ```python
@@ -182,9 +179,7 @@ final velocity: 30.0
   </tr>
 </table>
 
-- Il programma deve avere un'istruzione `print` *fuori* dal corpo del ciclo per mostrare
-  il valore finale di `velocity`, poiché il suo valore viene aggiornato dall'ultima
-  iterazione del ciclo.
+- Il programma deve includere un’istruzione `print` *fuori* dal corpo del ciclo per mostrare il valore finale di `velocity`, poiché il suo valore viene aggiornato nell'ultima iterazione del ciclo.
 
 ::::::::::::::::::::::::::::::::::::::::: callout
 
@@ -262,7 +257,7 @@ print(pressure)
 
 ## Valori di taglio
 
-Riempite gli spazi vuoti in modo che questo programma crei un nuovo elenco contenente
+Riempite gli spazi in modo che il codice sottostante crei un nuovo elenco contenente
 zeri dove i valori dell'elenco originale erano negativi e uno dove i valori dell'elenco
 originale erano positivi.
 
@@ -336,7 +331,7 @@ for filename in glob.glob('data/*.csv'):
 
 ## Inizializzazione
 
-Modificate questo programma in modo che trovi i valori più grandi e più piccoli
+Modificate questo codice in modo che trovi i valori più grandi e più piccoli
 dell'elenco, indipendentemente dall'intervallo di valori originario.
 
 ```python
@@ -351,8 +346,7 @@ for v in values:
 print(smallest, largest)
 ```
 
-Quali sono i vantaggi e gli svantaggi dell'uso di questo metodo per trovare l'intervallo
-dei dati?
+Quali sono i vantaggi e gli svantaggi dell'uso di questo metodo per trovare l'intervallo dei dati?
 
 ::::::::::::::: solution
 
@@ -374,8 +368,7 @@ Se si scrive `== None` invece di `is None`, funziona anche quello, ma i programm
 Python scrivono sempre `is None` a causa del modo speciale in cui funziona `None` nel
 linguaggio.
 
-Si può sostenere che un vantaggio dell'uso di questo metodo sarebbe quello di rendere il
-codice più leggibile. Tuttavia, uno svantaggio è che questo codice non è efficiente
+Si può sostenere che un vantaggio dell'uso di questo metodo sarebbe quello di rendere il codice più leggibile. Tuttavia, uno svantaggio è che questo codice non è efficiente
 perché all'interno di ogni iterazione del ciclo `for`, ci sono altri due cicli che
 eseguono due numeri ciascuno (le funzioni `min` e `max`). Sarebbe più efficiente iterare
 su ogni numero una sola volta:
@@ -393,8 +386,7 @@ print(smallest, largest)
 
 Ora abbiamo un ciclo, ma quattro test di confronto. Ci sono due modi per migliorarlo
 ulteriormente: utilizzare un numero minore di confronti in ogni iterazione, oppure
-utilizzare due cicli che contengono ciascuno un solo test di confronto. La soluzione più
-semplice è spesso la migliore:
+utilizzare due cicli che contengono ciascuno un solo test di confronto. La soluzione più semplice è spesso la migliore:
 
 ```python
 values = [-2,1,65,78,-54,-24,100]
