@@ -7,9 +7,9 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Spiegare le principali differenze tra numeri interi e numeri in virgola mobile.
-- Spiegare le principali differenze tra numeri e stringhe di caratteri.
-- Utilizzare le funzioni integrate per convertire tra numeri interi, numeri in virgola
+- Spiegare le principali differenze tra numeri interi e numeri con la virgola.
+- Spiegare le principali differenze tra numeri e stringhe.
+- Utilizzare le funzioni integrate per convertire  numeri interi, numeri con la virgola
   mobile e stringhe.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -25,7 +25,7 @@ exercises: 10
 
 - Ogni valore in un programma ha un tipo specifico.
 - Numero intero (`int`): rappresenta numeri interi positivi o negativi come 3 o -512.
-- Numero in virgola mobile (`float`): rappresenta numeri reali come 3,14159 o -2,5.
+- Numero con la virgola  (`float`): rappresenta numeri reali come 3,14159 o -2,5.
 - Stringa di caratteri (solitamente chiamata "stringa", `str`): testo.
   - Scritto tra apici singoli o doppi (purché corrispondano).
   - Le virgolette non vengono stampate quando la stringa viene visualizzata.
@@ -33,7 +33,7 @@ exercises: 10
 ## Usare la funzione integrata `type` per trovare il tipo di un valore.
 
 - Usare la funzione integrata `type` per scoprire il tipo di un valore.
-- funziona anche con le variabili.
+- Funziona anche con le variabili.
   - Ma ricordate: il *valore* ha il tipo --- la *variabile* è solo un'etichetta.
 
 ```python
@@ -55,7 +55,7 @@ print(type(fitness))
 
 ## I tipi controllano quali operazioni (o metodi) possono essere eseguite su un dato valore.
 
-- Il tipo di un valore determina ciò che il programma può fare su di esso.
+- Il tipo di un valore determina quali operazioni il programma può eseguire su di esso
 
 ```python
 print(5 - 3)
@@ -133,7 +133,7 @@ TypeError: object of type 'int' has no len()
 
 ## Deve convertire i numeri in stringhe o viceversa quando opera su di essi. {#convertire-numeri-e-stringhe}
 
-- Non può sommare numeri e stringhe.
+- Non si possono sommare numeri e stringhe.
 
 ```python
 print(1 + '2')
@@ -162,9 +162,9 @@ print(str(1) + '2')
 12
 ```
 
-## Può mischiare liberamente interi e float nelle operazioni.
+## Può mischiare liberamente interi e numeri con la virgola (float) nelle operazioni.
 
-- Gli interi e i numeri a virgola mobile possono essere mescolati nell'aritmetica.
+- Gli interi e i numeri con la virgola possono essere usati insieme in aritmetica.
   - Python 3 converte automaticamente gli interi in float quando necessario.
 
 ```python
@@ -210,7 +210,7 @@ Che tipo di valore è 3,4? Come si fa a scoprirlo?
 
 ## Soluzione
 
-è un numero in virgola mobile (spesso abbreviato in "float"). È possibile scoprirlo
+È un numero con la virgola (spesso abbreviato in "float"). È possibile scoprirlo
 utilizzando la funzione integrata `type()`.
 
 ```python
@@ -229,13 +229,13 @@ print(type(3.4))
 
 ## Conversione automatica di tipo
 
-Che tipo di valore è 3,25 + 4?
+Che tipo di numero è 3,25 + 4?
 
 ::::::::::::::: solution
 
 ## Soluzione
 
-è un float: i numeri interi vengono automaticamente convertiti in float se necessario.
+È un float: i numeri interi vengono automaticamente convertiti in float se necessario.
 
 ```python
 result = 3.25 + 4
@@ -254,16 +254,16 @@ print(result, 'is', type(result))
 
 ## Scegliere un tipo
 
-Quale tipo di valore (intero, numero in virgola mobile o stringa di caratteri) usereste
+Quale tipo di valore (intero, numero con la virgola o stringa di caratteri) usereste
 per rappresentare ciascuno dei seguenti elementi? Cercate di dare più di una risposta
 valida per ogni problema. Per esempio, nel punto 1, quando avrebbe più senso contare i
-giorni con una variabile in virgola mobile piuttosto che con un numero intero?
+giorni con una variabile float piuttosto che con un numero intero?
 
 1. Numero di giorni dall'inizio dell'anno.
 2. Tempo trascorso dall'inizio dell'anno a oggi in giorni.
 3. Numero di serie di un pezzo di attrezzatura da laboratorio.
 4. Età di un campione di laboratorio
-5. popolazione attuale di una città.
+5. Popolazione attuale di una città.
 6. Popolazione media di una città nel tempo.
 
 ::::::::::::::: solution
@@ -272,16 +272,16 @@ giorni con una variabile in virgola mobile piuttosto che con un numero intero?
 
 Le risposte alle domande sono:
 
-1. intero, poiché il numero di giorni è compreso tra 1 e 365.
-2. virgola mobile, poiché sono richiesti giorni frazionari
-3. stringa di caratteri se il numero di serie contiene lettere e numeri, altrimenti
+1. Intero, poiché il numero di giorni è compreso tra 1 e 365.
+2. Virgola (float), poiché sono richiesti giorni frazionati
+3. Stringa se il numero di serie contiene lettere e numeri, altrimenti
    numero intero se il numero di serie è composto solo da numeri
 4. Questo varia! Come si definisce l'età di un campione? Giorni interi dalla raccolta
    (intero)? Data e ora (stringa)?
-5. Scegliere i numeri in virgola mobile per rappresentare la popolazione in grandi
+5. Scegliere float per rappresentare la popolazione in grandi
    aggregati (ad esempio, milioni) o i numeri interi per rappresentare la popolazione in
    unità di individui.
-6. Numero in virgola mobile, poiché è probabile che una media abbia una parte
+6. Numeri con la virgola, poiché è probabile che una media abbia una parte
    frazionaria.
 
 :::::::::::::::::::::::::
@@ -293,7 +293,7 @@ Le risposte alle domande sono:
 ## Tipi di divisione
 
 In Python 3, l'operatore `//` esegue la divisione intera (numeri interi), l'operatore
-`/` esegue la divisione in virgola mobile e l'operatore `%` (o *modulo*) calcola e
+`/` esegue la divisione con la virgola e l'operatore `%` (o *modulo*) calcola e
 restituisce il resto della divisione intera:
 
 ```python
@@ -343,8 +343,8 @@ print(num_subjects, 'subjects,', num_per_survey, 'per survey:', num_surveys)
 
 ## Stringhe a numeri
 
-Se ragionevole, `float()` convertirà una stringa in un numero in virgola mobile e
-`int()` convertirà un numero in virgola mobile in un intero:
+Se possibile, `float()` convertirà una stringa in un numero float e
+`int()` convertirà float in un intero:
 
 ```python
 print("string to float:", float("3.4"))
@@ -385,9 +385,7 @@ print("fractional string to int:", int("3.4"))
 
 ## Soluzione
 
-Cosa ci si aspetta che faccia questo programma? Non sarebbe così irragionevole
-aspettarsi che il comando `int` di Python 3 converta la stringa "3.4" in 3.4 e
-un'ulteriore conversione di tipo in 3. Dopotutto, Python 3 compie molte altre magie: non
+Cosa ci si aspetta che faccia questo programma? Ci si potrebbe aspettare che il comando `int` di Python 3 converta la stringa "3.4" in 3.4 e un'ulteriore conversione di tipo in 3. Dopotutto, Python 3 compie molte altre magie: non
 è forse parte del suo fascino?
 
 ```python
@@ -422,7 +420,7 @@ int(float("3.4"))
 
 ## Aritmetica con tipi diversi
 
-Quale delle seguenti operazioni restituirà il numero in virgola mobile `2.0`? Nota: può
+Quale delle seguenti operazioni restituirà il numero float `2.0`? Nota: può
 esserci più di una risposta giusta.
 
 ```python
