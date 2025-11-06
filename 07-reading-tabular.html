@@ -260,8 +260,8 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#utilizzare-la-libreria-pandas-per-eseguire-statistiche-su-dati-tabellari.">Utilizzare la libreria Pandas per eseguire statistiche su dati
-tabellari.</a></li>
+        <ul><li><a href="#utilizzare-la-libreria-pandas-per-eseguire-statistiche-su-dati-di-una-tabella.">Utilizzare la libreria Pandas per eseguire statistiche su dati di
+una tabella.</a></li>
 <li><a href="#usare-index_col-per-specificare-che-i-valori-di-una-colonna-devono-essere-usati-come-intestazioni-di-riga.">Usare <code>index_col</code> per specificare che i valori di una
 colonna devono essere usati come intestazioni di riga.</a></li>
 <li><a href="#usare-il-metodo-dataframe.info-per-saperne-di-pi%C3%B9-su-un-dataframe.">Usare il metodo <code>DataFrame.info()</code> per saperne di più su
@@ -452,7 +452,7 @@ sintesi sui dati.</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Lettura di dati tabellari in DataFrames</h1>
-        <p>Ultimo aggiornamento il 2025-03-02 |
+        <p>Ultimo aggiornamento il 2025-11-06 |
 
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/07-reading-tabular.md" class="external-link">Modifica questa pagina <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -471,7 +471,7 @@ sintesi sui dati.</a></li>
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Domande</h3>
-<ul><li>Come si leggono i dati tabellari?</li>
+<ul><li>Come si leggono i dati di una tabella?</li>
 </ul></div>
 </div>
 </div>
@@ -481,18 +481,18 @@ sintesi sui dati.</a></li>
 <h3 class="card-title">Obiettivi</h3>
 <ul><li>Importare la libreria Pandas.</li>
 <li>Utilizzare Pandas per caricare un semplice set di dati CSV.</li>
-<li>Ottenere alcune informazioni di base su un DataFrame Pandas.</li>
+<li>Ottenere alcune informazioni di base su un Pandas DataFrame.</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="utilizzare-la-libreria-pandas-per-eseguire-statistiche-su-dati-tabellari-">Utilizzare la libreria Pandas per eseguire statistiche su dati
-tabellari.<a class="anchor" aria-label="anchor" href="#utilizzare-la-libreria-pandas-per-eseguire-statistiche-su-dati-tabellari-"></a></h2>
+<section><h2 class="section-heading" id="utilizzare-la-libreria-pandas-per-eseguire-statistiche-su-dati-di-una-tabella-">Utilizzare la libreria Pandas per eseguire statistiche su dati di
+una tabella.<a class="anchor" aria-label="anchor" href="#utilizzare-la-libreria-pandas-per-eseguire-statistiche-su-dati-di-una-tabella-"></a></h2>
 <hr class="half-width"><ul><li>
 <a href="https://pandas.pydata.org/" class="external-link">Pandas</a> è una libreria
-Python molto utilizzata per le statistiche, in particolare per i dati
-tabellari.</li>
+Python molto utilizzata per le statistiche, in particolare per leggere e
+manipolare tabelle.</li>
 <li>Prende in prestito molte caratteristiche dai dataframe di R.
 <ul><li>Una tabella bidimensionale le cui colonne hanno nomi e
 potenzialmente tipi di dati diversi.</li>
@@ -636,12 +636,11 @@ le osservazioni mancanti.</li>
 <li>Utilizza 208 byte di memoria.</li>
 </ul></section><section><h2 class="section-heading" id="la-variabile-dataframe-columns-memorizza-informazioni-sulle-colonne-del-dataframe-">La variabile <code>DataFrame.columns</code> memorizza informazioni
 sulle colonne del dataframe.<a class="anchor" aria-label="anchor" href="#la-variabile-dataframe-columns-memorizza-informazioni-sulle-colonne-del-dataframe-"></a></h2>
-<hr class="half-width"><ul><li>Si noti che questi sono dati, <em>non</em> un metodo. (Non ha
-parentesi)
+<hr class="half-width"><ul><li>Nota che questo è un dato,<em>non</em> un metodo. (non ha parentesi)
 <ul><li>Come <code>math.pi</code>.</li>
 <li>Quindi non usare <code>()</code> per cercare di chiamarlo.</li>
 </ul></li>
-<li>Chiamata <em>variabile membro</em>, o semplicemente
+<li>Si chiama <em>variabile membro</em>, o semplicemente
 <em>membro</em>.</li>
 </ul><div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -659,7 +658,7 @@ parentesi)
 </section><section><h2 class="section-heading" id="usare-dataframe-t-per-trasporre-un-dataframe-">Usare <code>DataFrame.T</code> per trasporre un dataframe.<a class="anchor" aria-label="anchor" href="#usare-dataframe-t-per-trasporre-un-dataframe-"></a></h2>
 <hr class="half-width"><ul><li>A volte si desidera trattare le colonne come righe e viceversa.</li>
 <li>La trasposizione (scritta <code>.T</code>) non copia i dati, ma
-cambia solo la visione del programma.</li>
+cambia solo la visione della tabella</li>
 <li>Come <code>columns</code>, è una variabile membro.</li>
 </ul><div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -752,7 +751,7 @@ riassuntive.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Per leggere un CSV, si usa <code>pd.read_csv</code> e gli si passa il
 nome del file <code>'data/gapminder_gdp_americas.csv'</code>. Passiamo
@@ -782,11 +781,10 @@ statistiche di riepilogo possono essere visualizzate con il metodo
 <code>help(data_americas.head)</code> e
 <code>help(data_americas.tail)</code> per scoprire cosa fanno
 <code>DataFrame.head</code> e <code>DataFrame.tail</code>.</p>
-<ol style="list-style-type: decimal"><li>Quale chiamata di metodo visualizzerà le prime tre righe di questi
-dati?</li>
-<li>Quale chiamata di metodo visualizzerà le ultime tre colonne di
-questi dati? (Suggerimento: potrebbe essere necessario modificare la
-visualizzazione dei dati)</li>
+<ol style="list-style-type: decimal"><li>Quale metodo visualizzerà le prime tre righe di questi dati?</li>
+<li>Quale metodo visualizzerà le ultime tre colonne di questi dati?
+(Suggerimento: potrebbe essere necessario modificare la visualizzazione
+dei dati)</li>
 </ol></div>
 </div>
 </div>
@@ -797,7 +795,7 @@ visualizzazione dei dati)</li>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>Possiamo controllare le prime cinque righe di
 <code>data_americas</code> eseguendo <code>data_americas.head()</code>
@@ -933,7 +931,7 @@ chiamata <code>thesis</code>:</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Dobbiamo specificare il percorso del file di interesse nella chiamata
 a <code>pd.read_csv</code>. Dobbiamo prima ‘saltare’ dalla cartella
@@ -961,9 +959,10 @@ seguente:</p>
 <p>Oltre alla funzione <code>read_csv</code> per leggere i dati da un
 file, Pandas fornisce una funzione <code>to_csv</code> per scrivere i
 dataframe sui file. Applicando quanto appreso sulla lettura dei file,
-scrivete uno dei vostri dataframe in un file chiamato
-<code>processed.csv</code>. È possibile utilizzare <code>help</code> per
-ottenere informazioni su come utilizzare <code>to_csv</code>.</p>
+scrivete uno dei vostri dataframe in un file
+chiamato<code>processed.csv</code>. È possibile utilizzare
+<code>help</code> per ottenere informazioni su come utilizzare
+<code>to_csv</code>.</p>
 </div>
 </div>
 </div>
@@ -974,7 +973,7 @@ ottenere informazioni su come utilizzare <code>to_csv</code>.</p>
   Soluzione
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>Per scrivere il DataFrame <code>data_americas</code> in un file
 chiamato <code>processed.csv</code>, eseguire il seguente comando:</p>
@@ -992,10 +991,10 @@ può eseguire, ad esempio:</p>
 <span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a><span class="bu">help</span>(pd.read_csv)</span></code></pre>
 </div>
 <p>Si noti che <code>help(to_csv)</code> o <code>help(pd.to_csv)</code>
-danno errore! Ciò è dovuto al fatto che <code>to_csv</code> non è una
-funzione globale di Pandas, ma una funzione membro di DataFrames. Ciò
-significa che può essere chiamata solo su un’istanza di un DataFrame, ad
-esempio <code>data_americas.to_csv</code> o
+generano un errore! Ciò è dovuto al fatto che <code>to_csv</code> non è
+una funzione globale di Pandas, ma una funzione membro di DataFrames.
+Ciò significa che può essere chiamata solo su un’istanza di un
+DataFrame, ad esempio <code>data_americas.to_csv</code> o
 <code>data_oceania.to_csv</code></p>
 </div>
 </div>
@@ -1009,7 +1008,7 @@ esempio <code>data_americas.to_csv</code> o
 <div class="callout-inner">
 <div class="callout-content">
 <ul><li>Utilizzare la libreria Pandas per ottenere statistiche di base da
-dati tabellari.</li>
+tabelle.</li>
 <li>Utilizzare <code>index_col</code> per specificare che i valori di
 una colonna devono essere utilizzati come intestazioni di riga.</li>
 <li>Usare <code>DataFrame.info</code> per saperne di più su un
@@ -1080,7 +1079,7 @@ di sintesi sui dati.</li>
   "url": "https://swcarpentry.github.io/python-novice-gapminder/07-reading-tabular.html",
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/07-reading-tabular.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2025-03-02",
+  "dateModified": "2025-11-06",
   "datePublished": "2025-11-06"
 }
 
