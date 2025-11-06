@@ -7,7 +7,7 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Raccogliere il feedback sul corso
+- Raccogliere il feedback sul corso.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
