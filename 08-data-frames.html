@@ -47,6 +47,16 @@
           </ul></li>
       </div>
 
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+          <b>Italiano</b>  <i data-feather="chevron-down"></i>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2"><li><button class="dropdown-item" type="button"><a href="https://biont-training.github.io/python-novice-gapminder-de" class="external-link">Deutsch</a></button></li>
+          <li><button class="dropdown-item" type="button"><a href="https://biont-training.github.io/python-novice-gapminder-en" class="external-link">English</a></button></li>
+          <li><button class="dropdown-item" type="button"><a href="https://biont-training.github.io/python-novice-gapminder-es" class="external-link">Español</a></button></li>
+        </ul></div>
+
       <div class="dropdown" id="instructor-dropdown">
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Vista Studente <i data-feather="chevron-down"></i>
@@ -843,7 +853,7 @@ nel 2007.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Soluzione </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>La selezione può essere effettuata utilizzando le etichette sia per
 la riga (“Serbia”) sia per la colonna (“gdpPercap_2007”):</p>
@@ -887,7 +897,7 @@ nelle fette numeriche e nelle fette denominate in Pandas?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Soluzione </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>No, non producono lo stesso output! L’output della prima è:</p>
 <div class="codewrapper">
@@ -945,7 +955,7 @@ fornito, mentre una slice denominata, ‘gdpPercap\1952’:‘gdpPercap\1962’,
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Soluzione </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Esaminiamo questo pezzo di codice riga per riga.</p>
 <div class="codewrapper sourceCode" id="cb32">
@@ -1028,7 +1038,7 @@ questi metodi?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Soluzione </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>Per ogni colonna in <code>data</code>, <code>idxmin</code> restituirà
 il valore dell’indice corrispondente al minimo di ogni colonna;
@@ -1066,7 +1076,7 @@ capite di quel Paese nel 1952.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Soluzione </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <p>1:</p>
 <div class="codewrapper sourceCode" id="cb38">
@@ -1129,7 +1139,7 @@ DataFrame:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution6" aria-expanded="false" aria-controls="collapseSolution6">
   <h4 class="accordion-header" id="headingSolution6"> Soluzione </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <p>1. Accedere a una singola colonna:</p>
 <div class="codewrapper sourceCode" id="cb42">
@@ -1320,7 +1330,7 @@ cui sono disponibili le informazioni.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution7" aria-expanded="false" aria-controls="collapseSolution7">
   <h4 class="accordion-header" id="headingSolution7"> Soluzione </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
 <div class="accordion-body">
 <p>Tra le tante scelte, <code>dir()</code> elenca la funzione
 <code>median()</code> come una possibilità. Quindi,</p>
@@ -1398,15 +1408,17 @@ valore.</li>
 	
         | <a href="https://github.com/swcarpentry/python-novice-gapminder/blob/main/CONTRIBUTING.md" class="external-link">Contributi</a>
         | <a href="https://github.com/swcarpentry/python-novice-gapminder/" class="external-link">Fonte</a></p>
-				<p><a href="https://github.com/swcarpentry/python-novice-gapminder/blob/main/CITATION" class="external-link">Cita</a> | <a href="mailto:team@carpentries.org">Contatti</a> | <a href="https://carpentries.org/about/" class="external-link">Informazioni</a></p>
-			</div>
-			<div class="col-md-6">
+        <p>
+        <a href="https://github.com/swcarpentry/python-novice-gapminder/blob/main/" class="external-link">Cita</a>
+        | <a href="mailto:team@carpentries.org">Contatti</a> | <a href="https://carpentries.org/about/" class="external-link">Informazioni</a></p>
+		</div>
+		<div class="col-md-6">
 
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template concesso in licenza sotto <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> da <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Realizzato con <a href="https://github.com/carpentries/sandpaper/tree/0.17.1" class="external-link">sandpaper (0.17.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a> e <a href="https://github.com/carpentries/varnish/tree/1.0.7" class="external-link">varnish (1.0.7)</a></p>
-			</div>
+        <p>Realizzato con <a href="https://github.com/carpentries/sandpaper/tree/0.17.3" class="external-link">sandpaper (0.17.3)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a> e <a href="https://github.com/carpentries/varnish/tree/1.0.9" class="external-link">varnish (1.0.9)</a></p>
+		</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
 		<a href="#top">
@@ -1428,7 +1440,7 @@ valore.</li>
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/08-data-frames.html",
   "dateCreated": "2016-01-07",
   "dateModified": "2025-11-06",
-  "datePublished": "2025-11-06"
+  "datePublished": "2026-01-15"
 }
 
   </script><script>
